@@ -15,6 +15,20 @@ const docsV4Source = {
   exclude: ['docs/**/*.json'],
   prefix: '/docs/4.x'
 }
+const nuxtcontentLIVE = {
+  // cwd: process.env.NUXT_V4_PATH ?? undefined,
+  repository: 'https://github.com/nuxt/content/tree/main',
+  include: 'docs/content/docs/**/*',
+  // exclude: ['docs/**/*.json'],
+  prefix: '/nuxtcontent/live'
+}
+const nuxtcontentVI = {
+  // cwd: process.env.NUXT_V4_PATH ?? undefined,
+  repository: 'https://github.com/jangdamaxdev/docs/tree/main',
+  include: 'nuxt/nuxtcontent/**/*',
+  // exclude: ['docs/**/*.json'],
+  prefix: '/nuxtcontent/vi'
+}
 
 const examplesV3Source = {
   cwd: process.env.NUXT_EXAMPLES_PATH ?? undefined,
@@ -146,6 +160,14 @@ const ShowcaseItem = z.object({
 
 export default defineContentConfig({
   collections: {
+  nuxtcontent: defineCollection({
+      type: 'page',
+      source: [nuxtcontentLIVE, nuxtcontentVI],
+      schema: z.object({
+        titleTemplate: z.string().optional(),
+        links: z.array(Button)
+      })
+    }),
     index: defineCollection({
       type: 'data',
       source: 'index.yml',

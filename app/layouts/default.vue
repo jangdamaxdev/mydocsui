@@ -17,6 +17,7 @@ onMounted(() => {
 
 <template>
   <div>
+    <!-- thông báo -->
     <UBanner
       id="senior-certification-nuxt"
       title="Official Nuxt Senior Certification Exam has launched"

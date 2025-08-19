@@ -1,6 +1,6 @@
 {
-  "name": "nuxt.com",
-  "version": "0.3.11",
+  "name": "mydocsui",
+  "version": "0.0.1",
   "packageManager": "pnpm@10.14.0",
   "scripts": {
     "dev": "nuxt dev",
@@ -20,9 +20,9 @@
     "@iconify-json/octicon": "^1.2.10",
     "@iconify-json/simple-icons": "^1.2.47",
     "@nuxt/content": "^3.6.3",
-    "@nuxt/image": "https://pkg.pr.new/@nuxt/image@1a5786c",
+    "@nuxt/image": "^1.10.0",
     "@nuxt/scripts": "^0.11.10",
-    "@nuxt/ui-pro": "^3.3.0",
+    "nuip": "workspace:*",
     "@nuxthub/core": "0.9.0",
     "@nuxtjs/html-validator": "^2.1.0",
     "@nuxtjs/mdc": "^0.17.2",
@@ -68,8 +68,10 @@
     "wrangler": "^4.28.1"
   },
   "resolutions": {
-    "chokidar": "3.6.0",
-    "unimport": "4.1.1"
+     "debug": "4.3.7",
+    "rollup": "4.34.9",
+    "unimport": "4.1.1",
+    "unplugin": "^2.3.5"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

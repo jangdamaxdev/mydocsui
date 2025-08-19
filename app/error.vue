@@ -2,8 +2,8 @@
 import type { NuxtError } from '#app'
 
 useSeoMeta({
-  title: 'Page not found',
-  description: 'We are sorry but this page could not be found.'
+  title: 'Page not found 3815',
+  description: 'We are sorry but this page could not be found. 3815'
 })
 
 defineProps<{ error: NuxtError }>()
