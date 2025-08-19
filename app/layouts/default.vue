@@ -49,7 +49,5 @@ onMounted(() => {
 
       <NuxtPage />
     </UMain>
-
-    <AppFooter />
   </div>
 </template>

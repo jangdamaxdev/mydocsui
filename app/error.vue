@@ -10,14 +10,14 @@ defineProps<{ error: NuxtError }>()
 
 const { version } = useDocsVersion()
 const { searchGroups, searchLinks, searchTerm } = useNavigation()
-const { fetchList } = useModules()
+
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
   useAsyncData('navigation', () => {
     return Promise.all([
       queryCollectionNavigation('docsv3', ['titleTemplate']),
       queryCollectionNavigation('docsv4', ['titleTemplate']).then(data => data[0]?.children),
-      queryCollectionNavigation('blog')
+
     ])
   }, {
     transform: data => data.flat(),
@@ -27,7 +27,7 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     return Promise.all([
       queryCollectionSearchSections('docsv3'),
       queryCollectionSearchSections('docsv4'),
-      queryCollectionSearchSections('blog')
+
     ])
   }, {
     server: false,
@@ -36,7 +36,6 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
   })
 ])
 
-onNuxtReady(() => fetchList())
 
 const versionNavigation = computed(() => navigation.value?.filter(item => item.path === version.value.path || item.path === '/blog') ?? [])
 const versionFiles = computed(() => files.value?.filter((file) => {
