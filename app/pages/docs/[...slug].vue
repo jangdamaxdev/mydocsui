@@ -10,6 +10,7 @@ definePageMeta({
 })
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
+// console.log('navigation in slug', navigation.value);
 
 const route = useRoute()
 const nuxtApp = useNuxtApp()
@@ -23,8 +24,8 @@ const asideNavigation = computed(() => {
   return navPageFromPath(path, navigation.value)?.children || []
 })
 
-const { headerLinks } = useHeaderLinks()
-const links = computed(() => headerLinks.value.find(link => link.to === version.value.path)?.children ?? [])
+
+const navigationChapter = computed(() => useNavigationChapter(navigation.value) ?? [])
 
 function paintResponse() {
   if (import.meta.server) {
@@ -77,45 +78,45 @@ const breadcrumb = computed(() => {
 
 const editLink = computed(() => `https://github.com/nuxt/nuxt/edit/${version.value.branch}/${page?.value?.stem?.replace(/docs\/\d\.x/, 'docs')}.${page?.value?.extension}`)
 
-const communityLinks = [{
-  icon: 'i-lucide-heart',
-  label: 'Become a Sponsor',
-  to: 'https://go.nuxt.com/sponsor',
-  target: '_blank'
-}, {
-  icon: 'i-lucide-chef-hat',
-  label: 'Master Nuxt',
-  to: 'https://masteringnuxt.com/nuxt3',
-  target: '_blank'
-}, {
-  icon: 'i-lucide-award',
-  label: 'Nuxt Certification',
-  to: 'https://certification.nuxt.com',
-  target: '_blank'
-}]
+// const communityLinks = [{
+//   icon: 'i-lucide-heart',
+//   label: 'Become a Sponsor',
+//   to: 'https://go.nuxt.com/sponsor',
+//   target: '_blank'
+// }, {
+//   icon: 'i-lucide-chef-hat',
+//   label: 'Master Nuxt',
+//   to: 'https://masteringnuxt.com/nuxt3',
+//   target: '_blank'
+// }, {
+//   icon: 'i-lucide-award',
+//   label: 'Nuxt Certification',
+//   to: 'https://certification.nuxt.com',
+//   target: '_blank'
+// }]
 
-const title = computed(() => page.value?.seo?.title || page.value?.title)
-const titleTemplate = computed(() => `${findTitleTemplate(page, navigation)} ${version.value.shortTag}`)
+// const title = computed(() => page.value?.seo?.title || page.value?.title)
+// const titleTemplate = computed(() => `${findTitleTemplate(page, navigation)} ${version.value.shortTag}`)
 
-useSeoMeta({
-  titleTemplate,
-  title
-})
+// useSeoMeta({
+//   titleTemplate,
+//   title
+// })
 
-if (import.meta.server) {
-  const description = page.value?.seo?.description || page.value?.description
-  useSeoMeta({
-    description,
-    ogDescription: description,
-    ogTitle: titleTemplate.value?.includes('%s') ? titleTemplate.value.replace('%s', title.value) : title.value
-  })
+// if (import.meta.server) {
+//   const description = page.value?.seo?.description || page.value?.description
+//   useSeoMeta({
+//     description,
+//     ogDescription: description,
+//     ogTitle: titleTemplate.value?.includes('%s') ? titleTemplate.value.replace('%s', title.value) : title.value
+//   })
 
-  defineOgImageComponent('Docs', {
-    headline: breadcrumb.value.length ? breadcrumb.value.map(link => link.label).join(' > ') : '',
-    title,
-    description
-  })
-}
+//   defineOgImageComponent('Docs', {
+//     headline: breadcrumb.value.length ? breadcrumb.value.map(link => link.label).join(' > ') : '',
+//     title,
+//     description
+//   })
+// }
 </script>
 
 <template>
@@ -125,7 +126,7 @@ if (import.meta.server) {
         <UPageAside>
           <VersionSelect />
           <USeparator type="dashed" class="my-6" />
-          <UPageAnchors :links="links" />
+          <UPageAnchors :links="navigationChapter" />
           <USeparator type="dashed" class="my-6" />
           <UContentNavigation
             :navigation="asideNavigation"
@@ -164,15 +165,13 @@ if (import.meta.server) {
           <div>
             <Feedback :page="page" />
             <USeparator class="mt-6 mb-10">
-              <div class="flex items-center gap-2 text-sm text-muted">
-                <UButton size="sm" variant="link" color="neutral" to="https://github.com/nuxt/nuxt/issues/new/choose" target="_blank">
-                  Report an issue
-                </UButton>
-                or
+<!-- ĐOẠN CHO PHÉP EDIT GITHUB CONTENT -->
+              <div class="flex items-center gap-2 text-sm text-muted">                
                 <UButton size="sm" variant="link" color="neutral" :to="editLink" target="_blank">
                   Edit this page on GitHub
                 </UButton>
               </div>
+
             </USeparator>
             <UContentSurround :surround="surround" />
           </div>
@@ -182,7 +181,7 @@ if (import.meta.server) {
           <UContentToc :links="page.body?.toc?.links" highlight class="lg:backdrop-blur-none">
             <template #bottom>
               <USeparator v-if="page.body?.toc?.links?.length" type="dashed" />
-              <UPageLinks title="Community" :links="communityLinks" />
+              <!-- <UPageLinks title="Community" :links="communityLinks" /> -->
               <USeparator type="dashed" />
               <SocialLinks />
               <Ads />

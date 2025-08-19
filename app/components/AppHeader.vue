@@ -9,20 +9,20 @@ const { copy } = useClipboard()
 const { headerLinks } = useHeaderLinks()
 const { version } = useDocsVersion()
 
-const { tags } = useDocsTags()
+// const { tags } = useDocsTags()
 
-const latestVersion = computed(() => {
-  const versionMatch = stats.value?.version?.match(/\d+\.\d+/)
-  return versionMatch ? versionMatch[0] : undefined
-})
+// const latestVersion = computed(() => {
+//   const versionMatch = stats.value?.version?.match(/\d+\.\d+/)
+//   return versionMatch ? versionMatch[0] : undefined
+// })
 
-const mobileDocsVersion = computed(() =>
-  route.path.startsWith('/docs')
-    ? version.value.shortTag !== 'v4'
-      ? `${version.value.shortTag} (${tags[version.value.shortTag]})`
-      : version.value.shortTag
-    : undefined
-)
+// const mobileDocsVersion = computed(() =>
+//   route.path.startsWith('/docs')
+//     ? version.value.shortTag !== 'v4'
+//       ? `${version.value.shortTag} (${tags[version.value.shortTag]})`
+//       : version.value.shortTag
+//     : undefined
+// )
 
 const mobileNavigation = computed<ContentNavigationItem[]>(() => {
   // Show Migration and Bridge on mobile only when user is reading them
@@ -88,15 +88,15 @@ const logoContextMenuItems = [
         <NuxtLink to="/" class="flex gap-2 items-end" aria-label="Back to home">
           <NuxtLogo ref="logo" class="block w-auto h-6" />
 
-          <UTooltip v-if="latestVersion" :text="`Latest release: v${stats?.version || 3}`" class="hidden md:block">
+          <!-- <UTooltip v-if="latestVersion" :text="`Latest release: v${stats?.version || 3}`" class="hidden md:block">
             <UBadge variant="subtle" size="sm" class="-mb-[2px] rounded font-semibold text-[12px]/3" color="primary">
               v{{ latestVersion }}
             </UBadge>
           </UTooltip>
 
           <UBadge v-if="mobileDocsVersion" variant="subtle" size="sm" class="block md:hidden -mb-[2px] rounded font-semibold text-[12px]/3" :color="version.tagColor">
-            {{ mobileDocsVersion }}
-          </UBadge>
+            {{ 'QQ' }}
+          </UBadge> -->
         </NuxtLink>
       </UContextMenu>
     </template>

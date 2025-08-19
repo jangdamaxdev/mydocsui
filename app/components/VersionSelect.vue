@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { version, items } = useDocsVersion()
-const { tags } = useDocsTags()
+const { tags } = useDocsTags('nuxt')
 </script>
 
 <template>

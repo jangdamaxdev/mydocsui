@@ -37,9 +37,9 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
 ])
 
 
-const versionNavigation = computed(() => navigation.value?.filter(item => item.path === version.value.path || item.path === '/blog') ?? [])
+const versionNavigation = computed(() => navigation.value?.filter(item => item.path === version.value.path) ?? [])
 const versionFiles = computed(() => files.value?.filter((file) => {
-  return (version.value.path === '/docs/4.x' ? file.id.startsWith('/docs/4.x/') : !file.id.startsWith('/docs/4.x')) || file.id.startsWith('/blog/')
+  return (version.value.path === '/docs/4.x' ? file.id.startsWith('/docs/4.x/') : !file.id.startsWith('/docs/4.x'))
 }) ?? [])
 
 provide('navigation', versionNavigation)

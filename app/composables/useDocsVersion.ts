@@ -11,7 +11,7 @@ interface Version {
 
 const versions: Version[] = [
   {
-    label: 'Version 4',
+    label: 'Version 4444444',
     shortTag: 'v4',
     branch: 'main',
     tagColor: 'info',
@@ -19,7 +19,7 @@ const versions: Version[] = [
     collection: 'docsv4'
   },
   {
-    label: 'Version 3',
+    label: 'Version 3333333',
     shortTag: 'v3',
     branch: '3.x',
     tagColor: 'primary',
@@ -33,9 +33,9 @@ const tagMap: Record<Version['shortTag'], string> = {
   v4: '4x'
 }
 
-export const useDocsTags = () => {
+export const useDocsTags = (framework: string) => {
   const { data: tags } = useAsyncData('versions', async () => {
-    const { 'dist-tags': distTags } = await $fetch<{ 'dist-tags': Record<string, string> }>('https://registry.npmjs.org/nuxt')
+    const { 'dist-tags': distTags } = await $fetch<{ 'dist-tags': Record<string, string> }>(`https://registry.npmjs.org/${framework}`)
     return Object.fromEntries(
       Object.entries(tagMap).map(([shortTag]: [keyof typeof tagMap, string]) => {
         return [shortTag, distTags[tagMap[shortTag]] ?? distTags.latest]

@@ -8,33 +8,33 @@ function _useHeaderLinks() {
     const to = version.value.path
     return [
       {
-      label: 'Nuxt',
-      icon: 'i-lucide-book-marked',
-      to,
-      search: false,
-      active: route.path.startsWith(to),
-      children: [{
-        label: 'Nuxt Core. useNavigation.ts',
-        description: 'Nuxt Core',
-        icon: 'i-lucide-rocket',
-        to: `${to}/getting-started`,
-        active: route.path.startsWith(`${to}/getting-started`)
-      }, {
-        label: 'Nuxt Content',
-        description: 'Nuxt Content ',
-        icon: 'i-lucide-rocket',
-        to: `${to}/getting-started`,
-        active: route.path.startsWith(`${to}/getting-started`)
+        label: 'Nuxt',
+        icon: 'i-lucide-book-marked',
+        to,
+        search: false,
+        active: route.path.startsWith(to),
+        children: [{
+          label: 'Nuxt Core. useNavigation.ts',
+          description: 'Nuxt Core',
+          icon: 'i-lucide-rocket',
+          to: `${to}/getting-started`,
+          active: route.path.startsWith(`${to}/getting-started`)
+        }, {
+          label: 'Nuxt Content',
+          description: 'Nuxt Content ',
+          icon: 'i-lucide-rocket',
+          to: `${to}/getting-started`,
+          active: route.path.startsWith(`${to}/getting-started`)
+        },
+        {
+          label: 'Nuxt UI',
+          description: 'Nuxt UI ',
+          icon: 'i-lucide-rocket',
+          to: `${to}/getting-started`,
+          active: route.path.startsWith(`${to}/getting-started`)
+        }]
       },
-    {
-        label: 'Nuxt UI',
-        description: 'Nuxt UI ',
-        icon: 'i-lucide-rocket',
-        to: `${to}/getting-started`,
-        active: route.path.startsWith(`${to}/getting-started`)
-      }]
-    },    
-    {
+      {
         label: 'Golang',
         description: 'Golang',
         icon: 'i-lucide-messages-square',
@@ -48,7 +48,7 @@ function _useHeaderLinks() {
         to: `${to}/spec`,
         active: route.path.startsWith(`${to}/spec`)
       }
-  ]
+    ]
   })
 
   return { headerLinks }
@@ -125,7 +125,7 @@ const _useNavigation = () => {
       }
       return link
     })
-    .filter((link): link is NonNullable<typeof link> => Boolean(link))
+      .filter((link): link is NonNullable<typeof link> => Boolean(link))
   ])
 
   type SearchGroup = {
@@ -250,3 +250,22 @@ const _useNavigation = () => {
 }
 
 export const useNavigation = import.meta.client ? createSharedComposable(_useNavigation) : _useNavigation
+import type { ContentNavigationItem } from '@nuxt/content'
+
+
+export function useNavigationChapter(navigation: ContentNavigationItem[]) {
+  const route = useRoute()
+  const navigationChapter = []
+  for (const nav of navigation[0].children) {   
+    navigationChapter.push(
+      {
+        active:route.path.startsWith(nav.path),
+        // description: nav.title,
+        icon: nav.icon,
+        label: nav.title,
+        to: nav.path
+      }
+    )
+  }
+  return navigationChapter
+}
