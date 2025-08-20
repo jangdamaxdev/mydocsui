@@ -25,8 +25,8 @@ const { tags } = useDocsTags('nuxt')
       >
         <span class="truncate">{{ version.label }}</span>
 
-        <UBadge v-if="tags[version.shortTag]" :color="version.tagColor" variant="subtle" size="sm" class="rounded-full">
-          {{ tags[version.shortTag] }}
+        <UBadge v-if="tags" :color="version.tagColor" variant="subtle" size="sm" class="rounded-full">
+          {{ tags }}
         </UBadge>
       </UButton>
     </template>
@@ -35,8 +35,8 @@ const { tags } = useDocsTags('nuxt')
       <div class="flex items-center gap-1.5">
         <span class="truncate">{{ item.label }}</span>
 
-        <UBadge v-if="item.shortTag" :color="item.tagColor" variant="subtle" size="sm" class="rounded-full">
-          {{ tags[item.shortTag] }}
+        <UBadge v-if="item.branch" :color="item.tagColor" variant="subtle" size="sm" class="rounded-full">
+          {{ item.branch == 'live' ? tags : '0.0.1' }}
         </UBadge>
       </div>
     </template>

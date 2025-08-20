@@ -1,5 +1,7 @@
 export default defineNuxtRouteMiddleware((to) => {
-  if (to.path.startsWith('/docs/') && !to.path.startsWith('/docs/4.x') && !to.path.startsWith('/docs/3.x')) {
-    return to.fullPath.replace('/docs', '/docs/4.x')
-  }
+  
+  // if (to.path.startsWith('/nuxt/nuxtcore') && !to.path.startsWith('/nuxt/nuxtcore/live') && !to.path.startsWith('/nuxt/vi')) {
+  //   return to.fullPath.replace('/nuxt', '/nuxt/live')
+  // }
+
 })

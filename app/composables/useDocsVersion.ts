@@ -1,47 +1,50 @@
 import type { BadgeProps } from '@nuxt/ui'
-
+import type { Collections } from '@nuxt/content'
 interface Version {
   label: string
-  shortTag: 'v4' | 'v3'
-  branch: string
+  // shortTag: 'v4' | 'v3'
+  branch: 'live' | 'vi'
   tagColor: BadgeProps['color']
   path: string
-  collection: 'docsv3' | 'docsv4'
+  collection: keyof Collections
 }
 
 const versions: Version[] = [
   {
-    label: 'Version 4444444',
-    shortTag: 'v4',
-    branch: 'main',
+    label: 'Version English',
+    // shortTag: 'v4',
+    branch: 'live',
     tagColor: 'info',
-    path: '/docs/4.x',
-    collection: 'docsv4'
+    path: '/nuxt/nuxtcore/live',
+    collection: 'nuxtcore'
   },
   {
-    label: 'Version 3333333',
-    shortTag: 'v3',
-    branch: '3.x',
+    label: 'Tiếng Việt',
+    // shortTag: 'v3',
+    branch: 'vi',
     tagColor: 'primary',
-    path: '/docs/3.x',
-    collection: 'docsv3'
+    path: '/nuxt/nuxtcore/vi',
+    collection: 'nuxtcore'
   }
 ]
 
-const tagMap: Record<Version['shortTag'], string> = {
-  v3: '3x',
-  v4: '4x'
+const collectionMap: Record<keyof Collections, string> = {
+  nuxtcore: 'nuxt',
+  nuxtcontent: '@nuxt/content',
+  nuxtui: '@nuxt/ui',
 }
 
-export const useDocsTags = (framework: string) => {
-  const { data: tags } = useAsyncData('versions', async () => {
-    const { 'dist-tags': distTags } = await $fetch<{ 'dist-tags': Record<string, string> }>(`https://registry.npmjs.org/${framework}`)
-    return Object.fromEntries(
-      Object.entries(tagMap).map(([shortTag]: [keyof typeof tagMap, string]) => {
-        return [shortTag, distTags[tagMap[shortTag]] ?? distTags.latest]
-      })
-    )
+export const useDocsTags = (framework: keyof Collections = 'nuxtcore') => {
+  const { data: tags } = useAsyncData('versions', async () => {  
+    const { 'dist-tags': distTags } = await $fetch<{ 'dist-tags': Record<string, string> }>(`https://registry.npmjs.org/${collectionMap[framework]}`)
+    return distTags.latest
+    // return Object.fromEntries(
+    //   Object.entries(tagMap).map(([shortTag]: [keyof typeof tagMap, string]) => {
+    //     return [shortTag, distTags[tagMap[shortTag]] ?? distTags.latest]
+    //   })
+    // )
   }, { default: () => ({}) })
+// console.log('tags', tags);
 
   return { tags }
 }
@@ -50,10 +53,9 @@ export const useDocsVersion = () => {
   const route = useRoute()
 
   const version = computed(() => {
-    if (route.path.startsWith('/docs/3.x')) {
-      return versions.find(v => v.path === '/docs/3.x')
+    if (route.path.startsWith('/nuxt/nuxtcore/vi')) {
+      return versions.find(v => v.path === '/nuxt/nuxtcore/vi')
     }
-
     return versions[0]
   })
 

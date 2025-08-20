@@ -65,6 +65,7 @@ export default defineNuxtConfig({
     }
   },
   routeRules: {
+    
     // Pre-render
     '/': { prerender: true },
     '/blog/rss.xml': { prerender: true },
@@ -75,6 +76,7 @@ export default defineNuxtConfig({
     '/admin': { ssr: false },
     '/admin/**': { ssr: false },
     // Redirects
+    '/nuxt/nuxtcore/live/getting-started': { redirect: '/nuxt/nuxtcore/live/getting-started/introduction', prerender: false },
     '/docs': { redirect: '/docs/getting-started/introduction', prerender: false },
     '/docs/3.x': { redirect: '/docs/3.x/getting-started/introduction', prerender: false },
     '/docs/4.x': { redirect: '/docs/4.x/getting-started/introduction', prerender: false },

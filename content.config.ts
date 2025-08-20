@@ -1,76 +1,48 @@
-import { defineContentConfig, defineCollection, z } from '@nuxt/content'
+import { defineContentConfig, defineCollection, z, type Collections } from '@nuxt/content'
 
-const docsV3Source = {
-  cwd: process.env.NUXT_PATH ?? undefined,
-  repository: !process.env.NUXT_PATH ? 'https://github.com/nuxt/nuxt/tree/3.x' : undefined,
-  include: 'docs/**/*',
-  exclude: ['docs/**/*.json'],
-  prefix: '/docs/3.x'
-}
 
-const docsV4Source = {
-  cwd: process.env.NUXT_V4_PATH ?? undefined,
-  repository: !process.env.NUXT_V4_PATH ? 'https://github.com/nuxt/nuxt/tree/main' : undefined,
-  include: 'docs/**/*',
-  exclude: ['docs/**/*.json'],
-  prefix: '/docs/4.x'
-}
 const nuxtcontentLIVE = {
   // cwd: process.env.NUXT_V4_PATH ?? undefined,
   repository: 'https://github.com/nuxt/content/tree/main',
   include: 'docs/content/docs/**/*',
   // exclude: ['docs/**/*.json'],
-  prefix: '/nuxtcontent/live'
+  prefix: '/nuxt/nuxtcontent/live'
 }
 const nuxtcontentVI = {
   // cwd: process.env.NUXT_V4_PATH ?? undefined,
   repository: 'https://github.com/jangdamaxdev/docs/tree/main',
   include: 'nuxt/nuxtcontent/**/*',
   // exclude: ['docs/**/*.json'],
-  prefix: '/nuxtcontent/vi'
+  prefix: '/nuxt/nuxtcontent/vi'
 }
 const nuxtcoreLIVE = {
   // cwd: process.env.NUXT_V4_PATH ?? undefined,
   repository: 'https://github.com/nuxt/nuxt/tree/main',
   include: 'docs/**/*',
   exclude: ['docs/**/*.json'],
-  prefix: '/nuxt/live'
+  prefix: '/nuxt/nuxtcore/live'
 }
 const nuxtcoreVI = {
   // cwd: process.env.NUXT_V4_PATH ?? undefined,
   repository: 'https://github.com/jangdamaxdev/docs/tree/main',
   include: 'nuxt/nuxt/**/*',
   // exclude: ['docs/**/*.json'],
-  prefix: '/nuxt/vi'
+  prefix: 'nuxt/nuxtcore/vi'
 }
 const nuxtuiLIVE = {
   // cwd: process.env.NUXT_V4_PATH ?? undefined,
   repository: 'https://github.com/nuxt/ui/tree/v3',
   include: 'docs/content/**/*',
   exclude: ['docs/**/*.json', 'showcase.yml', 'pro/**/*'],
-  prefix: '/nuxtui/live'
+  prefix: '/nuxt/nuxtui/live'
 }
 const nuxtuiVI = {
   // cwd: process.env.NUXT_V4_PATH ?? undefined,
   repository: 'https://github.com/jangdamaxdev/docs/tree/main',
   include: 'nuxt/nuxtui/**/*',
   // exclude: ['docs/**/*.json'],
-  prefix: '/nuxtui/vi'
+  prefix: '/nuxt/nuxtui/vi'
 }
-const examplesV3Source = {
-  cwd: process.env.NUXT_EXAMPLES_PATH ?? undefined,
-  repository: !process.env.NUXT_EXAMPLES_PATH ? 'https://github.com/nuxt/examples' : undefined,
-  include: '.docs/**/*',
-  prefix: '/docs/3.x/4.examples'
-}
-
-const examplesV4Source = {
-  cwd: process.env.NUXT_EXAMPLES_PATH ?? undefined,
-  repository: !process.env.NUXT_EXAMPLES_PATH ? 'https://github.com/nuxt/examples' : undefined,
-  include: '.docs/**/*',
-  prefix: '/docs/4.x/4.examples'
-}
-
 const Button = z.object({
   label: z.string(),
   icon: z.string().optional(),
@@ -103,7 +75,7 @@ const NuxtUISchema = z.object({
 })
 export default defineContentConfig({
   collections: {
-    nuxt: defineCollection({
+    nuxtcore: defineCollection({
       type: 'page',
       source: [nuxtcoreLIVE, nuxtcoreVI],
       schema: z.object({
@@ -123,22 +95,6 @@ export default defineContentConfig({
       type: 'page',
       source: [nuxtuiLIVE, nuxtuiVI],
       schema: NuxtUISchema      
-    }),
-    docsv3: defineCollection({
-      type: 'page',
-      source: [docsV3Source, examplesV3Source],
-      schema: z.object({
-        titleTemplate: z.string().optional(),
-        links: z.array(Button)
-      })
-    }),
-    docsv4: defineCollection({
-      type: 'page',
-      source: [docsV4Source, examplesV4Source],
-      schema: z.object({
-        titleTemplate: z.string().optional(),
-        links: z.array(Button)
-      })
-    }),  
+    }),    
   }
 })
