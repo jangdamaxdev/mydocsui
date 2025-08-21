@@ -1,14 +1,15 @@
-import type { ContentNavigationItem} from '@nuxt/content'
+import type { ContentNavigationItem } from '@nuxt/content'
 
 export function navPageFromPath(path: string, tree: ContentNavigationItem[]): ContentNavigationItem | undefined {
-  // console.log('tree', tree);
-  
+
   for (const file of tree) {
-    
+    // if (file.title == 'Docs') {
+    //   file.title = 'Live'
+    //   console.log('title', file.title);
+    // }
     if (file.path === path) {
       return file
     }
-
     if (file.children) {
       const result = navPageFromPath(path, file.children)
       if (result) {
@@ -16,7 +17,7 @@ export function navPageFromPath(path: string, tree: ContentNavigationItem[]): Co
       }
     }
   }
-  // return tree[0].children.filter(item => item.path == path)
+
 }
 
 

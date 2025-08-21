@@ -3,23 +3,22 @@ import { kebabCase } from "scule";
 import type { ContentNavigationItem } from "@nuxt/content";
 import { findPageBreadcrumb } from "@nuxt/content/utils";
 import { mapContentNavigation } from "#ui-pro/utils";
+console.log('runnig slug');
 
 definePageMeta({
   heroBackground: "opacity-30",
   key: "docs",
-
+  middleware: ['nuxtcore-route']
 });
 
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
-console.log('navigation in slug', navigation.value);
-
 const route = useRoute();
 const nuxtApp = useNuxtApp();
 const { version } = useDocsVersion();
-console.log('version in slug', version.value);
+// console.log('version in slug', version.value);
 
 const path = computed(() => route.path.replace(/\/$/, ""));
-console.log('path in slug', path.value); // /nuxt/live/guide/concepts/auto-imports
+// console.log('path in slug. Quan trọng để lấy page. Cần tới được file MD', path.value); // /nuxt/live/guide/concepts/auto-imports
 
 const asideNavigation = computed(() => {
   const path = [
@@ -28,11 +27,10 @@ const asideNavigation = computed(() => {
   ]
     .filter(Boolean)
     .join("/");
-console.log('patttttttttttth', path);
-
+// console.log('path for asideNavigation', path);
   return navPageFromPath(path, navigation.value)?.children || [];
 });
-console.log("asideNavigation", asideNavigation.value);
+// console.log("asideNavigation", asideNavigation.value);
 
 const navigationChapter = computed(
   () => useNavigationChapter(navigation.value) ?? [],

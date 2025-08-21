@@ -13,50 +13,38 @@ const { searchGroups, searchLinks, searchTerm } = useNavigation();
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
   useAsyncData(
-    "navigation",
-    () => 
-  
-        queryCollectionNavigation("nuxt",).then(
-          (data) => data[0]?.children,
-        ),
-        // queryCollectionNavigation("docsv4", ["titleTemplate"]).then(
-        //   (data) => data[0]?.children,
-        // ),
-     
-    {
-      transform: (data) => data.flat(),
-      watch: [version],
+    'navigation',
+    () => {
+      return Promise.all([
+        queryCollectionNavigation('nuxtcore'),//.then(data => data[0]?.children),
+        queryCollectionNavigation('nuxtcontent'),//.then(data => data[0]?.children),
+        queryCollectionNavigation('nuxtui'),//.then(data => data[0]?.children),
+      ])
     },
+    {
+      transform: data => data.flatMap(item => item[0].children),
+      watch: [version],
+    }
   ),
   useLazyAsyncData(
-    "search",
-    () =>
-    //  {
-      // return Promise.all([
-        queryCollectionSearchSections("nuxt"),
-        // queryCollectionSearchSections("docsv4"),
-      // ]);
-    // },
+    'search',
+    () => {
+      return Promise.all([
+        queryCollectionSearchSections('nuxtcore'),
+        queryCollectionSearchSections('nuxtcontent'),
+        queryCollectionSearchSections('nuxtui'),
+      ])
+    },
     {
       server: false,
-      transform: (data) => data.flat(),
+      transform: data => data.flat(),
       watch: [version],
-    },
+    }
   ),
-]);
+])
 
-const versionNavigation = computed(
-  () =>
-    navigation.value?.filter((item) => item.path === version.value.path) ?? [],
-);
-const versionFiles = computed(
-  () =>
-    files.value?.filter((file) => {
-      return version.value.path === "/nuxt/live"
-        ? file.id.startsWith("/nuxt/live/")
-        : !file.id.startsWith("/nuxt/live");
-    }) ?? [],
-);
+const versionNavigation = computed(() => [navPageFromPath(version.value.path, navigation.value)])
+const versionFiles = computed(() => files.value?.filter(file => file.id.startsWith(version.value.path) ?? []))
 
 provide("navigation", versionNavigation);
 </script>
@@ -76,7 +64,7 @@ provide("navigation", versionNavigation);
         :navigation="versionNavigation"
         :groups="searchGroups"
         :links="searchLinks"
-        :fuse="{ resultLimit: 42 }"
+        :fuse="{ resultLimit: 20 }"
       />
     </ClientOnly>
   </UApp>

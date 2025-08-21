@@ -3,28 +3,25 @@ import type { Collections } from '@nuxt/content'
 interface Version {
   label: string
   // shortTag: 'v4' | 'v3'
-  branch: 'live' | 'vi'
+  shortTag: 'live' | 'vi'
   tagColor: BadgeProps['color']
   path: string
-  collection: keyof Collections
 }
 
 const versions: Version[] = [
   {
-    label: 'Version English',
+    label: 'English(Live)',
     // shortTag: 'v4',
-    branch: 'live',
+    shortTag: 'live',
     tagColor: 'info',
     path: '/nuxt/nuxtcore/live',
-    collection: 'nuxtcore'
   },
   {
     label: 'Tiếng Việt',
     // shortTag: 'v3',
-    branch: 'vi',
+    shortTag: 'vi',
     tagColor: 'primary',
     path: '/nuxt/nuxtcore/vi',
-    collection: 'nuxtcore'
   }
 ]
 
@@ -35,16 +32,19 @@ const collectionMap: Record<keyof Collections, string> = {
 }
 
 export const useDocsTags = (framework: keyof Collections = 'nuxtcore') => {
-  const { data: tags } = useAsyncData('versions', async () => {  
+  const { data: tags } = useAsyncData('versions', async () => {
     const { 'dist-tags': distTags } = await $fetch<{ 'dist-tags': Record<string, string> }>(`https://registry.npmjs.org/${collectionMap[framework]}`)
-    return distTags.latest
+    return {
+      live: distTags.latest,
+      vi: '0.0.1'
+    }
     // return Object.fromEntries(
     //   Object.entries(tagMap).map(([shortTag]: [keyof typeof tagMap, string]) => {
     //     return [shortTag, distTags[tagMap[shortTag]] ?? distTags.latest]
     //   })
     // )
   }, { default: () => ({}) })
-// console.log('tags', tags);
+  // console.log('tags', tags);
 
   return { tags }
 }
@@ -61,15 +61,15 @@ export const useDocsVersion = () => {
 
   const items = computed(() => versions.map(v => ({
     ...v,
-    ...(v.branch === version.value.branch
+    ...(v.shortTag === version.value.shortTag
       ? {
-          checked: true,
-          color: v.tagColor,
-          type: 'checkbox' as const
-        }
+        checked: true,
+        color: v.tagColor,
+        type: 'checkbox' as const
+      }
       : {
-          to: route.path.replace(version.value.path, v.path)
-        })
+        to: route.path.replace(version.value.path, v.path)
+      })
   })))
 
   return {

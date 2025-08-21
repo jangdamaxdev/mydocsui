@@ -13,9 +13,9 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     'navigation',
     () => {
       return Promise.all([
-        queryCollectionNavigation('nuxtcore').then(data => data[0]?.children),
-        queryCollectionNavigation('nuxtcontent').then(data => data[0]?.children),
-        queryCollectionNavigation('nuxtui').then(data => data[0]?.children),
+        queryCollectionNavigation('nuxtcore'),//.then(data => data[0]?.children),
+        queryCollectionNavigation('nuxtcontent'),//.then(data => data[0]?.children),
+        queryCollectionNavigation('nuxtui'),//.then(data => data[0]?.children),
       ])
     },
     {
@@ -39,7 +39,7 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     }
   ),
 ])
-
+console.log("navigation", navigation.value); 
 // onNuxtReady(() => fetchList())
 
 useHead({
@@ -62,35 +62,11 @@ if (import.meta.server) {
     twitterSite: 'nuxt_js',
   })
 }
-// const [{ data: navigation2 }, { data: files2 }] = await Promise.all([
-//   useAsyncData(
-//     "navigation2",
-//     () =>
-//       queryCollectionNavigation("nuxtui").then(
-//         (data) => {
-//           // console.log("queryCollectionNavigation nuxtcontent", data);
-//           return data[0]?.children;
-//         },
-//       ),
-//     {
-//       transform: data => data.flat(),
-//       // watch: [version]
-//     },
-//   ),
-//   useLazyAsyncData(
-//     "search",
-//     () => queryCollectionSearchSections("nuxtui"),
 
-//     {
-//       server: false,
-//       transform: data => data.flat(),
-//       // watch: [version]
-//     },
-//   ),
-// ]);
-// console.log("navigation", navigation.value);
+const versionNavigation = computed(() => [navPageFromPath(version.value.path, navigation.value)])
+const versionFiles = computed(() => files.value?.filter(file => file.id.startsWith(version.value.path) ?? []))
 
-const versionNavigation = computed(() => navigation.value?.filter(item => item.path === version.value.path) ?? [])
+// const versionNavigation = computed(() => navigation.value?.filter(item => item.path === version.value.path) ?? [])
 // const versionFiles = computed(
 //   () =>
 //     files.value?.filter((file) => {
@@ -99,10 +75,8 @@ const versionNavigation = computed(() => navigation.value?.filter(item => item.p
 //         : !file.id.startsWith("/nuxt/live");
 //     }) ?? [],
 // );
-const versionFiles = computed(() => files.value?.filter(file => file.id.startsWith(version.value.path) ?? []))
 
-console.log('navigation', navigation.value, 'versionNavigation', versionNavigation.value)
-// console.log("files", versionFiles.value);
+// console.log('files', versionFiles.value)
 
 provide('navigation', versionNavigation)
 
@@ -137,5 +111,6 @@ onMounted(() => {
         :fuse="{ resultLimit: 20 }"
       />
     </ClientOnly>
+    
   </UApp>
 </template>

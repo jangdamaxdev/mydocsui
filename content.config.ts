@@ -25,9 +25,9 @@ const nuxtcoreLIVE = {
 const nuxtcoreVI = {
   // cwd: process.env.NUXT_V4_PATH ?? undefined,
   repository: 'https://github.com/jangdamaxdev/docs/tree/main',
-  include: 'nuxt/nuxt/**/*',
+  include: 'nuxt/nuxtcore/**/*',
   // exclude: ['docs/**/*.json'],
-  prefix: 'nuxt/nuxtcore/vi'
+  prefix: '/nuxt/nuxtcore/vi'
 }
 const nuxtuiLIVE = {
   // cwd: process.env.NUXT_V4_PATH ?? undefined,
@@ -83,7 +83,7 @@ export default defineContentConfig({
         links: z.array(Button)
       })
     }),
-  nuxtcontent: defineCollection({
+    nuxtcontent: defineCollection({
       type: 'page',
       source: [nuxtcontentLIVE, nuxtcontentVI],
       schema: z.object({
@@ -91,10 +91,10 @@ export default defineContentConfig({
         links: z.array(Button)
       })
     }),
-  nuxtui: defineCollection({
+    nuxtui: defineCollection({
       type: 'page',
       source: [nuxtuiLIVE, nuxtuiVI],
-      schema: NuxtUISchema      
-    }),    
+      schema: NuxtUISchema
+    }),
   }
 })
