@@ -2,7 +2,7 @@ import type { BadgeProps } from '@nuxt/ui'
 import type { Collections } from '@nuxt/content'
 interface Version {
   label: string
-  // shortTag: 'v4' | 'v3'
+  // collection: keyof Collections
   shortTag: 'live' | 'vi'
   tagColor: BadgeProps['color']
   path: string
@@ -11,18 +11,32 @@ interface Version {
 const versions: Version[] = [
   {
     label: 'English(Live)',
-    // shortTag: 'v4',
+    // collection: 'nuxtcore',
     shortTag: 'live',
     tagColor: 'info',
     path: '/nuxt/nuxtcore/live',
   },
   {
     label: 'Tiếng Việt',
-    // shortTag: 'v3',
+    // collection: 'nuxtcore',
     shortTag: 'vi',
     tagColor: 'primary',
     path: '/nuxt/nuxtcore/vi',
-  }
+  },
+  // {
+  //   label: 'English(Live)',
+  //   // collection: 'nuxtcore',
+  //   shortTag: 'live',
+  //   tagColor: 'info',
+  //   path: '/nuxt/nuxtcontent/live',
+  // },
+  // {
+  //   label: 'Tiếng Việt',
+  //   // collection: 'nuxtcontent',
+  //   shortTag: 'vi',
+  //   tagColor: 'primary',
+  //   path: '/nuxt/nuxtcontent/vi',
+  // }
 ]
 
 const collectionMap: Record<keyof Collections, string> = {
@@ -51,13 +65,10 @@ export const useDocsTags = (framework: keyof Collections = 'nuxtcore') => {
 
 export const useDocsVersion = () => {
   const route = useRoute()
-
-  const version = computed(() => {
-    if (route.path.startsWith('/nuxt/nuxtcore/vi')) {
-      return versions.find(v => v.path === '/nuxt/nuxtcore/vi')
-    }
-    return versions[0]
-  })
+  const collection = computed(() => route.path.split('/').slice(2,4).join('/'))
+  const version = computed(() =>    
+      versions.find(v => v.path.includes(collection.value))
+)
 
   const items = computed(() => versions.map(v => ({
     ...v,

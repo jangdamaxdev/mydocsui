@@ -3,34 +3,34 @@ import { kebabCase } from "scule";
 import type { ContentNavigationItem } from "@nuxt/content";
 import { findPageBreadcrumb } from "@nuxt/content/utils";
 import { mapContentNavigation } from "#ui-pro/utils";
-console.log('runnig slug');
+console.log('runnig slug nuxt content');
 
 definePageMeta({
   heroBackground: "opacity-30",
   key: "docs",
-  middleware: ['nuxtcore-route']
+  // middleware: ['nuxtcore-route']
 });
 
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
 const route = useRoute();
 const nuxtApp = useNuxtApp();
 const { version } = useDocsVersion();
-// console.log('version in slug', version.value);
-
+console.log('version in slug', version.value);
+console.log('route.params.slug', version.value.path.split("/"));
 const path = computed(() => route.path.replace(/\/$/, ""));
 // console.log('path in slug. Quan trọng để lấy page. Cần tới được file MD', path.value); // /nuxt/live/guide/concepts/auto-imports
 
 const asideNavigation = computed(() => {
   const path = [
     version.value.path,
-    route.params.slug?.[version.value.path.split("/").length - 2],
+    route.params.slug?.[version.value.path.split("/").length - 3], // version.value.path.split("/") đang trả về ['', 'nuxt', 'nuxtcore', 'live']. độ dài 4
   ]
     .filter(Boolean)
     .join("/");
-// console.log('path for asideNavigation', path);
+console.log('path for asideNavigation', route.params.slug); // ['live', 'getting-started', 'introduction'] tức là phần còn lại sau cấu trúc trang /pages/nuxtcore/*
   return navPageFromPath(path, navigation.value)?.children || [];
 });
-// console.log("asideNavigation", asideNavigation.value);
+console.log("asideNavigation", asideNavigation.value,'nagigation', navigation.value);
 
 const navigationChapter = computed(
   () => useNavigationChapter(navigation.value) ?? [],
@@ -53,7 +53,7 @@ const [{ data: page, status }, { data: surround }] = await Promise.all([
       paintResponse().then(() => {
         return (
           nuxtApp.static[kebabCase(path.value)] ??
-          queryCollection(version.value.collection).path(path.value).first()
+          queryCollection('nuxtcontent').path(path.value).first()
         );
       }),
     {
@@ -67,7 +67,7 @@ const [{ data: page, status }, { data: surround }] = await Promise.all([
         () =>
           nuxtApp.static[`${kebabCase(path.value)}-surround`] ??
           queryCollectionItemSurroundings(
-            version.value.collection,
+            'nuxtcontent',
             path.value,
             {
               fields: ["description"],
@@ -77,7 +77,7 @@ const [{ data: page, status }, { data: surround }] = await Promise.all([
     { watch: [path] },
   ),
 ]);
-console.log("page", page.value, status.value);
+// console.log("page", page.value, status.value);
 
 watch(status, (status) => {
   if (status === "pending") {
