@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
+import { title } from 'valibot'
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
 const logo = useTemplateRef('logo')
@@ -26,28 +27,30 @@ const { version } = useDocsVersion()
 
 const mobileNavigation = computed<ContentNavigationItem[]>(() => {
   // Show Migration and Bridge on mobile only when user is reading them
-  const docsLink = navigation.value.find(link => link.path === version.value.path)
-  if (docsLink && !route.path.startsWith(`${version.value.path}/bridge`) && !route.path.startsWith(`${version.value.path}/migration`)) {
-    docsLink.children = docsLink.children?.filter(link => ![`${version.value.path}/bridge`, `${version.value.path}/migration`].includes(link.path as string)) || []
-  }
+  const docsLink = navPageFromPath(version.value.path, navigation.value)
+  // if (docsLink && !route.path.startsWith(`${version.value.path}/bridge`) && !route.path.startsWith(`${version.value.path}/migration`)) {
+  //   docsLink.children = docsLink.children?.filter(link => ![`${version.value.path}/bridge`, `${version.value.path}/migration`].includes(link.path as string)) || []
+  // }
 
   return [
-    docsLink,
-    ...headerLinks.value.slice(1).map(link => ({
-      ...link,
-      title: link.label,
-      path: link.to,
-      children: link.children?.map(child => ({
-        ...child,
-        title: child.label,
-        path: child.to
-      }))
-    } as ContentNavigationItem)),
-    {
-      title: 'Design Kit',
-      icon: 'i-lucide-palette',
-      path: '/design-kit'
-    }
+     {
+      ...docsLink,
+      title: 'Table of Contents'
+     },    
+    ...headerLinks.value.map(
+      link =>
+        ({
+          ...link,
+          title: link.label,
+          path: link.to,
+          children: link.children?.map(child => ({
+            ...child,
+            title: child.label,
+            path: child.to,
+          })),
+        }) as ContentNavigationItem
+    ),
+  
   ].filter((item): item is ContentNavigationItem => Boolean(item))
 })
 
@@ -59,25 +62,29 @@ const defaultOpen = computed(() => {
 })
 
 const logoContextMenuItems = [
-  [{
-    label: 'Copy logo as SVG',
-    icon: 'i-simple-icons-nuxtdotjs',
-    onSelect() {
-      if (logo.value) {
-        copy(logo.value.$el.outerHTML, {
-          title: 'Nuxt logo copied as SVG',
-          description: 'You can now paste it into your project',
-          icon: 'i-lucide-circle-check',
-          color: 'success'
-        })
-      }
-    }
-  }],
-  [{
-    label: 'Browse design kit',
-    icon: 'i-lucide-shapes',
-    to: '/design-kit'
-  }]
+  [
+    {
+      label: 'Copy logo as SVG',
+      icon: 'i-simple-icons-nuxtdotjs',
+      onSelect() {
+        if (logo.value) {
+          copy(logo.value.$el.outerHTML, {
+            title: 'Nuxt logo copied as SVG',
+            description: 'You can now paste it into your project',
+            icon: 'i-lucide-circle-check',
+            color: 'success',
+          })
+        }
+      },
+    },
+  ],
+  [
+    {
+      label: 'Browse design kit',
+      icon: 'i-lucide-shapes',
+      to: '/design-kit',
+    },
+  ],
 ]
 </script>
 
@@ -119,7 +126,7 @@ const logoContextMenuItems = [
           color="neutral"
           :label="stats ? formatNumber(stats.stars) : '...'"
           :ui="{
-            label: 'hidden sm:inline-flex'
+            label: 'hidden sm:inline-flex',
           }"
         >
           <span class="sr-only">Nuxt on GitHub</span>

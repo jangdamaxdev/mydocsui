@@ -13,7 +13,7 @@ function _useHeaderLinks() {
         label: 'TypeScript',
         description: 'TypeScript',
         icon: 'i-lucide-messages-square',
-        // to: `/typescript/spec`,
+        to: `/typescript/spec`,
         // active: route.path.startsWith(path)
       },
       {
@@ -47,14 +47,14 @@ function _useHeaderLinks() {
         label: 'Golang',
         description: 'Golang',
         icon: 'i-lucide-messages-square',
-        // to: `${to}/spec`,
+        to: `go.dev/spec`,
         // active: route.path.startsWith(`${to}/spec`)
       },
       {
         label: 'Rust',
         description: 'Rust',
         icon: 'i-lucide-messages-square',
-        // to: `${to}/spec`,
+        to: `rust.io/spec`,
         // active: route.path.startsWith(`${to}/spec`)
       }
     ]
@@ -265,7 +265,7 @@ import type { ContentNavigationItem } from '@nuxt/content'
 export function useNavigationChapter(navigation: ContentNavigationItem[]) {
   const route = useRoute()
   const navigationChapter = []
-  for (const nav of navigation[0].children) {
+  for (const nav of navigation) {
     navigationChapter.push(
       {
         active: route.path.startsWith(nav.path),

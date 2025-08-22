@@ -13,9 +13,9 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     'navigation',
     () => {
       return Promise.all([
-        queryCollectionNavigation('nuxtcore'),//.then(data => data[0]?.children),
-        queryCollectionNavigation('nuxtcontent'),//.then(data => data[0]?.children),
-        queryCollectionNavigation('nuxtui'),//.then(data => data[0]?.children),
+        queryCollectionNavigation('nuxtcore').then(data => data[0]?.children),
+        queryCollectionNavigation('nuxtcontent').then(data => data[0]?.children),
+        queryCollectionNavigation('nuxtui').then(data => data[0]?.children),
       ])
     },
     {
@@ -39,7 +39,7 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     }
   ),
 ])
-// console.log("navigation", navigation.value); 
+console.log("navigation APP", navigation.value);
 // onNuxtReady(() => fetchList())
 
 useHead({
@@ -63,22 +63,12 @@ if (import.meta.server) {
   })
 }
 
-const versionNavigation = computed(() => [navPageFromPath(version.value.path, navigation.value)])
+const versionNavigation = computed(() => {
+  return [navPageFromPath(version.value.path, navigation.value)]
+})
 const versionFiles = computed(() => files.value?.filter(file => file.id.startsWith(version.value.path) ?? []))
 
-// const versionNavigation = computed(() => navigation.value?.filter(item => item.path === version.value.path) ?? [])
-// const versionFiles = computed(
-//   () =>
-//     files.value?.filter((file) => {
-//       return version.value.path === "/nuxt/live"
-//         ? file.id.startsWith("/nuxt/live/")
-//         : !file.id.startsWith("/nuxt/live");
-//     }) ?? [],
-// );
-
-// console.log('files', versionFiles.value)
-
-provide('navigation', versionNavigation)
+provide('navigation', navigation)
 
 const appear = ref(false)
 const appeared = ref(false)
@@ -111,6 +101,5 @@ onMounted(() => {
         :fuse="{ resultLimit: 20 }"
       />
     </ClientOnly>
-    
   </UApp>
 </template>

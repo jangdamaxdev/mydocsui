@@ -67,15 +67,14 @@ export const useDocsTags = (framework: keyof Collections = 'nuxtcore') => {
 export const useDocsVersion = () => {
   const route = useRoute()
   const versionCollection = computed(() => route.path.split('/').slice(2, 4).join('/') || 'nuxtcore/vi')
-  const collection = computed(() => route.path.split('/').slice(2, 3).join()|| 'nuxtcore')
+  const collection = computed(() => route.path.split('/').slice(2, 3).join() || 'nuxtcore')
   const versions = computed(() => createVersions(collection.value as keyof Collections))
   // console.log('versions', versions.value);
-  
+
   const version = computed(() =>
     versions.value.find(v => {
-      console.log('versionCollection.value', versionCollection.value);
-      
-      return v.path.includes(versionCollection.value)})
+      return v.path.includes(versionCollection.value)
+    })
   )
 
   const items = computed(() => versions.value.map(v => ({

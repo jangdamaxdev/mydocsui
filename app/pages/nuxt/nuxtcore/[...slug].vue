@@ -14,10 +14,10 @@ const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
 const route = useRoute();
 const nuxtApp = useNuxtApp();
 const { version } = useDocsVersion();
-// console.log('version in slug', version.value);
-// console.log('route.params.slug', version.value.path.split("/"));
+console.log('version.value.path in slug CORE line 17', version.value.path);
+
 const path = computed(() => route.path.replace(/\/$/, ""));
-// console.log('path in slug. Quan trọng để lấy page. Cần tới được file MD', path.value); // /nuxt/live/guide/concepts/auto-imports
+// console.log('path in slug. Quan trọng để lấy page. Cần tới được file MD', path.value);
 
 const asideNavigation = computed(() => {
   const path = [
@@ -26,13 +26,13 @@ const asideNavigation = computed(() => {
   ]
     .filter(Boolean)
     .join("/");
-// console.log('path for asideNavigation', path); // ['live', 'getting-started', 'introduction'] tức là phần còn lại sau cấu trúc trang /pages/nuxtcore/*
+// console.log('path for asideNavigation in slug CORE', path); // ['live', 'getting-started', 'introduction'] tức là phần còn lại sau cấu trúc trang /pages/nuxtcore/*
   return navPageFromPath(path, navigation.value)?.children || [];
 });
-console.log("asideNavigation", asideNavigation.value,'nagigation', navigation.value);
+console.log("Chapter in slug CORE", navPageFromPath(version.value.path, navigation.value)?.children);
 
 const navigationChapter = computed(
-  () => useNavigationChapter(navigation.value) ?? [],
+  () => useNavigationChapter(navPageFromPath(version.value.path, navigation.value)?.children) ?? [],
 );
 
 function paintResponse() {
@@ -76,7 +76,6 @@ const [{ data: page, status }, { data: surround }] = await Promise.all([
     { watch: [path] },
   ),
 ]);
-// console.log("page", page.value, status.value);
 
 watch(status, (status) => {
   if (status === "pending") {
