@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { version, items } = useDocsVersion()
-const { tags } = useDocsTags('nuxtcore')
+const { tags } = useDocsTags(version.value.collection)
 </script>
 
 <template>

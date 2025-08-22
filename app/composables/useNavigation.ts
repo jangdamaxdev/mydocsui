@@ -5,48 +5,57 @@ function _useHeaderLinks() {
   const { version } = useDocsVersion()
 
   const headerLinks = computed(() => {
-    const to = version.value.path
+    const lang = computed(() => version.value.shortTag).value
+
+
     return [
       {
-        label: 'Nuxt',
+        label: 'TypeScript',
+        description: 'TypeScript',
+        icon: 'i-lucide-messages-square',
+        // to: `/typescript/spec`,
+        // active: route.path.startsWith(path)
+      },
+      {
+        label: 'Nuxt meta-framework',
         icon: 'i-lucide-book-marked',
-        to,
+        to: `/nuxt/nuxtcore/${lang}/getting-started`,
         search: false,
-        active: route.path.startsWith(to),
+        active: route.path.startsWith('/nuxt'),
         children: [{
-          label: 'Nuxt Core. useNavigation.ts',
-          description: 'Nuxt Core',
+          label: 'Nuxt Core',
+          description: `Nuxt's goal is to make web development intuitive and performant with a great Developer Experience in mind.`,
           icon: 'i-lucide-rocket',
-          to: `${to}/getting-started`,
-          active: route.path.startsWith(`${to}/getting-started`)
+          to: `/nuxt/nuxtcore/${lang}/getting-started`,
+
         }, {
           label: 'Nuxt Content',
-          description: 'Nuxt Content ',
+          description: `The powerful Git-based CMS designed specifically for Nuxt developers.`,
           icon: 'i-lucide-rocket',
-          to: `${to}/getting-started`,
-          active: route.path.startsWith(`${to}/getting-started`)
+          to: `/nuxt/nuxtcontent/${lang}/getting-started`,
+
         },
         {
           label: 'Nuxt UI',
-          description: 'Nuxt UI ',
+          description: `Nuxt UI harnesses the combined strengths of Reka UI, Tailwind CSS, and Tailwind Variants`,
           icon: 'i-lucide-rocket',
-          to: `${to}/getting-started`,
-          active: route.path.startsWith(`${to}/getting-started`)
+          to: `/nuxt/nuxtui/${lang}/getting-started`,
+
         }]
       },
       {
         label: 'Golang',
         description: 'Golang',
         icon: 'i-lucide-messages-square',
-        to: `${to}/spec`,
-        active: route.path.startsWith(`${to}/spec`)
+        // to: `${to}/spec`,
+        // active: route.path.startsWith(`${to}/spec`)
       },
       {
         label: 'Rust',
         description: 'Rust',
         icon: 'i-lucide-messages-square',
-        to: `${to}/spec`,
-        active: route.path.startsWith(`${to}/spec`)
+        // to: `${to}/spec`,
+        // active: route.path.startsWith(`${to}/spec`)
       }
     ]
   })
@@ -256,10 +265,10 @@ import type { ContentNavigationItem } from '@nuxt/content'
 export function useNavigationChapter(navigation: ContentNavigationItem[]) {
   const route = useRoute()
   const navigationChapter = []
-  for (const nav of navigation[0].children) {   
+  for (const nav of navigation[0].children) {
     navigationChapter.push(
       {
-        active:route.path.startsWith(nav.path),
+        active: route.path.startsWith(nav.path),
         // description: nav.title,
         icon: nav.icon,
         label: nav.title,

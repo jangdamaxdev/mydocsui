@@ -2,42 +2,43 @@ import type { BadgeProps } from '@nuxt/ui'
 import type { Collections } from '@nuxt/content'
 interface Version {
   label: string
-  // collection: keyof Collections
+  collection: keyof Collections
   shortTag: 'live' | 'vi'
   tagColor: BadgeProps['color']
   path: string
 }
-
-const versions: Version[] = [
-  {
-    label: 'English(Live)',
-    // collection: 'nuxtcore',
-    shortTag: 'live',
-    tagColor: 'info',
-    path: '/nuxt/nuxtcore/live',
-  },
-  {
-    label: 'Tiếng Việt',
-    // collection: 'nuxtcore',
-    shortTag: 'vi',
-    tagColor: 'primary',
-    path: '/nuxt/nuxtcore/vi',
-  },
-  // {
-  //   label: 'English(Live)',
-  //   // collection: 'nuxtcore',
-  //   shortTag: 'live',
-  //   tagColor: 'info',
-  //   path: '/nuxt/nuxtcontent/live',
-  // },
-  // {
-  //   label: 'Tiếng Việt',
-  //   // collection: 'nuxtcontent',
-  //   shortTag: 'vi',
-  //   tagColor: 'primary',
-  //   path: '/nuxt/nuxtcontent/vi',
-  // }
-]
+function createVersions(collection: keyof Collections = 'nuxtcore'): Version[] {
+  return [
+    {
+      label: 'English(Live)',
+      shortTag: 'live',
+      collection,
+      tagColor: 'info',
+      path: `/nuxt/${collection}/live`,
+    },
+    {
+      label: 'Tiếng Việt',
+      shortTag: 'vi',
+      collection,
+      tagColor: 'primary',
+      path: `/nuxt/${collection}/vi`,
+    }
+  ]
+}
+// const versionsDefault: Version[] = [
+//   {
+//     label: 'English(Live)',
+//     shortTag: 'live',
+//     tagColor: 'info',
+//     path: '/nuxt/nuxtcore/live',
+//   },
+//   {
+//     label: 'Tiếng Việt',
+//     shortTag: 'vi',
+//     tagColor: 'primary',
+//     path: '/nuxt/nuxtcore/vi',
+//   },
+// ]
 
 const collectionMap: Record<keyof Collections, string> = {
   nuxtcore: 'nuxt',
@@ -65,12 +66,19 @@ export const useDocsTags = (framework: keyof Collections = 'nuxtcore') => {
 
 export const useDocsVersion = () => {
   const route = useRoute()
-  const collection = computed(() => route.path.split('/').slice(2,4).join('/'))
-  const version = computed(() =>    
-      versions.find(v => v.path.includes(collection.value))
-)
+  const versionCollection = computed(() => route.path.split('/').slice(2, 4).join('/') || 'nuxtcore/vi')
+  const collection = computed(() => route.path.split('/').slice(2, 3).join()|| 'nuxtcore')
+  const versions = computed(() => createVersions(collection.value as keyof Collections))
+  // console.log('versions', versions.value);
+  
+  const version = computed(() =>
+    versions.value.find(v => {
+      console.log('versionCollection.value', versionCollection.value);
+      
+      return v.path.includes(versionCollection.value)})
+  )
 
-  const items = computed(() => versions.map(v => ({
+  const items = computed(() => versions.value.map(v => ({
     ...v,
     ...(v.shortTag === version.value.shortTag
       ? {
