@@ -13,7 +13,7 @@ function _useHeaderLinks() {
         label: 'TypeScript',
         description: 'TypeScript',
         icon: 'i-lucide-messages-square',
-        to: `/typescript/spec`,
+        // to: `/typescript/spec`,
         // active: route.path.startsWith(path)
       },
       {
@@ -26,7 +26,7 @@ function _useHeaderLinks() {
           label: 'Nuxt Core',
           description: `Nuxt's goal is to make web development intuitive and performant with a great Developer Experience in mind.`,
           icon: 'i-lucide-rocket',
-          to: `/nuxt/nuxtcore/${lang}/getting-started`,
+          to: `/nuxt/nuxtcore/${lang}/community`,
 
         }, {
           label: 'Nuxt Content',
@@ -47,14 +47,14 @@ function _useHeaderLinks() {
         label: 'Golang',
         description: 'Golang',
         icon: 'i-lucide-messages-square',
-        to: `go.dev/spec`,
+        // to: `go.dev/spec`,
         // active: route.path.startsWith(`${to}/spec`)
       },
       {
-        label: 'Rust',
-        description: 'Rust',
+        label: 'Test',
+        description: 'Test',
         icon: 'i-lucide-messages-square',
-        to: `rust.io/spec`,
+        to: `/docs`,
         // active: route.path.startsWith(`${to}/spec`)
       }
     ]

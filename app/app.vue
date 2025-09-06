@@ -39,7 +39,7 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     }
   ),
 ])
-console.log("navigation APP", navigation.value);
+// console.log("navigation APP", navigation.value);
 // onNuxtReady(() => fetchList())
 
 useHead({

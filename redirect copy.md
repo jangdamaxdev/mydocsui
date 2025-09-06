@@ -36,5 +36,23 @@ routeRules: {
     '/docs/guide/recipes': { redirect: '/nuxt/nuxtcore/guide/recipes/custom-routing', prerender: false },
     '/docs/guide/best-practices': { redirect: '/nuxt/nuxtcore/guide/best-practices/performance', prerender: false },
     '/docs/guide/going-further/custom-routing': { redirect: '/nuxt/nuxtcore/guide/recipes/custom-routing', prerender: false },
+
+
+    // Redirect to live version at https://nuxt.com/ 
+    '/blog': { redirect: 'https://nuxt.com/blog', prerender: false },
+    '/blog/nuxt-on-the-edge': { redirect: 'https://nuxt.com/blog/nuxt-on-the-edge', prerender: false },
+    '/blog/v3-9': { redirect: 'https://nuxt.com/blog/v3-9', prerender: false },
+    '/blog/v3-10': { redirect: 'https://nuxt.com/blog/v3-10', prerender: false },
+    '/blog/v3-15': { redirect: 'https://nuxt.com/blog/v3-15', prerender: false },
+
+    '/modules': { redirect: 'https://nuxt.com/modules', prerender: false },
+    "/modules/tailwindcss": { redirect: 'https://nuxt.com/modules/tailwindcss', prerender: false },
+    "/modules/unocss": { redirect: 'https://nuxt.com/modules/unocss', prerender: false },
+    "/modules/pinia": { redirect: 'https://nuxt.com/modules/pinia', prerender: false },
+    "/modules/harlem": { redirect: 'https://nuxt.com/modules/harlem', prerender: false },
+    "/modules/xstate": { redirect: 'https://nuxt.com/modules/xstate', prerender: false },
+    "/deploy": { redirect: 'https://nuxt.com/deploy', prerender: false },
+
+    
   }
 ```

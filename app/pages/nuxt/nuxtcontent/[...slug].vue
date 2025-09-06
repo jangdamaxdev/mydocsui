@@ -7,20 +7,21 @@ import { mapContentNavigation } from "#ui-pro/utils";
 definePageMeta({
   heroBackground: "opacity-30",
   key: "docs",
-  // middleware: ['nuxtcore-route']
 });
 
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
 const route = useRoute();
+//NAVIGATE TO FIRST CONTENT OF CHAPTER
+const chapterNavigation = computed(() => navPageFromPath(route.path, navigation.value))
+if (chapterNavigation.value?.children!) {
+  const firstContent = chapterNavigation.value?.children[0].path
+  navigateTo(firstContent)
+}
+
 const nuxtApp = useNuxtApp();
 const { version } = useDocsVersion();
-
-// console.log('version.value.path in slug CONTENT LINE 18', version.value.path);
-
-
 const path = computed(() => route.path.replace(/\/$/, ""));
-// console.log('path in slug. Quan trọng để lấy page. Cần tới được file MD', path.value); // /nuxt/live/guide/concepts/auto-imports
-
+//TOC
 const asideNavigation = computed(() => {
   const fixIndex = route.params.slug.length >= 3 ? 3 : 2 
   const path = [
@@ -32,7 +33,7 @@ const asideNavigation = computed(() => {
 // console.log('path for asideNavigation in slug CONTENT', path); // ['live', 'getting-started', 'introduction'] tức là phần còn lại sau cấu trúc trang /pages/nuxtCONTENT/*
   return navPageFromPath(path, navigation.value)?.children || [];
 });
-console.log("asideNavigation in slug CONTENT", asideNavigation.value,'nagigation', navigation.value?.[0].children);
+// console.log("asideNavigation in slug CONTENT", asideNavigation.value,'nagigation', navigation.value?.[0].children);
 
 
 const navigationChapter = computed(
@@ -80,7 +81,6 @@ const [{ data: page, status }, { data: surround }] = await Promise.all([
     { watch: [path] },
   ),
 ]);
-// console.log("page", page.value, status.value);
 
 watch(status, (status) => {
   if (status === "pending") {
