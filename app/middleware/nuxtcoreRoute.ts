@@ -4,6 +4,8 @@
 // ]
 // export default defineNuxtRouteMiddleware((to) => {
 // const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
+// console.log('middleware route', navigation.value);
+
 //   const chapterNavigation = computed(() => navPageFromPath(to.path, navigation.value))
 //   console.log('chapterNavigation', chapterNavigation.value, 'to.path', to.path, "navigation", navigation.value);
 

@@ -7,28 +7,35 @@ import { mapContentNavigation } from '#ui-pro/utils'
 definePageMeta({
   heroBackground: 'opacity-30',
   key: 'docs',
+
 })
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
 const route = useRoute()
-//NAVIGATE TO FIRST CONTENT OF CHAPTER
-const chapterNavigation = computed(() => navPageFromPath(route.path, navigation.value))
-console.log('chapterNavigation', chapterNavigation.value);
-watch(chapterNavigation, (newChapter) => {
-  if (
-    newChapter?.children?.length &&
-    route.path !== newChapter.children[0].path
-  ) {
-    navigateTo(newChapter.children[0].path)
-  }
-}, { immediate: true })
+// //NAVIGATE TO FIRST CONTENT OF CHAPTER
+// const chapterNavigation = computed(() => navPageFromPath(route.path, navigation.value))
+// console.log('chapterNavigation', chapterNavigation.value);
+// watch(chapterNavigation, chapterNavigation => {
+// console.log('newChapter', chapterNavigation.children);
+
+//   if (chapterNavigation.children) {
+//     navigateTo(chapterNavigation.children[0].path)
+//   }
+// }, { 
+//   immediate: true,
+//   deep: true,
+//   flush: 'sync'
+//  })
 
 const nuxtApp = useNuxtApp()
 const { version } = useDocsVersion()
 const path = computed(() => route.path.replace(/\/$/, ''))
-console.log('pathhhhhhhhhhhhhh', path.value);
 
-//TOC
+// CHAPTER
+const navigationChapter = computed(
+  () => useNavigationChapter(navPageFromPath(version.value.path, navigation.value)?.children) ?? []
+)
+// Table of content
 const asideNavigation = computed(() => {
   const path = [
     version.value.path,
@@ -39,9 +46,6 @@ const asideNavigation = computed(() => {
   return navPageFromPath(path, navigation.value)?.children || []
 })
 
-const navigationChapter = computed(
-  () => useNavigationChapter(navPageFromPath(version.value.path, navigation.value)?.children) ?? []
-)
 
 function paintResponse() {
   if (import.meta.server) {
@@ -117,7 +121,8 @@ const breadcrumb = computed(() => {
   }
 
   return links
-})
+}
+)
 
 // const editLink = computed(
 //   () =>
