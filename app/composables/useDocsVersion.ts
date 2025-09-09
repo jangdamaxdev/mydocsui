@@ -69,8 +69,6 @@ export const useDocsVersion = () => {
   const versionCollection = computed(() => route.path.split('/').slice(2, 4).join('/') || 'nuxtcore/vi')
   const collection = computed(() => route.path.split('/').slice(2, 3).join() || 'nuxtcore')
   const versions = computed(() => createVersions(collection.value as keyof Collections))
-  // console.log('versions', versions.value);
-
   const version = computed(() =>
     versions.value.find(v => {
       return v.path.includes(versionCollection.value)

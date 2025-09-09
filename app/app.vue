@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
 const { version } = useDocsVersion()
-// console.log('version from app.vue xem path có dạng', version.value)
+
 
 const { searchGroups, searchLinks, searchTerm } = useNavigation()
 // const { fetchList } = useModules()
@@ -39,7 +39,6 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     }
   ),
 ])
-// console.log("navigation APP", navigation.value);
 // onNuxtReady(() => fetchList())
 
 useHead({
@@ -68,7 +67,6 @@ const versionNavigation = computed(() => {
 })
 const versionFiles = computed(() => files.value?.filter(file => file.id.startsWith(version.value.path) ?? []))
 useState('navigation', () => navigation)
-provide('navigation', navigation)
 
 const appear = ref(false)
 const appeared = ref(false)

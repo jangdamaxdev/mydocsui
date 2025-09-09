@@ -9,7 +9,9 @@ definePageMeta({
   key: "docs",
 });
 
-const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
+// const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
+const navigation = useState<ContentNavigationItem[]>('navigation')
+
 const route = useRoute();
 //NAVIGATE TO FIRST CONTENT OF CHAPTER
 const chapterNavigation = computed(() => navPageFromPath(route.path, navigation.value))
@@ -23,7 +25,6 @@ const { version } = useDocsVersion();
 const path = computed(() => route.path.replace(/\/$/, ""));
 //TOC
 const asideNavigation = computed(() => {
-  const fixIndex = route.params.slug.length >= 3 ? 3 : 2 
   const path = [
     version.value.path,
     route.params.slug?.[version.value.path.split("/").length - 3], // version.value.path.split("/") đang trả về ['', 'nuxt', 'nuxtCONTENT', 'live']. độ dài 4

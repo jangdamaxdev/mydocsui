@@ -75,17 +75,17 @@ watch(status, status => {
 })
 
 watch(
-  [page, asideNavigation],
-  ([page, asideNavigation]) => {
-    if (!page) {    
+  page,
+  page => {
+    if (!page) {
       throw createError({
         statusCode: 404,
-        statusMessage: 'Page not found of Slug Core',
+        statusMessage: '[Nuxt Core] Page not found',
         fatal: true,
       })
     }
   },
-  { immediate: true}
+  { immediate: true }
 )
 
 const breadcrumb = computed(() => {
@@ -107,10 +107,11 @@ const breadcrumb = computed(() => {
   return links
 })
 
-// const editLink = computed(
-//   () =>
-//     `https://github.com/nuxt/nuxt/edit/${version.value.branch}/${page?.value?.stem?.replace(/docs\/\d\.x/, "docs")}.${page?.value?.extension}`,
-// );
+const editLink = computed(() => {
+  const lang = '/' + version.value.shortTag
+  const filepath = page?.value?.stem?.replace(lang, '') + '.md'
+  return `https://github.com/jangdamaxdev/docs/edit/${version.value.collection}/${filepath}`
+})
 
 // const communityLinks = [{
 //   icon: 'i-lucide-heart',
@@ -209,15 +210,9 @@ const breadcrumb = computed(() => {
             <USeparator class="mt-6 mb-10">
               <!-- ĐOẠN CHO PHÉP EDIT GITHUB CONTENT -->
               <div class="flex items-center gap-2 text-sm text-muted">
-                <!-- <UButton
-                  size="sm"
-                  variant="link"
-                  color="neutral"
-                  :to="editLink"
-                  target="_blank"
-                >
+                <UButton size="sm" variant="link" color="neutral" :to="editLink" target="_blank">
                   Edit this page on GitHub
-                </UButton> -->
+                </UButton>
               </div>
             </USeparator>
             <UContentSurround :surround="surround" />

@@ -10,13 +10,6 @@ function _useHeaderLinks() {
 
     return [
       {
-        label: 'TypeScript',
-        description: 'TypeScript',
-        icon: 'i-lucide-messages-square',
-        // to: `/typescript/spec`,
-        // active: route.path.startsWith(path)
-      },
-      {
         label: 'Nuxt meta-framework',
         icon: 'i-lucide-book-marked',
         to: `/nuxt/nuxtcore/${lang}/getting-started`,
@@ -26,13 +19,15 @@ function _useHeaderLinks() {
           label: 'Nuxt Core',
           description: `Nuxt's goal is to make web development intuitive and performant with a great Developer Experience in mind.`,
           icon: 'i-lucide-rocket',
-          to: `/nuxt/nuxtcore/${lang}/community`,
+          to: `/nuxt/nuxtcore/${lang}/getting-started`,
+          active: route.path.startsWith('/nuxt/nuxtcore'),
 
         }, {
           label: 'Nuxt Content',
           description: `The powerful Git-based CMS designed specifically for Nuxt developers.`,
           icon: 'i-lucide-rocket',
           to: `/nuxt/nuxtcontent/${lang}/getting-started`,
+          active: route.path.startsWith('/nuxt/nuxtcontent'),
 
         },
         {
@@ -40,8 +35,16 @@ function _useHeaderLinks() {
           description: `Nuxt UI harnesses the combined strengths of Reka UI, Tailwind CSS, and Tailwind Variants`,
           icon: 'i-lucide-rocket',
           to: `/nuxt/nuxtui/${lang}/getting-started`,
+          active: route.path.startsWith('/nuxt/nuxtui'),
 
         }]
+      },
+      {
+        label: 'TypeScript',
+        description: 'TypeScript',
+        icon: 'i-lucide-messages-square',
+        // to: `/typescript/spec`,
+        // active: route.path.startsWith(path)
       },
       {
         label: 'Golang',

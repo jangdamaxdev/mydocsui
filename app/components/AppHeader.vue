@@ -1,42 +1,21 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
-import { title } from 'valibot'
 
-const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
-const logo = useTemplateRef('logo')
+// const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
+const navigation = useState<ContentNavigationItem[]>('navigation')
 const route = useRoute()
 const stats = useStats()
-const { copy } = useClipboard()
 const { headerLinks } = useHeaderLinks()
 const { version } = useDocsVersion()
-
-// const { tags } = useDocsTags()
-
-// const latestVersion = computed(() => {
-//   const versionMatch = stats.value?.version?.match(/\d+\.\d+/)
-//   return versionMatch ? versionMatch[0] : undefined
-// })
-
-// const mobileDocsVersion = computed(() =>
-//   route.path.startsWith('/docs')
-//     ? version.value.shortTag !== 'v4'
-//       ? `${version.value.shortTag} (${tags[version.value.shortTag]})`
-//       : version.value.shortTag
-//     : undefined
-// )
-
 const mobileNavigation = computed<ContentNavigationItem[]>(() => {
   // Show Migration and Bridge on mobile only when user is reading them
-  const docsLink = navPageFromPath(version.value.path, navigation.value)
-  // if (docsLink && !route.path.startsWith(`${version.value.path}/bridge`) && !route.path.startsWith(`${version.value.path}/migration`)) {
-  //   docsLink.children = docsLink.children?.filter(link => ![`${version.value.path}/bridge`, `${version.value.path}/migration`].includes(link.path as string)) || []
-  // }
-
+  const docsLink = navPageFromPath(version.value.path, navigation.value) 
   return [
-     {
+    {
       ...docsLink,
-      title: 'Table of Contents'
-     },    
+      title: 'Table of Contents',
+      children: docsLink.children?.map(child => ({...child, active: child.path.includes(route.params.slug[1])})),
+    },
     ...headerLinks.value.map(
       link =>
         ({
@@ -50,7 +29,6 @@ const mobileNavigation = computed<ContentNavigationItem[]>(() => {
           })),
         }) as ContentNavigationItem
     ),
-  
   ].filter((item): item is ContentNavigationItem => Boolean(item))
 })
 
@@ -60,52 +38,43 @@ const defaultOpen = computed(() => {
 
   return topLevelWithChildren.some(link => link.children?.some(child => currentPath.startsWith(child.path as string)))
 })
-
-const logoContextMenuItems = [
-  [
-    {
-      label: 'Copy logo as SVG',
-      icon: 'i-simple-icons-nuxtdotjs',
-      onSelect() {
-        if (logo.value) {
-          copy(logo.value.$el.outerHTML, {
-            title: 'Nuxt logo copied as SVG',
-            description: 'You can now paste it into your project',
-            icon: 'i-lucide-circle-check',
-            color: 'success',
-          })
-        }
-      },
-    },
-  ],
-  [
-    {
-      label: 'Browse design kit',
-      icon: 'i-lucide-shapes',
-      to: '/design-kit',
-    },
-  ],
-]
+// const logo = useTemplateRef('logo')
+// const { copy } = useClipboard()
+// const logoContextMenuItems = [
+//   [
+//     {
+//       label: 'Copy logo as SVG',
+//       icon: 'i-simple-icons-nuxtdotjs',
+//       onSelect() {
+//         if (logo.value) {
+//           copy(logo.value.$el.outerHTML, {
+//             title: 'Nuxt logo copied as SVG',
+//             description: 'You can now paste it into your project',
+//             icon: 'i-lucide-circle-check',
+//             color: 'success',
+//           })
+//         }
+//       },
+//     },
+//   ],
+//   [
+//     {
+//       label: 'Browse design kit',
+//       icon: 'i-lucide-shapes',
+//       to: '/design-kit',
+//     },
+//   ],
+// ]
 </script>
 
 <template>
   <UHeader>
     <template #left>
-      <UContextMenu :items="logoContextMenuItems" size="xs">
-        <NuxtLink to="/" class="flex gap-2 items-end" aria-label="Back to home">
-          <NuxtLogo ref="logo" class="block w-auto h-6" />
-
-          <!-- <UTooltip v-if="latestVersion" :text="`Latest release: v${stats?.version || 3}`" class="hidden md:block">
-            <UBadge variant="subtle" size="sm" class="-mb-[2px] rounded font-semibold text-[12px]/3" color="primary">
-              v{{ latestVersion }}
-            </UBadge>
-          </UTooltip>
-
-          <UBadge v-if="mobileDocsVersion" variant="subtle" size="sm" class="block md:hidden -mb-[2px] rounded font-semibold text-[12px]/3" :color="version.tagColor">
-            {{ 'QQ' }}
-          </UBadge> -->
-        </NuxtLink>
-      </UContextMenu>
+      <!-- <UContextMenu :items="logoContextMenuItems" size="xs"> -->
+      <NuxtLink to="/" class="flex gap-2 items-end" aria-label="Back to home">
+        <NuxtLogo ref="logo" class="block w-auto h-6" />
+      </NuxtLink>
+      <!-- </UContextMenu> -->
     </template>
 
     <UNavigationMenu :items="headerLinks" variant="link" :ui="{ linkLeadingIcon: 'hidden' }" />
@@ -129,15 +98,14 @@ const logoContextMenuItems = [
             label: 'hidden sm:inline-flex',
           }"
         >
-          <span class="sr-only">Nuxt on GitHub</span>
+          <span class="sr-only">My GitHub</span>
         </UButton>
       </UTooltip>
     </template>
 
     <template #body>
-      <template v-if="route.path.startsWith('/docs')">
+      <template v-if="route.path.startsWith('/nuxt')">
         <VersionSelect />
-
         <USeparator type="dashed" class="my-6" />
       </template>
 

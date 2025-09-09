@@ -8,10 +8,12 @@ console.log('runnig slug');
 definePageMeta({
   heroBackground: "opacity-30",
   key: "docs",
-  middleware: ['nuxtcore-route']
+  // middleware: ['nuxtcore-route']
 });
 
-const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
+// const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
+const navigation = useState<ContentNavigationItem[]>('navigation')
+
 const route = useRoute();
 const nuxtApp = useNuxtApp();
 const { version } = useDocsVersion();
