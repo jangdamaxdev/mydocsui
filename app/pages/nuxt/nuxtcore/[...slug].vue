@@ -7,25 +7,10 @@ import { mapContentNavigation } from '#ui-pro/utils'
 definePageMeta({
   heroBackground: 'opacity-30',
   key: 'docs',
-
+  middleware: ['nuxt-core-route'],
 })
-
-const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
+const navigation = useState<ContentNavigationItem[]>('navigation')
 const route = useRoute()
-// //NAVIGATE TO FIRST CONTENT OF CHAPTER
-// const chapterNavigation = computed(() => navPageFromPath(route.path, navigation.value))
-// console.log('chapterNavigation', chapterNavigation.value);
-// watch(chapterNavigation, chapterNavigation => {
-// console.log('newChapter', chapterNavigation.children);
-
-//   if (chapterNavigation.children) {
-//     navigateTo(chapterNavigation.children[0].path)
-//   }
-// }, { 
-//   immediate: true,
-//   deep: true,
-//   flush: 'sync'
-//  })
 
 const nuxtApp = useNuxtApp()
 const { version } = useDocsVersion()
@@ -45,7 +30,6 @@ const asideNavigation = computed(() => {
     .join('/')
   return navPageFromPath(path, navigation.value)?.children || []
 })
-
 
 function paintResponse() {
   if (import.meta.server) {
@@ -91,17 +75,17 @@ watch(status, status => {
 })
 
 watch(
-  page,
-  page => {
-    if (!page) {
+  [page, asideNavigation],
+  ([page, asideNavigation]) => {
+    if (!page) {    
       throw createError({
         statusCode: 404,
-        statusMessage: 'Page not found',
+        statusMessage: 'Page not found of Slug Core',
         fatal: true,
       })
     }
   },
-  { immediate: true }
+  { immediate: true}
 )
 
 const breadcrumb = computed(() => {
@@ -121,8 +105,7 @@ const breadcrumb = computed(() => {
   }
 
   return links
-}
-)
+})
 
 // const editLink = computed(
 //   () =>

@@ -67,7 +67,7 @@ const versionNavigation = computed(() => {
   return [navPageFromPath(version.value.path, navigation.value)]
 })
 const versionFiles = computed(() => files.value?.filter(file => file.id.startsWith(version.value.path) ?? []))
-
+useState('navigation', () => navigation)
 provide('navigation', navigation)
 
 const appear = ref(false)

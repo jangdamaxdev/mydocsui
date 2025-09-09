@@ -120,7 +120,7 @@ const logoContextMenuItems = [
       <UTooltip text="GitHub Stars">
         <UButton
           icon="i-simple-icons-github"
-          to="https://go.nuxt.com/github"
+          to="https://github.com/jangdamaxdev/docs"
           target="_blank"
           variant="ghost"
           color="neutral"

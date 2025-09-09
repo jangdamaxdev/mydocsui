@@ -51,7 +51,7 @@ export const useDocsTags = (framework: keyof Collections = 'nuxtcore') => {
     const { 'dist-tags': distTags } = await $fetch<{ 'dist-tags': Record<string, string> }>(`https://registry.npmjs.org/${collectionMap[framework]}`)
     return {
       live: distTags.latest,
-      vi: '0.0.1'
+      vi: '4.0.3'
     }
     // return Object.fromEntries(
     //   Object.entries(tagMap).map(([shortTag]: [keyof typeof tagMap, string]) => {
