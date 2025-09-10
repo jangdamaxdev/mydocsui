@@ -1,54 +1,47 @@
 <script setup lang="ts">
-import { kebabCase } from "scule";
-import type { ContentNavigationItem } from "@nuxt/content";
-import { findPageBreadcrumb } from "@nuxt/content/utils";
-import { mapContentNavigation } from "#ui-pro/utils";
+import { kebabCase } from 'scule'
+import type { ContentNavigationItem } from '@nuxt/content'
+import { findPageBreadcrumb } from '@nuxt/content/utils'
+import { mapContentNavigation } from '#ui-pro/utils'
 
 definePageMeta({
-  heroBackground: "opacity-30",
-  key: "docs",
-});
+  heroBackground: 'opacity-30',
+  key: 'docs',
+  middleware: ['nuxt-content-route'],
+
+})
 
 // const navigation = inject<Ref<ContentNavigationItem[]>>("navigation", ref([]));
 const navigation = useState<ContentNavigationItem[]>('navigation')
 
-const route = useRoute();
-//NAVIGATE TO FIRST CONTENT OF CHAPTER
-const chapterNavigation = computed(() => navPageFromPath(route.path, navigation.value))
-if (chapterNavigation.value?.children!) {
-  const firstContent = chapterNavigation.value?.children[0].path
-  navigateTo(firstContent)
-}
-
-const nuxtApp = useNuxtApp();
-const { version } = useDocsVersion();
-const path = computed(() => route.path.replace(/\/$/, ""));
+const route = useRoute()
+const nuxtApp = useNuxtApp()
+const { version } = useDocsVersion()
+const path = computed(() => route.path.replace(/\/$/, ''))
+// CHAPTER
+const navigationChapter = computed(
+  () => useNavigationChapter(navPageFromPath(version.value.path, navigation.value)?.children) ?? []
+)
 //TOC
 const asideNavigation = computed(() => {
   const path = [
     version.value.path,
-    route.params.slug?.[version.value.path.split("/").length - 3], // version.value.path.split("/") đang trả về ['', 'nuxt', 'nuxtCONTENT', 'live']. độ dài 4
+    route.params.slug?.[version.value.path.split('/').length - 3], // version.value.path.split("/") đang trả về ['', 'nuxt', 'nuxtCONTENT', 'live']. độ dài 4
   ]
     .filter(Boolean)
-    .join("/");
-// console.log('path for asideNavigation in slug CONTENT', path); // ['live', 'getting-started', 'introduction'] tức là phần còn lại sau cấu trúc trang /pages/nuxtCONTENT/*
-  return navPageFromPath(path, navigation.value)?.children || [];
-});
+    .join('/')
+  return navPageFromPath(path, navigation.value)?.children || []
+})
 // console.log("asideNavigation in slug CONTENT", asideNavigation.value,'nagigation', navigation.value?.[0].children);
-
-
-const navigationChapter = computed(
-  () => useNavigationChapter(navPageFromPath(version.value.path, navigation.value)?.children) ?? [],
-);
 
 function paintResponse() {
   if (import.meta.server) {
-    return Promise.resolve();
+    return Promise.resolve()
   }
-  return new Promise((resolve) => {
-    setTimeout(resolve, 100);
-    requestAnimationFrame(() => setTimeout(resolve, 0));
-  });
+  return new Promise(resolve => {
+    setTimeout(resolve, 100)
+    requestAnimationFrame(() => setTimeout(resolve, 0))
+  })
 }
 
 const [{ data: page, status }, { data: surround }] = await Promise.all([
@@ -56,14 +49,11 @@ const [{ data: page, status }, { data: surround }] = await Promise.all([
     kebabCase(path.value),
     () =>
       paintResponse().then(() => {
-        return (
-          nuxtApp.static[kebabCase(path.value)] ??
-          queryCollection('nuxtcontent').path(path.value).first()
-        );
+        return nuxtApp.static[kebabCase(path.value)] ?? queryCollection('nuxtcontent').path(path.value).first()
       }),
     {
       watch: [path],
-    },
+    }
   ),
   useAsyncData(
     `${kebabCase(path.value)}-surround`,
@@ -71,66 +61,49 @@ const [{ data: page, status }, { data: surround }] = await Promise.all([
       paintResponse().then(
         () =>
           nuxtApp.static[`${kebabCase(path.value)}-surround`] ??
-          queryCollectionItemSurroundings(
-            'nuxtcontent',
-            path.value,
-            {
-              fields: ["description"],
-            },
-          ),
+          queryCollectionItemSurroundings('nuxtcontent', path.value, {
+            fields: ['description'],
+          })
       ),
-    { watch: [path] },
+    { watch: [path] }
   ),
-]);
+])
 
-watch(status, (status) => {
-  if (status === "pending") {
-    nuxtApp.hooks.callHook("page:loading:start");
-  } else if (status === "success" || status === "error") {
-    nuxtApp.hooks.callHook("page:loading:end");
+watch(status, status => {
+  if (status === 'pending') {
+    nuxtApp.hooks.callHook('page:loading:start')
+  } else if (status === 'success' || status === 'error') {
+    nuxtApp.hooks.callHook('page:loading:end')
   }
-});
+})
 
 watch(
   page,
-  (page) => {
+  page => {
     if (!page) {
       throw createError({
         statusCode: 404,
-        statusMessage: "Page not found",
+        statusMessage: '[Nuxt Content] Page not found',
         fatal: true,
-      });
+      })
     }
   },
-  { immediate: true },
-);
+  { immediate: true }
+)
 
 const breadcrumb = computed(() => {
-  const links = mapContentNavigation(
-    findPageBreadcrumb(navigation.value, path.value),
-  ).map((link) => ({
+  const links = mapContentNavigation(findPageBreadcrumb(navigation.value, path.value)).map(link => ({
     label: link.label,
     to: link.to,
-  }));
+  }))
+  return links
+})
 
-  if (
-    path.value.startsWith(`${version.value.path}/bridge`) ||
-    path.value.startsWith(`${version.value.path}/migration`)
-  ) {
-    links.splice(1, 0, {
-      label: "Upgrade Guide",
-      to: `${version.value.path}/getting-started/upgrade`,
-    });
-  }
-
-  return links;
-});
-
-// const editLink = computed(
-//   () =>
-//     `https://github.com/nuxt/nuxt/edit/${version.value.branch}/${page?.value?.stem?.replace(/docs\/\d\.x/, "docs")}.${page?.value?.extension}`,
-// );
-
+const editLink = computed(() => {
+  const lang = '/' + version.value.shortTag
+  const filepath = page?.value?.stem?.replace(lang, '') + '.md'
+  return `https://github.com/jangdamaxdev/docs/edit/${version.value.collection}/${filepath}`
+})
 // const communityLinks = [{
 //   icon: 'i-lucide-heart',
 //   label: 'Become a Sponsor',
@@ -203,7 +176,7 @@ const breadcrumb = computed(() => {
 
           <template #links>
             <UButton
-              v-for="link in page.links?.map((link) => ({
+              v-for="link in page.links?.map(link => ({
                 ...link,
                 size: 'md',
               }))"
@@ -214,11 +187,7 @@ const breadcrumb = computed(() => {
               v-bind="link"
             >
               <template v-if="link.avatar" #leading>
-                <UAvatar
-                  v-bind="link.avatar"
-                  size="2xs"
-                  :alt="`${link.label} avatar`"
-                />
+                <UAvatar v-bind="link.avatar" size="2xs" :alt="`${link.label} avatar`" />
               </template>
             </UButton>
             <PageHeaderLinks :key="page.path" />
@@ -232,7 +201,7 @@ const breadcrumb = computed(() => {
             <USeparator class="mt-6 mb-10">
               <!-- ĐOẠN CHO PHÉP EDIT GITHUB CONTENT -->
               <div class="flex items-center gap-2 text-sm text-muted">
-                <!-- <UButton
+                <UButton
                   size="sm"
                   variant="link"
                   color="neutral"
@@ -240,7 +209,7 @@ const breadcrumb = computed(() => {
                   target="_blank"
                 >
                   Edit this page on GitHub
-                </UButton> -->
+                </UButton>
               </div>
             </USeparator>
             <UContentSurround :surround="surround" />
@@ -248,17 +217,13 @@ const breadcrumb = computed(() => {
         </UPageBody>
 
         <template #right>
-          <UContentToc
-            :links="page.body?.toc?.links"
-            highlight
-            class="lg:backdrop-blur-none"
-          >
+          <UContentToc :links="page.body?.toc?.links" highlight class="lg:backdrop-blur-none">
             <template #bottom>
               <USeparator v-if="page.body?.toc?.links?.length" type="dashed" />
               <!-- <UPageLinks title="Community" :links="communityLinks" /> -->
               <USeparator type="dashed" />
               <SocialLinks />
-              <Ads />
+              <!-- <Ads /> -->
             </template>
           </UContentToc>
         </template>

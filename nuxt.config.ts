@@ -87,6 +87,10 @@ export default defineNuxtConfig({
     "/modules/harlem": { redirect: 'https://nuxt.com/modules/harlem', prerender: false },
     "/modules/xstate": { redirect: 'https://nuxt.com/modules/xstate', prerender: false },
     "/deploy": { redirect: 'https://nuxt.com/deploy', prerender: false },
+    // NUXT CONTENT
+    '/studio': { redirect: '/docs/studio', prerender: false },
+    '/templates': { redirect: 'https://content.nuxt.com/templates', prerender: false },
+    '/blog/visual-editor': { redirect: 'https://content.nuxt.com/blog/visual-editor', prerender: false },
 
   },
   sourcemap: true,

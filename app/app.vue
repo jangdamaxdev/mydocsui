@@ -1,11 +1,9 @@
 <script setup lang="ts">
+import { upperFirst } from 'scule'
+
 const colorMode = useColorMode()
 const { version } = useDocsVersion()
-
-
 const { searchGroups, searchLinks, searchTerm } = useNavigation()
-// const { fetchList } = useModules()
-
 const color = computed(() => (colorMode.value === 'dark' ? '#020420' : 'white'))
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
@@ -19,7 +17,16 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
       ])
     },
     {
-      transform: data => data.flatMap(item => item[0].children),
+      transform: data =>
+        data.flatMap(item => {
+          const Collections = item[0].children
+          const CollectionName = 'Nuxt ' + upperFirst(item[0]?.title.slice(4))
+          Collections.map(collection => {
+            collection.title = CollectionName
+            return collection
+          })
+          return Collections
+        }),
       watch: [version],
     }
   ),
