@@ -91,6 +91,8 @@ export default defineNuxtConfig({
     '/studio': { redirect: '/docs/studio', prerender: false },
     '/templates': { redirect: 'https://content.nuxt.com/templates', prerender: false },
     '/blog/visual-editor': { redirect: 'https://content.nuxt.com/blog/visual-editor', prerender: false },
+    // Link chết trong content /studio/setup, chuyển đại về trang chủ
+    '/home/videos/HomeNotionLikePoster.webp': { redirect: 'https://content.nuxt.com/home/videos/HomeNotionLikePoster.webp', prerender: false },
 
   },
   sourcemap: true,

@@ -57,12 +57,10 @@ trước khi  dùng `data[0]?.children` thì mỗi queryCollectionNavigation s�
 Do đó phải dùng ` transform: data => data.flat(),` để bỏ bớt 1 lớp mảng ` [ [Object] ]` thành ` [Object] `. Nên cuối cùng navigation có dạng như trên.
 
 ```sh [navigation2.value]
-[{…}]0: children: Array(2)0: children: (3) [{…}, {…}, {…}]page: falsepath: "/nuxt/nuxtui/live"stem: "nuxt/nuxtui/live"title: "Live"[[Prototype]]: Object1: {title: 'Vi', path: '/nuxt/nuxtui/vi', stem: 'nuxt/nuxtui/vi', children: Array(3), page: false}length: 2[[Prototype]]: Array(0)page: falsepath: "/nuxt/nuxtui"stem: "nuxt/nuxtui"title: "Nuxtui"[[Prototype]]: Objectlength: 1[[Prototype]]: Array(0) 'Nuxt Ui'
-
 ```
 Lỗi ở Content
 * Files:
-- /files/markdown lỗi nhiều `CodePreview.vue:21` [Vue warn]: Failed to resolve component: `ExampleTitle`
-- /files/csv: shared.js?v=8f972c55:16 [Icon] failed to load icon `vscode-icons:file-type-csv`
+- /files/markdown lỗi nhiều `CodePreview.vue:21` [Vue warn]: Failed to resolve component: `ExampleTitle` ---- DOne
+- /files/csv: shared.js?v=8f972c55:16 [Icon] failed to load icon `vscode-icons:file-type-csv` ------lỗi từ biên tập content
 * Studio:
-- /studio/debug: `Warning.vue:9` [Vue warn]: Failed to resolve component: `Shortcut`
+- /studio/debug: `Warning.vue:9` [Vue warn]: Failed to resolve component: `Shortcut` ------lỗi từ biên tập content. Chức năng không dùng đến hoặc đã bỏ, còn trong content của bản live.
