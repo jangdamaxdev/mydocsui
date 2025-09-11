@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxtjs/turnstile',
     '@vueuse/nuxt',
+    // 'nuxt-component-meta',
     'nuxt-og-image',
     'motion-v/nuxt',
     'nuxt-llms',
@@ -22,6 +23,25 @@ export default defineNuxtConfig({
     'nuxt-charts',
     'nuxt-auth-utils'
   ],
+  componentMeta: {
+    exclude: [
+      '@nuxt/content',
+      '@nuxt/icon',
+      '@nuxt/image',
+      '@nuxtjs/color-mode',
+      '@nuxtjs/mdc',
+      '@nuxtjs/plausible',
+      'nuxt/dist',
+      'nuxt-og-image',
+    ],
+    metaFields: {
+      type: false,
+      props: true,
+      slots: true,
+      events: true,
+      exposed: false
+    }
+  },
   $development: {
     site: {
       url: 'http://localhost:3000'

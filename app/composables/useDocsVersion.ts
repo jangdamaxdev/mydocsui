@@ -25,25 +25,16 @@ function createVersions(collection: keyof Collections = 'nuxtcore'): Version[] {
     }
   ]
 }
-// const versionsDefault: Version[] = [
-//   {
-//     label: 'English(Live)',
-//     shortTag: 'live',
-//     tagColor: 'info',
-//     path: '/nuxt/nuxtcore/live',
-//   },
-//   {
-//     label: 'Tiếng Việt',
-//     shortTag: 'vi',
-//     tagColor: 'primary',
-//     path: '/nuxt/nuxtcore/vi',
-//   },
-// ]
 
 const collectionMap: Record<keyof Collections, string> = {
   nuxtcore: 'nuxt',
   nuxtcontent: '@nuxt/content',
   nuxtui: '@nuxt/ui',
+}
+const VietnameseVersion: Record<keyof Collections, string> = {
+  nuxtcore: '4.0.3',
+  nuxtcontent: '3.6.3',
+  nuxtui: '3.3.0',
 }
 
 export const useDocsTags = (framework: keyof Collections = 'nuxtcore') => {
@@ -51,7 +42,7 @@ export const useDocsTags = (framework: keyof Collections = 'nuxtcore') => {
     const { 'dist-tags': distTags } = await $fetch<{ 'dist-tags': Record<string, string> }>(`https://registry.npmjs.org/${collectionMap[framework]}`)
     return {
       live: distTags.latest,
-      vi: '4.0.3'
+      vi: VietnameseVersion[framework],
     }
     // return Object.fromEntries(
     //   Object.entries(tagMap).map(([shortTag]: [keyof typeof tagMap, string]) => {

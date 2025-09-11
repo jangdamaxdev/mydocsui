@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import json5 from 'json5'
-import icons from '../../../../src/theme/icons'
+import icons from '@nuxt/ui'
 
-const { framework } = useFrameworks()
+// const { framework } = useFrameworks()
 
 const { data: ast } = await useAsyncData(`icons-theme`, async () => {
   const md = `
@@ -44,7 +44,9 @@ export default defineConfig({
 `
 
   return parseMarkdown(md)
-}, { watch: [framework] })
+}, 
+// { watch: [framework] }
+)
 </script>
 
 <template>
