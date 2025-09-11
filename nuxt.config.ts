@@ -75,24 +75,43 @@ export default defineNuxtConfig({
     '/admin/**': { ssr: false },
 
     // NUXT CORE: Redirect `hard code link` trong content (marckdown) sang trang chủ Live version.
+    // @ts-ignore
+    '/blog/**': { redirect: (route: { path: string }) => 'https://nuxt.com/' + route.path, prerender: false },
     '/blog': { redirect: 'https://nuxt.com/blog', prerender: false },
-    '/blog/nuxt-on-the-edge': { redirect: 'https://nuxt.com/blog/nuxt-on-the-edge', prerender: false },
-    '/blog/v3-9': { redirect: 'https://nuxt.com/blog/v3-9', prerender: false },
-    '/blog/v3-10': { redirect: 'https://nuxt.com/blog/v3-10', prerender: false },
-    '/blog/v3-15': { redirect: 'https://nuxt.com/blog/v3-15', prerender: false },
+
+    // @ts-ignore
+    '/modules/**': { redirect: (route: { path: string }) => 'https://nuxt.com/' + route.path, prerender: false },
     '/modules': { redirect: 'https://nuxt.com/modules', prerender: false },
-    "/modules/tailwindcss": { redirect: 'https://nuxt.com/modules/tailwindcss', prerender: false },
-    "/modules/unocss": { redirect: 'https://nuxt.com/modules/unocss', prerender: false },
-    "/modules/pinia": { redirect: 'https://nuxt.com/modules/pinia', prerender: false },
-    "/modules/harlem": { redirect: 'https://nuxt.com/modules/harlem', prerender: false },
-    "/modules/xstate": { redirect: 'https://nuxt.com/modules/xstate', prerender: false },
+
     "/deploy": { redirect: 'https://nuxt.com/deploy', prerender: false },
+
+    // '/blog': { redirect: 'https://nuxt.com/blog', prerender: false },
+    // '/blog/nuxt-on-the-edge': { redirect: 'https://nuxt.com/blog/nuxt-on-the-edge', prerender: false },
+    // '/blog/v3-9': { redirect: 'https://nuxt.com/blog/v3-9', prerender: false },
+    // '/blog/v3-10': { redirect: 'https://nuxt.com/blog/v3-10', prerender: false },
+    // '/blog/v3-15': { redirect: 'https://nuxt.com/blog/v3-15', prerender: false },
+    // '/modules': { redirect: 'https://nuxt.com/modules', prerender: false },
+    // "/modules/tailwindcss": { redirect: 'https://nuxt.com/modules/tailwindcss', prerender: false },
+    // "/modules/unocss": { redirect: 'https://nuxt.com/modules/unocss', prerender: false },
+    // "/modules/pinia": { redirect: 'https://nuxt.com/modules/pinia', prerender: false },
+    // "/modules/harlem": { redirect: 'https://nuxt.com/modules/harlem', prerender: false },
+    // "/modules/xstate": { redirect: 'https://nuxt.com/modules/xstate', prerender: false },
     // NUXT CONTENT
     '/studio': { redirect: '/docs/studio', prerender: false },
     '/templates': { redirect: 'https://content.nuxt.com/templates', prerender: false },
     '/blog/visual-editor': { redirect: 'https://content.nuxt.com/blog/visual-editor', prerender: false },
     // Link chết trong content /studio/setup, chuyển đại về trang chủ
-    '/home/videos/HomeNotionLikePoster.webp': { redirect: 'https://content.nuxt.com/home/videos/HomeNotionLikePoster.webp', prerender: false },
+    '/home/videos/HomeNotionLikePoster.webp': { redirect: 'https://content.nuxt.com', prerender: false },
+    // NUXT UI
+    // @ts-ignore
+    '/getting-started/**': { redirect: (route: { path: string }) => '/docs' + route.path, prerender: false },
+    '/getting-started': { redirect: '/docs/getting-started', prerender: false },
+    // @ts-ignore
+    '/components/**': { redirect: (route: { path: string }) => '/docs' + route.path, prerender: false },
+    '/components': { redirect: '/docs/components', prerender: false },
+    // @ts-ignore
+    '/composables/**': { redirect: (route: { path: string }) => '/docs' + route.path, prerender: false },
+    '/composables': { redirect: '/docs/composables', prerender: false },
 
   },
   sourcemap: true,

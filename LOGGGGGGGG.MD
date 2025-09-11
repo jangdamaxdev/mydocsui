@@ -64,3 +64,8 @@ Lỗi ở Content
 - /files/csv: shared.js?v=8f972c55:16 [Icon] failed to load icon `vscode-icons:file-type-csv` ------lỗi từ biên tập content
 * Studio:
 - /studio/debug: `Warning.vue:9` [Vue warn]: Failed to resolve component: `Shortcut` ------lỗi từ biên tập content. Chức năng không dùng đến hoặc đã bỏ, còn trong content của bản live.
+
+# UI
+ComponentsList.vue
+IconsTheme.vue
+ComponentTheme.vue
