@@ -56,7 +56,12 @@ trước khi  dùng `data[0]?.children` thì mỗi queryCollectionNavigation s�
 `children` có 1 phần tử,  và phần tử đó là 1 trong 3 object ở trên. 
 Do đó phải dùng ` transform: data => data.flat(),` để bỏ bớt 1 lớp mảng ` [ [Object] ]` thành ` [Object] `. Nên cuối cùng navigation có dạng như trên.
 
-```sh [navigation2.value]
+``` ts CORE
+/docs/guide/directory-structure/plugins 
+    '/docs/guide/directory-structure/plugins': { redirect: '/docs/guide/directory-structure/app/plugins ', prerender: false },
+    '/blog': { redirect: 'https://nuxt.com/blog', prerender: false },
+
+
 ```
 Lỗi ở Content
 * Files:

@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     'nuxt-content-twoslash',
     '@nuxt/content',
     '@nuxt/image',
+    '@nuxthub/core',
     '@nuxtjs/plausible',
     '@nuxt/eslint',
     '@nuxt/scripts',
@@ -19,29 +20,33 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'motion-v/nuxt',
     'nuxt-llms',
-    '@nuxthub/core',
     'nuxt-charts',
-    'nuxt-auth-utils'
+    'nuxt-auth-utils',
+    //  (_, nuxt) => {
+    //   nuxt.hook('components:dirs', (dirs) => {
+    //     dirs.unshift({ path: resolve('./app/components/content/examples'), pathPrefix: false, prefix: '', global: true })
+    //   })
+    // }
   ],
-  componentMeta: {
-    exclude: [
-      '@nuxt/content',
-      '@nuxt/icon',
-      '@nuxt/image',
-      '@nuxtjs/color-mode',
-      '@nuxtjs/mdc',
-      '@nuxtjs/plausible',
-      'nuxt/dist',
-      'nuxt-og-image',
-    ],
-    metaFields: {
-      type: false,
-      props: true,
-      slots: true,
-      events: true,
-      exposed: false
-    }
-  },
+  // componentMeta: {
+  //   exclude: [
+  //     '@nuxt/content',
+  //     '@nuxt/icon',
+  //     '@nuxt/image',
+  //     '@nuxtjs/color-mode',
+  //     '@nuxtjs/mdc',
+  //     '@nuxtjs/plausible',
+  //     'nuxt/dist',
+  //     'nuxt-og-image',
+  //   ],
+  //   metaFields: {
+  //     type: false,
+  //     props: true,
+  //     slots: true,
+  //     events: true,
+  //     exposed: false
+  //   }
+  // },
   $development: {
     site: {
       url: 'http://localhost:3000'
@@ -104,6 +109,7 @@ export default defineNuxtConfig({
     '/modules': { redirect: 'https://nuxt.com/modules', prerender: false },
 
     "/deploy": { redirect: 'https://nuxt.com/deploy', prerender: false },
+
     // NUXT CONTENT
     '/studio': { redirect: '/docs/studio', prerender: false },
     '/templates': { redirect: 'https://content.nuxt.com/templates', prerender: false },
