@@ -6,6 +6,7 @@ const { resolve } = createResolver(import.meta.url)
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
+    '@nuxt/ui',
     'nuip',
     'nuxt-content-twoslash',
     '@nuxt/content',
@@ -14,9 +15,9 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@nuxt/eslint',
     '@nuxt/scripts',
-    '@nuxtjs/turnstile',
+    // '@nuxtjs/turnstile',
     '@vueuse/nuxt',
-    // 'nuxt-component-meta',
+    'nuxt-component-meta',
     'nuxt-og-image',
     'motion-v/nuxt',
     'nuxt-llms',
@@ -28,25 +29,25 @@ export default defineNuxtConfig({
     //   })
     // }
   ],
-  // componentMeta: {
-  //   exclude: [
-  //     '@nuxt/content',
-  //     '@nuxt/icon',
-  //     '@nuxt/image',
-  //     '@nuxtjs/color-mode',
-  //     '@nuxtjs/mdc',
-  //     '@nuxtjs/plausible',
-  //     'nuxt/dist',
-  //     'nuxt-og-image',
-  //   ],
-  //   metaFields: {
-  //     type: false,
-  //     props: true,
-  //     slots: true,
-  //     events: true,
-  //     exposed: false
-  //   }
-  // },
+  componentMeta: {
+    exclude: [
+      '@nuxt/content',
+      '@nuxt/icon',
+      '@nuxt/image',
+      '@nuxtjs/color-mode',
+      '@nuxtjs/mdc',
+      '@nuxtjs/plausible',
+      'nuxt/dist',
+      'nuxt-og-image',
+    ],
+    metaFields: {
+      type: false,
+      props: true,
+      slots: true,
+      events: true,
+      exposed: false
+    }
+  },
   $development: {
     site: {
       url: 'http://localhost:3000'
@@ -206,9 +207,9 @@ export default defineNuxtConfig({
       description: 'The complete Nuxt documentation and blog posts written in Markdown (MDC syntax).'
     }
   },
-  turnstile: {
-    siteKey: '0x4AAAAAAAP2vNBsTBT3ucZi'
-  },
+  // turnstile: {
+  //   siteKey: '0x4AAAAAAAP2vNBsTBT3ucZi'
+  // },
   twoslash: {
     floatingVueOptions: {
       classMarkdown: 'prose prose-primary dark:prose-invert'
