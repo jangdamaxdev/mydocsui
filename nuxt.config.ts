@@ -23,11 +23,6 @@ export default defineNuxtConfig({
     'nuxt-llms',
     'nuxt-charts',
     'nuxt-auth-utils',
-    //  (_, nuxt) => {
-    //   nuxt.hook('components:dirs', (dirs) => {
-    //     dirs.unshift({ path: resolve('./app/components/content/examples'), pathPrefix: false, prefix: '', global: true })
-    //   })
-    // }
   ],
   componentMeta: {
     exclude: [

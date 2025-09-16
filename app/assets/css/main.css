@@ -31,3 +31,10 @@
   --ui-bg-elevated: var(--ui-color-neutral-900);
   --ui-bg-accented: var(--ui-color-neutral-800);
 }
+
+html[data-framework="nuxt"] .vue-only,
+html[data-framework="vue"] .nuxt-only,
+html[data-module="ui-pro"] .ui-only,
+html[data-module="ui"] .ui-pro-only {
+  display: none;
+}

@@ -18,6 +18,15 @@ const route = useRoute()
 const nuxtApp = useNuxtApp()
 const { version } = useDocsVersion()
 const path = computed(() => route.path.replace(/\/$/, ''))
+// DATA FRAMEWORK & MODULE
+const { framework, module } = useSharedData()
+useHead({
+  htmlAttrs: {
+    'data-framework': framework,
+    'data-module': module
+  }
+})
+
 // CHAPTER
 const navigationChapter = computed(
   () => useNavigationChapter(navPageFromPath(version.value.path, navigation.value)?.children) ?? []

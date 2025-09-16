@@ -2,17 +2,11 @@
 import type { CommitInfo } from '#build/changelog'
 import { changelog } from '#build/changelog'
 
-const props = defineProps<{
-  prose?: boolean
-}>()
-
 const route = useRoute()
 const name = route.path.split('/').pop()
 
 const commits = computed(() => {
-  const componentName = props.prose ? `prose-${name}` : name
-  const related = changelog.filter(c => c.version || c.components?.some(i => i === componentName))
-
+  const related = changelog.filter(c => c.version || c.components?.some(i => i === name))
   return related.filter((i, idx) => !(i.version && (!related[idx + 1] || related[idx + 1]?.version)))
 })
 

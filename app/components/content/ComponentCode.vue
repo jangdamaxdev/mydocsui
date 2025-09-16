@@ -6,6 +6,7 @@ import { upperFirst, camelCase, kebabCase } from 'scule'
 import { hash } from 'ohash'
 import { CalendarDate } from '@internationalized/date'
 import * as theme from '#build/ui'
+import * as themePro from '#build/ui-pro'
 import { get, set } from '#ui/utils'
 
 interface Cast {
@@ -41,6 +42,7 @@ const castMap: Record<string, Cast> = {
 }
 
 const props = defineProps<{
+  pro?: boolean
   prose?: boolean
   prefix?: string
   /** Override the slug taken from the route */
@@ -88,12 +90,16 @@ const { $prettier } = useNuxtApp()
 const camelName = camelCase(props.slug ?? route.path.split('/').pop() ?? '')
 const name = `${props.prose ? 'Prose' : 'U'}${upperFirst(camelName)}`
 const component = defineAsyncComponent(() => {
-  if (props.prefix) {
-    return import(`#ui/components/${props.prefix}/${upperFirst(camelName)}.vue`)
-  }
+  if (props.pro) {
+    if (props.prefix) {
+      return import(`#ui-pro/components/${props.prefix}/${upperFirst(camelName)}.vue`)
+    }
 
-  if (props.prose) {
-    return import(`#ui/components/prose/${upperFirst(camelName)}.vue`)
+    if (props.prose) {
+      return import(`#ui-pro/components/prose/${upperFirst(camelName)}.vue`)
+    }
+
+    return import(`#ui-pro/components/${upperFirst(camelName)}.vue`)
   }
 
   return import(`#ui/components/${upperFirst(camelName)}.vue`)
@@ -123,7 +129,7 @@ function setComponentProp(name: string, value: any) {
   set(componentProps, name, value)
 }
 
-const componentTheme = ((props.prose ? theme.prose : theme) as any)[camelName]
+const componentTheme = ((props.pro ? props.prose ? themePro.prose : themePro : theme) as any)[camelName]
 const meta = await fetchComponentMeta(name as any)
 
 function mapKeys(obj: object, parentKey = ''): any {
@@ -211,7 +217,7 @@ ${props.slots?.default}
       const removeArrayBrackets = (type: string): string => type.endsWith('[]') ? removeArrayBrackets(type.slice(0, -2)) : type
 
       const types = props.externalTypes.map(type => removeArrayBrackets(type))
-      code += `import type { ${types.join(', ')} } from '@nuxt/ui'
+      code += `import type { ${types.join(', ')} } from '@nuxt/ui${props.pro ? '-pro' : ''}'
 
 `
     }

@@ -5,6 +5,8 @@ const colorMode = useColorMode()
 const { version } = useDocsVersion()
 const { searchGroups, searchLinks, searchTerm } = useNavigation()
 const color = computed(() => (colorMode.value === 'dark' ? '#020420' : 'white'))
+// SET DEFAULT FOR NUXT UI
+useSharedData()
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
   useAsyncData(

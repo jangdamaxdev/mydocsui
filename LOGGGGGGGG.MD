@@ -74,3 +74,10 @@ Lỗi ở Content
 ComponentsList.vue
 IconsTheme.vue
 ComponentTheme.vue
+
+Code.vue:21 [Vue warn]: Slot "default" invoked outside of the render function: this will not track dependencies used in the slot. Invoke the slot function inside the render function instead. 
+  at <ProseCode class="language-ts-type shiki shiki-themes material-theme-lighter material-theme-lighter material-theme-palenight" language="ts-type" style= {}  ... > 
+  at <AsyncComponentWrapper class="language-ts-type shiki shiki-themes material-theme-lighter material-theme-lighter material-theme-palenight" language="ts-type" style=""  ... > 
+  at <ProseP key="0" > 
+  at <AsyncComponentWrapper key="0" > 
+  at <MDCRenderer key=0 body= 
