@@ -25,15 +25,23 @@ export default defineNuxtConfig({
   ],
   componentMeta: {
     exclude: [
+      'nuxt-content-twoslash',
       '@nuxt/content',
       '@nuxt/icon',
       '@nuxt/image',
+      '@nuxthub/core',
       '@nuxtjs/color-mode',
       '@nuxtjs/mdc',
       '@nuxtjs/plausible',
       'nuxt/dist',
+      '@nuxt/eslint',
+      '@nuxt/scripts',
+      '@vueuse/nuxt',
       'nuxt-og-image',
-      
+      'motion-v/nuxt',
+      'nuxt-llms',
+      'nuxt-charts',
+      'nuxt-auth-utils',
     ],
     metaFields: {
       type: false,
@@ -134,15 +142,15 @@ export default defineNuxtConfig({
       ],
       autoSubfolderIndex: false
     },
-  //   cloudflare: {
-  //     pages: {
-  //       routes: {
-  //         exclude: [
-  //           '/docs/*'
-  //         ]
-  //       }
-  //     }
-  //   }
+    //   cloudflare: {
+    //     pages: {
+    //       routes: {
+    //         exclude: [
+    //           '/docs/*'
+    //         ]
+    //       }
+    //     }
+    //   }
   },
   hub: {
     cache: true
@@ -150,7 +158,7 @@ export default defineNuxtConfig({
   typescript: {
     strict: false
   },
-  hooks: {    
+  hooks: {
     'content:file:afterParse': async ({ file, content }) => {
       if (file.id === 'index/index.yml') {
         // @ts-expect-error -- TODO: fix this
