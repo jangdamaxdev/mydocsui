@@ -35,7 +35,7 @@ jobs:
         run: pnpx nuxthub@latest ensure
 
       - name: Build application
-        run: pnpm build
+        run: NODE_OPTIONS='--max-old-space-size=8192' pnpm build
       
 
       - name: Deploy to NuxtHub
