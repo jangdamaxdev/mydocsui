@@ -43,7 +43,6 @@ function createVersions(collection: keyof Collections = 'nuxtcore'): Version[] {
 const collectionMap: Record<keyof Collections, string> = {
   nuxtcore: 'nuxt',
   nuxtcontent: '@nuxt/content',
-  nuxtui: '@nuxt/ui',
 }
 
 export const useDocsTags = (framework: keyof Collections = 'nuxtcore') => {

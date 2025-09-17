@@ -19,7 +19,6 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
       return Promise.all([
         queryCollectionNavigation('nuxtcore').then(data => data[0]?.children),
         queryCollectionNavigation('nuxtcontent').then(data => data[0]?.children),
-        queryCollectionNavigation('nuxtui').then(data => data[0]?.children),
       ])
     },
     {
@@ -42,7 +41,6 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
       return Promise.all([
         queryCollectionSearchSections('nuxtcore'),
         queryCollectionSearchSections('nuxtcontent'),
-        queryCollectionSearchSections('nuxtui'),
       ])
     },
     {

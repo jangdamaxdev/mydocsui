@@ -1,18 +1,18 @@
-import type { Docsv3CollectionItem, Docsv4CollectionItem } from '@nuxt/content'
-import { queryCollection } from '@nuxt/content/nitro'
+import type { Collections } from '@nuxt/content'
+import { queryCollection } from '@nuxt/content/server'
 import { stringify } from 'minimark/stringify'
 import { withLeadingSlash } from 'ufo'
 
 export default eventHandler(async (event) => {
+  const collection = event.path.split('/')[3] as keyof Collections
   const slug = getRouterParams(event)['slug.md']
   if (!slug?.endsWith('.md')) {
     throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
   }
 
   const path = withLeadingSlash(slug.replace('.md', ''))
-  const docsVersion = path.includes('4.x') ? 'docsv4' : 'docsv3'
 
-  const page = await queryCollection(event, docsVersion).path(path).first() as Docsv3CollectionItem | Docsv4CollectionItem
+  const page = await queryCollection(event, collection).path(path).first() 
   if (!page) {
     throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
   }

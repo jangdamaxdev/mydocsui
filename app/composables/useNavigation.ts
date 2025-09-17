@@ -30,32 +30,25 @@ function _useHeaderLinks() {
           active: route.path.startsWith('/nuxt/nuxtcontent'),
 
         },
-        {
-          label: 'Nuxt UI',
-          description: `Nuxt UI harnesses the combined strengths of Reka UI, Tailwind CSS, and Tailwind Variants`,
-          icon: 'i-lucide-rocket',
-          to: `/nuxt/nuxtui/${lang}/getting-started`,
-          active: route.path.startsWith('/nuxt/nuxtui'),
-
-        }]
+        ]
       },
       {
         label: 'TypeScript',
-        description: 'TypeScript',
+        description: 'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.',
         icon: 'i-lucide-messages-square',
         // to: `/typescript/spec`,
         // active: route.path.startsWith(path)
       },
       {
         label: 'Golang',
-        description: 'Golang',
+        description: 'An open source programming language that makes it easy to build simple, reliable, and efficient software.',
         icon: 'i-lucide-messages-square',
         // to: `go.dev/spec`,
         // active: route.path.startsWith(`${to}/spec`)
       },
       {
-        label: 'Test',
-        description: 'Test',
+        label: 'Rust',
+        description: 'Empowering everyone to build reliable and efficient software.',
         icon: 'i-lucide-messages-square',
         to: `/docs`,
         // active: route.path.startsWith(`${to}/spec`)
@@ -68,56 +61,11 @@ function _useHeaderLinks() {
 
 export const useHeaderLinks = import.meta.client ? createSharedComposable(_useHeaderLinks) : _useHeaderLinks
 
-// const footerLinks = [{
-//   label: 'Community',
-//   children: [{
-//     label: 'Nuxters',
-//     to: 'https://nuxters.nuxt.com',
-//     target: '_blank'
-//   }, {
-//     label: 'Team',
-//     to: '/team'
-//   }, {
-//     label: 'Design Kit',
-//     to: '/design-kit'
-//   }]
-// }, {
-//   label: 'Products',
-//   children: [{
-//     label: 'Nuxt UI Pro',
-//     to: 'https://ui.nuxt.com/pro?utm_source=nuxt-website&utm_medium=footer',
-//     target: '_blank'
-//   }, {
-//     label: 'Nuxt Studio',
-//     to: 'https://content.nuxt.com/studio/?utm_source=nuxt-website&utm_medium=footer',
-//     target: '_blank'
-//   }, {
-//     label: 'NuxtHub',
-//     to: 'https://hub.nuxt.com/?utm_source=nuxt-website&utm_medium=footer',
-//     target: '_blank'
-//   }]
-// }, {
-//   label: 'Enterprise',
-//   children: [{
-//     label: 'Support',
-//     to: '/enterprise/support'
-//   }, {
-//     label: 'Agencies',
-//     to: '/enterprise/agencies'
-//   }, {
-//     label: 'Sponsors',
-//     to: '/enterprise/sponsors'
-//   }]
-// }]
-
-// export const useFooterLinks = () => ({ footerLinks })
-
 const _useNavigation = () => {
   const nuxtApp = useNuxtApp()
   const searchTerm = ref<string>('')
 
   const { headerLinks } = useHeaderLinks()
-  // const { footerLinks } = useFooterLinks()
 
   const searchLinks = computed(() => [
     {
@@ -168,18 +116,6 @@ const _useNavigation = () => {
       items: []
     }
 
-    // const modulesGroup: SearchGroup = {
-    //   id: 'modules-search',
-    //   label: 'Modules',
-    //   items: []
-    // }
-
-    // const hostingGroup: SearchGroup = {
-    //   id: 'hosting-search',
-    //   label: 'Hosting',
-    //   items: []
-    // }
-
     const groups = [aiGroup]
 
     if (!searchTerm.value) {
@@ -195,60 +131,6 @@ const _useNavigation = () => {
         return nuxtApp.$kapa.openModal(searchTerm.value)
       }
     }]
-
-    // const loadModules = async () => {
-    //   const { modules, fetchList } = useModules()
-    //   if (!modules.value.length) {
-    //     await fetchList()
-    //   }
-
-    //   modulesGroup.items = modules.value
-    //     .filter(module => ['name', 'npm', 'repo'].map(field => module[field as keyof typeof module]).filter(Boolean).some(value => typeof value === 'string' && value.search(searchTextRegExp(searchTerm.value)) !== -1))
-    //     .map(module => ({
-    //       id: `module-${module.name}`,
-    //       label: module.npm,
-    //       suffix: module.description,
-    //       avatar: {
-    //         src: moduleImage(module.icon),
-    //         ui: {
-    //           root: 'rounded-none bg-transparent'
-    //         }
-    //       },
-    //       to: `/modules/${module.name}`
-    //     }))
-    // }
-
-    // const loadHosting = async () => {
-    //   const { providers, fetchList } = useHostingProviders()
-    //   if (!providers.value.length) {
-    //     await fetchList()
-    //   }
-
-    //   hostingGroup.items = providers.value
-    //     .filter(hosting => ['title'].map(field => hosting[field as keyof typeof hosting]).filter(Boolean).some(value => typeof value === 'string' && value.search(searchTextRegExp(searchTerm.value)) !== -1))
-    //     .map(hosting => ({
-    //       id: `hosting-${hosting.path}`,
-    //       label: hosting.title,
-    //       suffix: hosting.description,
-    //       icon: hosting.logoIcon,
-    //       avatar: hosting.logoSrc
-    //         ? {
-    //             src: hosting.logoSrc,
-    //             ui: {
-    //               root: 'rounded-none bg-transparent'
-    //             }
-    //           }
-    //         : undefined,
-    //       to: hosting.path
-    //     }))
-    // }
-
-    // onMounted(() => {
-    //   Promise.all([
-    //     loadModules(),
-    //     loadHosting()
-    //   ]).catch(error => console.error('Error loading search results:', error))
-    // })
 
     return groups
   })

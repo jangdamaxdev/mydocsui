@@ -91,10 +91,6 @@ export default defineContentConfig({
         links: z.array(Button)
       })
     }),
-    nuxtui: defineCollection({
-      type: 'page',
-      source: [nuxtuiLIVE, nuxtuiVI],
-      schema: NuxtUISchema
-    }),
+
   }
 })
