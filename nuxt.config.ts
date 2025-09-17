@@ -89,7 +89,6 @@ export default defineNuxtConfig({
     // Pre-render
     '/': { prerender: true },
     '/404.html': { prerender: true },
-    '/nuxt/nuxtcore/vi/getting-started/introduction': { prerender: true },
     // Admin
     '/admin': { ssr: false },
     '/admin/**': { ssr: false },
@@ -134,15 +133,15 @@ export default defineNuxtConfig({
       ],
       autoSubfolderIndex: false
     },
-    cloudflare: {
-      pages: {
-        routes: {
-          exclude: [
-            '/docs/*'
-          ]
-        }
-      }
-    }
+  //   cloudflare: {
+  //     pages: {
+  //       routes: {
+  //         exclude: [
+  //           '/docs/*'
+  //         ]
+  //       }
+  //     }
+  //   }
   },
   hub: {
     cache: true

@@ -12,7 +12,7 @@ function _useHeaderLinks() {
       {
         label: 'Nuxt meta-framework',
         icon: 'i-lucide-book-marked',
-        to: `/nuxt/nuxtcore/${lang}/getting-started`,
+        // to: `/nuxt/nuxtcore/${lang}/getting-started`,
         search: false,
         active: route.path.startsWith('/nuxt'),
         children: [{
@@ -57,7 +57,7 @@ function _useHeaderLinks() {
         label: 'Test',
         description: 'Test',
         icon: 'i-lucide-messages-square',
-        to: `/docs`,
+        // to: `/docs`,
         // active: route.path.startsWith(`${to}/spec`)
       }
     ]
