@@ -3,10 +3,6 @@ import type { ContentNavigationItem } from '@nuxt/content'
 export function navPageFromPath(path: string, tree: ContentNavigationItem[]): ContentNavigationItem | undefined {
 
   for (const file of tree) {
-    // if (file.title == 'Docs') {
-    //   file.title = 'Live'
-    //   console.log('title', file.title);
-    // }
     if (file.path === path) {
       return file
     }

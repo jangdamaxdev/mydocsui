@@ -25,6 +25,7 @@ export default defineNuxtConfig({
   ],
   componentMeta: {
     exclude: [
+      'nuip',
       'nuxt-content-twoslash',
       '@nuxt/content',
       '@nuxt/icon',
@@ -41,7 +42,7 @@ export default defineNuxtConfig({
       'motion-v/nuxt',
       'nuxt-llms',
       'nuxt-charts',
-      'nuxt-auth-utils',
+      'nuxt-auth-utils',       
     ],
     metaFields: {
       type: false,
