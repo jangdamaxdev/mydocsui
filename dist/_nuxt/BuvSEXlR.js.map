@@ -1,0 +1,1 @@
+{"version":3,"file":"BuvSEXlR.js","names":[],"sources":["../../node_modules/app/components/example/ExampleTitle.vue"],"sourcesContent":["<template>\n  <h1 class=\"text-4xl text-black dark:text-white\">\n    <slot mdc-unwrap=\"p\" />\n  </h1>\n</template>\n"],"mappings":"gHACM,MAAM,sCAAqC,4BAA/C,EAEK,KAFL,EAEK,CADH,EAAuB,EAAA,OAAA,UAAA,CAAjB,UAAW,IAAG,CAAA,CAAA,CAAA"}

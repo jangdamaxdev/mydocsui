@@ -1,0 +1,2 @@
+import{Ga as e,Ja as t,Ni as n,Ta as r,dn as i,xa as a,xo as o}from"#entry";import{t as s}from"./aTTFNSyR.js";var c={__name:`ProseP`,props:{class:{type:null,required:!1}},setup(c){let l=c,u=n(),d=a(()=>i({extend:i(s),...u.uiPro?.prose?.p||{}}));return(n,i)=>(e(),r(`p`,{class:o(d.value({class:l.class}))},[t(n.$slots,`default`)],2))}};export{c as t};
+//# sourceMappingURL=JF-itZh4.js.map

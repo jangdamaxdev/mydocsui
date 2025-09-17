@@ -1,0 +1,2 @@
+import{Ga as e,La as t,Ta as n,_a as r,ka as i,z as a}from"#entry";var o=Object.assign({inheritAttrs:!1},{__name:`UColorModeAvatar`,props:{light:{type:String,required:!0},dark:{type:String,required:!0}},setup(o){return(s,c)=>(e(),n(r,null,[i(a,t({src:o.light,class:`dark:hidden`},s.$attrs),null,16,[`src`]),i(a,t({src:o.dark,class:`hidden dark:block`},s.$attrs),null,16,[`src`])],64))}});export{o as default};
+//# sourceMappingURL=BogFO915.js.map

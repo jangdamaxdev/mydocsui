@@ -1,0 +1,2 @@
+import{Ca as e,Ga as t,Ni as n,so as r,yo as i}from"#entry";import{t as a}from"./CCjOvWH_.js";import{t as o}from"./B08XxfLw.js";var s={__name:`ProseNote`,setup(s){let c=n();return(n,s)=>(t(),e(o,{color:`info`,icon:i(c).ui.icons.info},{default:r(()=>[a(n.$slots,`default`,{mdcUnwrap:`p`})]),_:3},8,[`icon`]))}};export{s as t};
+//# sourceMappingURL=Dn7RZ6E_.js.map

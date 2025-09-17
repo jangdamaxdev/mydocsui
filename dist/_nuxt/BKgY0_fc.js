@@ -1,0 +1,2 @@
+import{Ga as e,Ja as t,Ni as n,Ta as r,dn as i,xa as a,xo as o}from"#entry";import{t as s}from"./D3mb0wl1.js";var c={__name:`ProseEm`,props:{class:{type:String,required:!1}},setup(c){let l=c,u=n(),d=a(()=>i({extend:i(s),...u.uiPro?.prose?.em||{}}));return(n,i)=>(e(),r(`em`,{class:o(d.value({class:l.class}))},[t(n.$slots,`default`)],2))}};export{c as default};
+//# sourceMappingURL=BKgY0_fc.js.map

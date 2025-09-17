@@ -1,0 +1,2 @@
+import{Ca as e,Ga as t,Ja as n,Ni as r,Xr as i,dn as a,so as o,xa as s,xo as c,yo as l}from"#entry";import{t as u}from"./DwKzAgWq.js";var d={__name:`UPageList`,props:{as:{type:null,required:!1},divide:{type:Boolean,required:!1,default:!1},class:{type:null,required:!1}},setup(d){let f=d,p=r(),m=s(()=>a({extend:a(u),...p.uiPro?.pageList||{}}));return(r,a)=>(t(),e(l(i),{as:d.as,role:`list`,class:c(m.value({class:f.class,divide:f.divide}))},{default:o(()=>[n(r.$slots,`default`)]),_:3},8,[`as`,`class`]))}};export{d as default};
+//# sourceMappingURL=C6bsx1Kk.js.map

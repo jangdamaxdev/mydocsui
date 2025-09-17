@@ -1,0 +1,667 @@
+# Nuxt Docs
+
+> Nuxt is an open source framework that makes web development intuitive and powerful. Create performant and production-grade full-stack web apps and websites with confidence.
+
+## Documentation Sets
+
+- [Nuxt Docs](https://nuxt.com/llms-full.txt): The complete Nuxt documentation and blog posts written in Markdown (MDC syntax).
+
+## Nuxtcore
+
+- [Introduction](https://nuxt.com/nuxt/nuxtcore/live/getting-started/introduction): Nuxt's goal is to make web development intuitive and performant with a great Developer Experience in mind.
+- [Installation](https://nuxt.com/nuxt/nuxtcore/live/getting-started/installation): Get started with Nuxt quickly with our online starters or start locally with your terminal.
+- [Configuration](https://nuxt.com/nuxt/nuxtcore/live/getting-started/configuration): Nuxt is configured with sensible defaults to make you productive.
+- [Views](https://nuxt.com/nuxt/nuxtcore/live/getting-started/views): Nuxt provides several component layers to implement the user interface of your application.
+- [Assets](https://nuxt.com/nuxt/nuxtcore/live/getting-started/assets): Nuxt offers two options for your assets.
+- [Styling](https://nuxt.com/nuxt/nuxtcore/live/getting-started/styling): Learn how to style your Nuxt application.
+- [Routing](https://nuxt.com/nuxt/nuxtcore/live/getting-started/routing): Nuxt file-system routing creates a route for every file in the pages/ directory.
+- [SEO and Meta](https://nuxt.com/nuxt/nuxtcore/live/getting-started/seo-meta): Improve your Nuxt app's SEO with powerful head config, composables and components.
+- [Transitions](https://nuxt.com/nuxt/nuxtcore/live/getting-started/transitions): Apply transitions between pages and layouts with Vue or native browser View Transitions.
+- [Data Fetching](https://nuxt.com/nuxt/nuxtcore/live/getting-started/data-fetching): Nuxt provides composables to handle data fetching within your application.
+- [State Management](https://nuxt.com/nuxt/nuxtcore/live/getting-started/state-management): Nuxt provides powerful state management libraries and the useState composable to create a reactive and SSR-friendly shared state.
+- [Error Handling](https://nuxt.com/nuxt/nuxtcore/live/getting-started/error-handling): Learn how to catch and handle errors in Nuxt.
+- [Server](https://nuxt.com/nuxt/nuxtcore/live/getting-started/server): Build full-stack applications with Nuxt's server framework. You can fetch data from your database or another server, create APIs, or even generate static server-side content like a sitemap or a RSS feed - all from a single codebase.
+- [Layers](https://nuxt.com/nuxt/nuxtcore/live/getting-started/layers): Nuxt provides a powerful system that allows you to extend the default files, configs, and much more.
+- [Prerendering](https://nuxt.com/nuxt/nuxtcore/live/getting-started/prerendering): Nuxt allows pages to be statically rendered at build time to improve certain performance or SEO metrics
+- [Deployment](https://nuxt.com/nuxt/nuxtcore/live/getting-started/deployment): Learn how to deploy your Nuxt application to any hosting provider.
+- [Testing](https://nuxt.com/nuxt/nuxtcore/live/getting-started/testing): How to test your Nuxt application.
+- [Upgrade Guide](https://nuxt.com/nuxt/nuxtcore/live/getting-started/upgrade): Learn how to upgrade to the latest Nuxt version.
+- [Nuxt Guide](https://nuxt.com/nuxt/nuxtcore/live/guide): Learn how Nuxt works with in-depth guides.
+- [Auto-imports](https://nuxt.com/nuxt/nuxtcore/live/guide/concepts/auto-imports): Nuxt auto-imports components, composables, helper functions and Vue APIs.
+- [Nuxt Lifecycle](https://nuxt.com/nuxt/nuxtcore/live/guide/concepts/nuxt-lifecycle): Understanding the lifecycle of Nuxt applications can help you gain deeper insights into how the framework operates, especially for both server-side and client-side rendering.
+- [Vue.js Development](https://nuxt.com/nuxt/nuxtcore/live/guide/concepts/vuejs-development): Nuxt uses Vue.js and adds features such as component auto-imports, file-based routing and composables for an SSR-friendly usage.
+- [Rendering Modes](https://nuxt.com/nuxt/nuxtcore/live/guide/concepts/rendering): Learn about the different rendering modes available in Nuxt.
+- [Server Engine](https://nuxt.com/nuxt/nuxtcore/live/guide/concepts/server-engine): Nuxt is powered by a new server engine: Nitro.
+- [Modules](https://nuxt.com/nuxt/nuxtcore/live/guide/concepts/modules): Nuxt provides a module system to extend the framework core and simplify integrations.
+- [ES Modules](https://nuxt.com/nuxt/nuxtcore/live/guide/concepts/esm): Nuxt uses native ES modules.
+- [TypeScript](https://nuxt.com/nuxt/nuxtcore/live/guide/concepts/typescript): Nuxt is fully typed and provides helpful shortcuts to ensure you have access to accurate type information when you are coding.
+- [Code Style](https://nuxt.com/nuxt/nuxtcore/live/guide/concepts/code-style): Nuxt supports ESLint out of the box
+- [.nuxt](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/nuxt): Nuxt uses the .nuxt/ directory in development to generate your Vue application.
+- [.output](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/output): Nuxt creates the .output/ directory when building your application for production.
+- [assets](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/assets): The assets/ directory is used to add all the website's assets that the build tool will process.
+- [components](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/components): The components/ directory is where you put all your Vue components.
+- [composables](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/composables): Use the composables/ directory to auto-import your Vue composables into your application.
+- [layouts](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/layouts): Nuxt provides a layouts framework to extract common UI patterns into reusable layouts.
+- [middleware](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/middleware): Nuxt provides middleware to run code before navigating to a particular route.
+- [pages](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/pages): Nuxt provides file-based routing to create routes within your web application.
+- [plugins](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/plugins): Nuxt has a plugins system to use Vue plugins and more at the creation of your Vue application.
+- [utils](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/utils): Use the utils/ directory to auto-import your utility functions throughout your application.
+- [app.vue](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/app): The app.vue file is the main component of your Nuxt application.
+- [app.config.ts](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/app-config): Expose reactive configuration within your application with the App Config file.
+- [error.vue](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/app/error): The error.vue file is the error page in your Nuxt application.
+- [content](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/content): Use the content/ directory to create a file-based CMS for your application.
+- [modules](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/modules): Use the modules/ directory to automatically register local modules within your application.
+- [node_modules](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/node_modules): The package manager stores the dependencies of your project in the node_modules/ directory.
+- [public](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/public): The public/ directory is used to serve your website's static assets.
+- [server](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/server): The server/ directory is used to register API and server handlers to your application.
+- [shared](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/shared): Use the shared/ directory to share functionality between the Vue app and the Nitro server.
+- [.env](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/env): A .env file specifies your build/dev-time environment variables.
+- [.gitignore](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/gitignore): A .gitignore file specifies intentionally untracked files that git should ignore.
+- [.nuxtignore](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/nuxtignore): The .nuxtignore file lets Nuxt ignore files in your project’s root directory during the build phase.
+- [.nuxtrc](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/nuxtrc): The .nuxtrc file allows you to define nuxt configurations in a flat syntax.
+- [nuxt.config.ts](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/nuxt-config): Nuxt can be easily configured with a single nuxt.config file.
+- [package.json](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/package): The package.json file contains all the dependencies and scripts for your application.
+- [tsconfig.json](https://nuxt.com/nuxt/nuxtcore/live/guide/directory-structure/tsconfig): Nuxt generates multiple TypeScript configuration files with sensible defaults and your aliases.
+- [Events](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/events): Nuxt provides a powerful event system powered by hookable.
+- [Experimental Features](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/experimental-features): Enable Nuxt experimental features to unlock new possibilities.
+- [Features](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/features): Enable or disable optional Nuxt features to unlock new possibilities.
+- [How Nuxt Works?](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/internals): Nuxt is a minimal but highly customizable framework to build web applications.
+- [Runtime Config](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/runtime-config): Nuxt provides a runtime config API to expose configuration and secrets within your application.
+- [Nightly Release Channel](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/nightly-release-channel): The nightly release channel allows using Nuxt built directly from the latest commits to the repository.
+- [Lifecycle Hooks](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/hooks): Nuxt provides a powerful hooking system to expand almost every aspect using hooks.
+- [Module Author Guide](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/modules): Learn how to create a Nuxt Module to integrate, enhance or extend any Nuxt applications.
+- [Nuxt Kit](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/kit): @nuxt/kit provides features for module authors.
+- [NuxtApp](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/nuxt-app): In Nuxt, you can access runtime app context within composables, components and plugins.
+- [Authoring Nuxt Layers](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/layers): Nuxt provides a powerful system that allows you to extend the default files, configs, and much more.
+- [Debugging](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further/debugging): In Nuxt, you can get started with debugging your application directly in the browser as well as in your IDE.
+- [](https://nuxt.com/nuxt/nuxtcore/live/guide/going-further)
+- [Custom Routing](https://nuxt.com/nuxt/nuxtcore/live/guide/recipes/custom-routing): In Nuxt, your routing is defined by the structure of your files inside the pages directory. However, since it uses vue-router under the hood, Nuxt offers you several ways to add custom routes in your project.
+- [Using Vite Plugins in Nuxt](https://nuxt.com/nuxt/nuxtcore/live/guide/recipes/vite-plugin): Learn how to integrate Vite plugins into your Nuxt project.
+- [Custom useFetch in Nuxt](https://nuxt.com/nuxt/nuxtcore/live/guide/recipes/custom-usefetch): How to create a custom fetcher for calling your external API in Nuxt.
+- [Sessions and Authentication](https://nuxt.com/nuxt/nuxtcore/live/guide/recipes/sessions-and-authentication): Authentication is an extremely common requirement in web apps. This recipe will show you how to implement basic user registration and authentication in your Nuxt app.
+- [Nuxt and hydration](https://nuxt.com/nuxt/nuxtcore/live/guide/best-practices/hydration): Why fixing hydration issues is important
+- [Nuxt performance](https://nuxt.com/nuxt/nuxtcore/live/guide/best-practices/performance): Best practices for improving performance of Nuxt apps.
+- [Nuxt Plugins](https://nuxt.com/nuxt/nuxtcore/live/guide/best-practices/plugins): Best practices when using Nuxt plugins.
+- [<ClientOnly>](https://nuxt.com/nuxt/nuxtcore/live/api/components/client-only): Render components only in client-side with the <ClientOnly> component.
+- [<DevOnly>](https://nuxt.com/nuxt/nuxtcore/live/api/components/dev-only): Render components only during development with the <DevOnly> component.
+- [<NuxtClientFallback>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-client-fallback): Nuxt provides the <NuxtClientFallback> component to render its content on the client if any of its children trigger an error in SSR
+- [<NuxtPicture>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-picture): Nuxt provides a <NuxtPicture> component to handle automatic image optimization.
+- [<Teleport>](https://nuxt.com/nuxt/nuxtcore/live/api/components/teleports): The <Teleport> component teleports a component to a different location in the DOM.
+- [<NuxtRouteAnnouncer>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-route-announcer): The <NuxtRouteAnnouncer> component adds a hidden element with the page title to announce route changes to assistive technologies.
+- [<NuxtTime>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-time): The <NuxtTime> component displays time in a locale-friendly format with server-client consistency.
+- [<NuxtPage>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-page): The <NuxtPage> component is required to display pages located in the pages/ directory.
+- [<NuxtLayout>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-layout): Nuxt provides the <NuxtLayout> component to show layouts on pages and error pages.
+- [<NuxtLink>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-link): Nuxt provides <NuxtLink> component to handle any kind of links within your application.
+- [<NuxtLoadingIndicator>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-loading-indicator): Display a progress bar between page navigations.
+- [<NuxtErrorBoundary>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-error-boundary): The <NuxtErrorBoundary> component handles client-side errors happening in its default slot.
+- [<NuxtWelcome>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-welcome): The <NuxtWelcome> component greets users in new projects made from the starter template.
+- [<NuxtIsland>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-island): Nuxt provides the <NuxtIsland> component to render a non-interactive component without any client JS.
+- [<NuxtImg>](https://nuxt.com/nuxt/nuxtcore/live/api/components/nuxt-img): Nuxt provides a <NuxtImg> component to handle automatic image optimization.
+- [onPrehydrate](https://nuxt.com/nuxt/nuxtcore/live/api/composables/on-prehydrate): Use onPrehydrate to run a callback on the client immediately before Nuxt hydrates the page.
+- [useAppConfig](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-app-config): Access the reactive app config defined in the project.
+- [useAsyncData](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-async-data): useAsyncData provides access to data that resolves asynchronously in an SSR-friendly composable.
+- [useCookie](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-cookie): useCookie is an SSR-friendly composable to read and write cookies.
+- [useError](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-error): useError composable returns the global Nuxt error that is being handled.
+- [useFetch](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-fetch): Fetch data from an API endpoint with an SSR-friendly composable.
+- [useHead](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-head): useHead customizes the head properties of individual pages of your Nuxt app.
+- [useHeadSafe](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-head-safe): The recommended way to provide head data with user input.
+- [useHydration](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-hydration): Allows full control of the hydration cycle to set and receive data from the server.
+- [useLazyAsyncData](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-lazy-async-data): This wrapper around useAsyncData triggers navigation immediately.
+- [useLazyFetch](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-lazy-fetch): This wrapper around useFetch triggers navigation immediately.
+- [useLoadingIndicator](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-loading-indicator): This composable gives you access to the loading state of the app page.
+- [useNuxtApp](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-nuxt-app): Access the shared runtime context of the Nuxt Application.
+- [useNuxtData](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-nuxt-data): Access the current cached value of data fetching composables.
+- [usePreviewMode](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-preview-mode): Use usePreviewMode to check and control preview mode in Nuxt
+- [useRequestEvent](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-request-event): Access the incoming request event with the useRequestEvent composable.
+- [useRequestFetch](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-request-fetch): Forward the request context and headers for server-side fetch requests with the useRequestFetch composable.
+- [useRequestHeader](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-request-header): Use useRequestHeader to access a certain incoming request header.
+- [useRequestHeaders](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-request-headers): Use useRequestHeaders to access the incoming request headers.
+- [useRequestURL](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-request-url): Access the incoming request URL with the useRequestURL composable.
+- [useResponseHeader](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-response-header): Use useResponseHeader to set a server response header.
+- [useRoute](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-route): The useRoute composable returns the current route.
+- [useRouteAnnouncer](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-route-announcer): This composable observes the page title changes and updates the announcer message accordingly.
+- [useRouter](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-router): The useRouter composable returns the router instance.
+- [useRuntimeConfig](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-runtime-config): Access runtime config variables with the useRuntimeConfig composable.
+- [useRuntimeHook](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-runtime-hook): Registers a runtime hook in a Nuxt application and ensures it is properly disposed of when the scope is destroyed.
+- [useSeoMeta](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-seo-meta): The useSeoMeta composable lets you define your site's SEO meta tags as a flat object with full TypeScript support.
+- [useServerSeoMeta](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-server-seo-meta): The useServerSeoMeta composable lets you define your site's SEO meta tags as a flat object with full TypeScript support.
+- [useState](https://nuxt.com/nuxt/nuxtcore/live/api/composables/use-state): The useState composable creates a reactive and SSR-friendly shared state.
+- [$fetch](https://nuxt.com/nuxt/nuxtcore/live/api/utils/dollarfetch): Nuxt uses ofetch to expose globally the $fetch helper for making HTTP requests.
+- [abortNavigation](https://nuxt.com/nuxt/nuxtcore/live/api/utils/abort-navigation): abortNavigation is a helper function that prevents navigation from taking place and throws an error if one is set as a parameter.
+- [addRouteMiddleware](https://nuxt.com/nuxt/nuxtcore/live/api/utils/add-route-middleware): addRouteMiddleware() is a helper function to dynamically add middleware in your application.
+- [callOnce](https://nuxt.com/nuxt/nuxtcore/live/api/utils/call-once): Run a given function or block of code once during SSR or CSR.
+- [clearError](https://nuxt.com/nuxt/nuxtcore/live/api/utils/clear-error): The clearError composable clears all handled errors.
+- [clearNuxtData](https://nuxt.com/nuxt/nuxtcore/live/api/utils/clear-nuxt-data): Delete cached data, error status and pending promises of useAsyncData and useFetch.
+- [clearNuxtState](https://nuxt.com/nuxt/nuxtcore/live/api/utils/clear-nuxt-state): Delete the cached state of useState.
+- [createError](https://nuxt.com/nuxt/nuxtcore/live/api/utils/create-error): Create an error object with additional metadata.
+- [defineLazyHydrationComponent](https://nuxt.com/nuxt/nuxtcore/live/api/utils/define-lazy-hydration-component): Define a lazy hydration component with a specific strategy.
+- [defineNuxtComponent](https://nuxt.com/nuxt/nuxtcore/live/api/utils/define-nuxt-component): defineNuxtComponent() is a helper function for defining type safe components with Options API.
+- [defineNuxtPlugin](https://nuxt.com/nuxt/nuxtcore/live/api/utils/define-nuxt-plugin): defineNuxtPlugin() is a helper function for creating Nuxt plugins.
+- [defineNuxtRouteMiddleware](https://nuxt.com/nuxt/nuxtcore/live/api/utils/define-nuxt-route-middleware): Create named route middleware using defineNuxtRouteMiddleware helper function.
+- [definePageMeta](https://nuxt.com/nuxt/nuxtcore/live/api/utils/define-page-meta): Define metadata for your page components.
+- [defineRouteRules](https://nuxt.com/nuxt/nuxtcore/live/api/utils/define-route-rules): Define route rules for hybrid rendering at the page level.
+- [navigateTo](https://nuxt.com/nuxt/nuxtcore/live/api/utils/navigate-to): navigateTo is a helper function that programmatically navigates users.
+- [onBeforeRouteLeave](https://nuxt.com/nuxt/nuxtcore/live/api/utils/on-before-route-leave): The onBeforeRouteLeave composable allows registering a route guard within a component.
+- [onBeforeRouteUpdate](https://nuxt.com/nuxt/nuxtcore/live/api/utils/on-before-route-update): The onBeforeRouteUpdate composable allows registering a route guard within a component.
+- [onNuxtReady](https://nuxt.com/nuxt/nuxtcore/live/api/utils/on-nuxt-ready): The onNuxtReady composable allows running a callback after your app has finished initializing.
+- [prefetchComponents](https://nuxt.com/nuxt/nuxtcore/live/api/utils/prefetch-components): Nuxt provides utilities to give you control over prefetching components.
+- [preloadComponents](https://nuxt.com/nuxt/nuxtcore/live/api/utils/preload-components): Nuxt provides utilities to give you control over preloading components.
+- [preloadRouteComponents](https://nuxt.com/nuxt/nuxtcore/live/api/utils/preload-route-components): preloadRouteComponents allows you to manually preload individual pages in your Nuxt app.
+- [prerenderRoutes](https://nuxt.com/nuxt/nuxtcore/live/api/utils/prerender-routes): prerenderRoutes hints to Nitro to prerender an additional route.
+- [refreshCookie](https://nuxt.com/nuxt/nuxtcore/live/api/utils/refresh-cookie): Refresh useCookie values manually when a cookie has changed
+- [refreshNuxtData](https://nuxt.com/nuxt/nuxtcore/live/api/utils/refresh-nuxt-data): Refresh all or specific asyncData instances in Nuxt
+- [reloadNuxtApp](https://nuxt.com/nuxt/nuxtcore/live/api/utils/reload-nuxt-app): reloadNuxtApp will perform a hard reload of the page.
+- [setPageLayout](https://nuxt.com/nuxt/nuxtcore/live/api/utils/set-page-layout): setPageLayout allows you to dynamically change the layout of a page.
+- [setResponseStatus](https://nuxt.com/nuxt/nuxtcore/live/api/utils/set-response-status): setResponseStatus sets the statusCode (and optionally the statusMessage) of the response.
+- [showError](https://nuxt.com/nuxt/nuxtcore/live/api/utils/show-error): Nuxt provides a quick and simple way to show a full screen error page if needed.
+- [updateAppConfig](https://nuxt.com/nuxt/nuxtcore/live/api/utils/update-app-config): Update the App Config at runtime.
+- [nuxt add](https://nuxt.com/nuxt/nuxtcore/live/api/commands/add): Scaffold an entity into your Nuxt application.
+- [nuxt analyze](https://nuxt.com/nuxt/nuxtcore/live/api/commands/analyze): Analyze the production bundle or your Nuxt application.
+- [nuxt build](https://nuxt.com/nuxt/nuxtcore/live/api/commands/build): Build your Nuxt application.
+- [nuxt build-module](https://nuxt.com/nuxt/nuxtcore/live/api/commands/build-module): Nuxt command to build your Nuxt module before publishing.
+- [nuxt cleanup](https://nuxt.com/nuxt/nuxtcore/live/api/commands/cleanup): Remove common generated Nuxt files and caches.
+- [nuxt dev](https://nuxt.com/nuxt/nuxtcore/live/api/commands/dev): The dev command starts a development server with hot module replacement at http://localhost:3000
+- [nuxt devtools](https://nuxt.com/nuxt/nuxtcore/live/api/commands/devtools): The devtools command allows you to enable or disable Nuxt DevTools on a per-project basis.
+- [nuxt generate](https://nuxt.com/nuxt/nuxtcore/live/api/commands/generate): Pre-renders every route of the application and stores the result in plain HTML files.
+- [nuxt info](https://nuxt.com/nuxt/nuxtcore/live/api/commands/info): The info command logs information about the current or specified Nuxt project.
+- [create nuxt](https://nuxt.com/nuxt/nuxtcore/live/api/commands/init): The init command initializes a fresh Nuxt project.
+- [nuxt module](https://nuxt.com/nuxt/nuxtcore/live/api/commands/module): Search and add modules to your Nuxt application with the command line.
+- [nuxt prepare](https://nuxt.com/nuxt/nuxtcore/live/api/commands/prepare): The prepare command creates a .nuxt directory in your application and generates types.
+- [nuxt preview](https://nuxt.com/nuxt/nuxtcore/live/api/commands/preview): The preview command starts a server to preview your application after the build command.
+- [nuxt typecheck](https://nuxt.com/nuxt/nuxtcore/live/api/commands/typecheck): The typecheck command runs vue-tsc to check types throughout your app.
+- [nuxt upgrade](https://nuxt.com/nuxt/nuxtcore/live/api/commands/upgrade): The upgrade command upgrades Nuxt to the latest version.
+- [Modules](https://nuxt.com/nuxt/nuxtcore/live/api/kit/modules): Nuxt Kit provides a set of utilities to help you create and use modules. You can use these utilities to create your own modules or to reuse existing modules.
+- [Runtime Config](https://nuxt.com/nuxt/nuxtcore/live/api/kit/runtime-config): Nuxt Kit provides a set of utilities to help you access and modify Nuxt runtime configuration.
+- [Templates](https://nuxt.com/nuxt/nuxtcore/live/api/kit/templates): Nuxt Kit provides a set of utilities to help you work with templates. These functions allow you to generate extra files during development and build time.
+- [Nitro](https://nuxt.com/nuxt/nuxtcore/live/api/kit/nitro): Nuxt Kit provides a set of utilities to help you work with Nitro. These functions allow you to add server handlers, plugins, and prerender routes.
+- [Resolving](https://nuxt.com/nuxt/nuxtcore/live/api/kit/resolving): Nuxt Kit provides a set of utilities to help you resolve paths. These functions allow you to resolve paths relative to the current module, with unknown name or extension.
+- [Logging](https://nuxt.com/nuxt/nuxtcore/live/api/kit/logging): Nuxt Kit provides a set of utilities to help you work with logging. These functions allow you to log messages with extra features.
+- [Builder](https://nuxt.com/nuxt/nuxtcore/live/api/kit/builder): Nuxt Kit provides a set of utilities to help you work with the builder. These functions allow you to extend the Vite and webpack configurations.
+- [Examples](https://nuxt.com/nuxt/nuxtcore/live/api/kit/examples): Examples of Nuxt Kit utilities in use.
+- [Layers](https://nuxt.com/nuxt/nuxtcore/live/api/kit/layers): Nuxt Kit provides utilities to help you work with layers and their directory structures.
+- [Programmatic Usage](https://nuxt.com/nuxt/nuxtcore/live/api/kit/programmatic): Nuxt Kit provides a set of utilities to help you work with Nuxt programmatically. These functions allow you to load Nuxt, build Nuxt, and load Nuxt configuration.
+- [Compatibility](https://nuxt.com/nuxt/nuxtcore/live/api/kit/compatibility): Nuxt Kit provides a set of utilities to help you check the compatibility of your modules with different Nuxt versions.
+- [Auto-imports](https://nuxt.com/nuxt/nuxtcore/live/api/kit/autoimports): Nuxt Kit provides a set of utilities to help you work with auto-imports. These functions allow you to register your own utils, composables and Vue APIs.
+- [Components](https://nuxt.com/nuxt/nuxtcore/live/api/kit/components): Nuxt Kit provides a set of utilities to help you work with components. You can register components globally or locally, and also add directories to be scanned for components.
+- [Context](https://nuxt.com/nuxt/nuxtcore/live/api/kit/context): Nuxt Kit provides a set of utilities to help you work with context.
+- [Pages](https://nuxt.com/nuxt/nuxtcore/live/api/kit/pages): Nuxt Kit provides a set of utilities to help you create and use pages. You can use these utilities to manipulate the pages configuration or to define route rules.
+- [Layout](https://nuxt.com/nuxt/nuxtcore/live/api/kit/layout): Nuxt Kit provides a set of utilities to help you work with layouts.
+- [Plugins](https://nuxt.com/nuxt/nuxtcore/live/api/kit/plugins): Nuxt Kit provides a set of utilities to help you create and use plugins. You can add plugins or plugin templates to your module using these functions.
+- [Lifecycle Hooks](https://nuxt.com/nuxt/nuxtcore/live/api/advanced/hooks): Nuxt provides a powerful hooking system to expand almost every aspect using hooks.
+- [Import meta](https://nuxt.com/nuxt/nuxtcore/live/api/advanced/import-meta): Understand where your code is running using `import.meta`.
+- [Nuxt Configuration](https://nuxt.com/nuxt/nuxtcore/live/api/nuxt-config): Discover all the options you can use in your nuxt.config.ts file.
+- [Nuxt API Reference](https://nuxt.com/nuxt/nuxtcore/live/api): Explore all Nuxt Internals: Components, Composables, Utils, Commands and more.
+- [Getting Help](https://nuxt.com/nuxt/nuxtcore/live/community/getting-help): We're a friendly community of developers and we'd love to help.
+- [Reporting Bugs](https://nuxt.com/nuxt/nuxtcore/live/community/reporting-bugs): One of the most valuable roles in open source is taking the time to report bugs helpfully.
+- [Contribution](https://nuxt.com/nuxt/nuxtcore/live/community/contribution): Nuxt is a community project - and so we love contributions of all kinds! ❤️
+- [Framework](https://nuxt.com/nuxt/nuxtcore/live/community/framework-contribution): Some specific points about contributions to the framework repository.
+- [Roadmap](https://nuxt.com/nuxt/nuxtcore/live/community/roadmap): Nuxt is constantly evolving, with new features and modules being added all the time.
+- [Releases](https://nuxt.com/nuxt/nuxtcore/live/community/changelog): Discover the latest releases of Nuxt & Nuxt official modules.
+- [Overview](https://nuxt.com/nuxt/nuxtcore/live/bridge/overview): Reduce the differences with Nuxt 3 and reduce the burden of migration to Nuxt 3.
+- [Configuration](https://nuxt.com/nuxt/nuxtcore/live/bridge/configuration): Learn how to configure Nuxt Bridge to your own needs.
+- [TypeScript](https://nuxt.com/nuxt/nuxtcore/live/bridge/typescript): Learn how to use TypeScript with Nuxt Bridge.
+- [Legacy Composition API](https://nuxt.com/nuxt/nuxtcore/live/bridge/bridge-composition-api): Learn how to migrate to Composition API with Nuxt Bridge.
+- [Plugins and Middleware](https://nuxt.com/nuxt/nuxtcore/live/bridge/plugins-and-middleware): Learn how to migrate from Nuxt 2 to Nuxt Bridge new plugins and middleware.
+- [New Composition API](https://nuxt.com/nuxt/nuxtcore/live/bridge/nuxt3-compatible-api): Nuxt Bridge implements composables compatible with Nuxt 3.
+- [Meta Tags](https://nuxt.com/nuxt/nuxtcore/live/bridge/meta): Learn how to migrate from Nuxt 2 to Nuxt Bridge new meta tags.
+- [Runtime Config](https://nuxt.com/nuxt/nuxtcore/live/bridge/runtime-config): Nuxt provides a runtime config API to expose configuration and secrets within your application.
+- [Nitro](https://nuxt.com/nuxt/nuxtcore/live/bridge/nitro): Activate Nitro to your Nuxt 2 application with Nuxt Bridge.
+- [Vite](https://nuxt.com/nuxt/nuxtcore/live/bridge/vite): Activate Vite to your Nuxt 2 application with Nuxt Bridge.
+- [Overview](https://nuxt.com/nuxt/nuxtcore/live/migration/overview): Nuxt 3 is a complete rewrite of Nuxt 2, and also based on a new set of underlying technologies.
+- [Build Tooling](https://nuxt.com/nuxt/nuxtcore/live/migration/bundling): Learn how to migrate from Nuxt 2 to Nuxt 3 build tooling.
+- [Server](https://nuxt.com/nuxt/nuxtcore/live/migration/server): Learn how to migrate from Nuxt 2 to Nuxt 3 server.
+- [Configuration](https://nuxt.com/nuxt/nuxtcore/live/migration/configuration): Learn how to migrate from Nuxt 2 to Nuxt 3 new configuration.
+- [Modules](https://nuxt.com/nuxt/nuxtcore/live/migration/module-authors): Learn how to migrate from Nuxt 2 to Nuxt 3 modules.
+- [Auto Imports](https://nuxt.com/nuxt/nuxtcore/live/migration/auto-imports): Nuxt 3 adopts a minimal friction approach, meaning wherever possible components and composables are auto-imported.
+- [Meta Tags](https://nuxt.com/nuxt/nuxtcore/live/migration/meta): Manage your meta tags, from Nuxt 2 to Nuxt 3.
+- [Plugins and Middleware](https://nuxt.com/nuxt/nuxtcore/live/migration/plugins-and-middleware): Learn how to migrate from Nuxt 2 to Nuxt 3 plugins and middleware.
+- [Pages and Layouts](https://nuxt.com/nuxt/nuxtcore/live/migration/pages-and-layouts): Learn how to migrate from Nuxt 2 to Nuxt 3 pages and layouts.
+- [Component Options](https://nuxt.com/nuxt/nuxtcore/live/migration/component-options): Learn how to migrate from Nuxt 2 components options to Nuxt 3 composables.
+- [Runtime Config](https://nuxt.com/nuxt/nuxtcore/live/migration/runtime-config): Learn how to migrate from Nuxt 2 to Nuxt 3 runtime config.
+- [Nuxt Docs](https://nuxt.com/nuxt/nuxtcore/live/readme): This repository contains the documentation of Nuxt hosted on https://nuxt.com/docs
+- [Introduction](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/introduction): Nuxt's goal is to make web development intuitive and performant with a great Developer Experience in mind.
+- [Installation](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/installation): Get started with Nuxt quickly with our online starters or start locally with your terminal.
+- [Configuration](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/configuration): Nuxt is configured with sensible defaults to make you productive.
+- [Views](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/views): Nuxt provides several component layers to implement the user interface of your application.
+- [Assets](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/assets): Nuxt offers two options for your assets.
+- [Styling](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/styling): Learn how to style your Nuxt application.
+- [Routing](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/routing): Nuxt file-system routing creates a route for every file in the pages/ directory.
+- [SEO and Meta](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/seo-meta): Improve your Nuxt app's SEO with powerful head config, composables and components.
+- [Transitions](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/transitions): Apply transitions between pages and layouts with Vue or native browser View Transitions.
+- [Data Fetching](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/data-fetching): Nuxt provides composables to handle data fetching within your application.
+- [State Management](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/state-management): Nuxt cung cấp các thư viện quản lý state mạnh mẽ và composable useState để tạo ra một shared state phản ứng và thân thiện với SSR.
+- [Error Handling](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/error-handling): Learn how to catch and handle errors in Nuxt.
+- [Server](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/server): Xây dựng các ứng dụng full-stack với server framework của Nuxt. Bạn có thể fetch dữ liệu từ database hoặc server khác, tạo API, hoặc thậm chí tạo nội dung tĩnh phía server như sitemap hoặc RSS feed - tất cả từ một codebase duy nhất.
+- [Layers](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/layers): Nuxt cung cấp một hệ thống mạnh mẽ cho phép bạn mở rộng các file mặc định, config, và nhiều thứ khác.
+- [Prerendering](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/prerendering): Nuxt cho phép các trang được render tĩnh tại thời điểm build để cải thiện một số metric về hiệu suất hoặc SEO
+- [Deployment](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/deployment): Tìm hiểu cách triển khai ứng dụng Nuxt của bạn đến bất kỳ hosting provider nào.
+- [Testing](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/testing): Cách test ứng dụng Nuxt của bạn.
+- [Upgrade Guide](https://nuxt.com/nuxt/nuxtcore/vi/getting-started/upgrade): Tìm hiểu cách nâng cấp lên phiên bản Nuxt mới nhất.
+- [Nuxt Guide](https://nuxt.com/nuxt/nuxtcore/vi/guide): Learn how Nuxt works with in-depth guides.
+- [Auto-imports](https://nuxt.com/nuxt/nuxtcore/vi/guide/concepts/auto-imports): Nuxt auto-imports components, composables, helper functions and Vue APIs.
+- [Nuxt Lifecycle](https://nuxt.com/nuxt/nuxtcore/vi/guide/concepts/nuxt-lifecycle): Hiểu về lifecycle của ứng dụng Nuxt có thể giúp bạn có được cái nhìn sâu hơn về cách framework hoạt động, đặc biệt cho cả server-side và client-side rendering.
+- [Vue.js Development](https://nuxt.com/nuxt/nuxtcore/vi/guide/concepts/vuejs-development): Nuxt uses Vue.js and adds features such as component auto-imports, file-based routing and composables for an SSR-friendly usage.
+- [Rendering Modes](https://nuxt.com/nuxt/nuxtcore/vi/guide/concepts/rendering): Learn about the different rendering modes available in Nuxt.
+- [Server Engine](https://nuxt.com/nuxt/nuxtcore/vi/guide/concepts/server-engine): Nuxt is powered by a new server engine: Nitro.
+- [Modules](https://nuxt.com/nuxt/nuxtcore/vi/guide/concepts/modules): Nuxt provides a module system to extend the framework core and simplify integrations.(Qwen3 235B A22B)
+- [ES Modules](https://nuxt.com/nuxt/nuxtcore/vi/guide/concepts/esm): Nuxt uses native ES modules.
+- [TypeScript](https://nuxt.com/nuxt/nuxtcore/vi/guide/concepts/typescript): Nuxt được type hoàn toàn và cung cấp các shortcut hữu ích để đảm bảo bạn có quyền truy cập vào thông tin type chính xác khi coding.
+- [Code Style](https://nuxt.com/nuxt/nuxtcore/vi/guide/concepts/code-style): Nuxt hỗ trợ ESLint ngay từ đầu
+- [.nuxt](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/nuxt): Nuxt uses the .nuxt/ directory in development to generate your Vue application.
+- [.output](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/output): Nuxt creates the .output/ directory when building your application for production.
+- [assets](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/assets): The assets/ directory is used to add all the website's assets that the build tool will process.
+- [components](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/components): The components/ directory is where you put all your Vue components.
+- [composables](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/composables): Sử dụng thư mục composables/ để tự động nhập các Vue composables vào ứng dụng của bạn.
+- [layouts](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/layouts): Nuxt cung cấp một framework layouts để trích xuất các mẫu UI phổ biến thành các layouts có thể tái sử dụng.
+- [middleware](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/middleware): Nuxt provides middleware to run code before navigating to a particular route.
+- [pages](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/pages): Nuxt provides file-based routing to create routes within your web application.
+- [plugins](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/plugins): Nuxt has a plugins system to use Vue plugins and more at the creation of your Vue application.
+- [utils](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/utils): Use the utils/ directory to auto-import your utility functions throughout your application.
+- [app.vue](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/app): The app.vue file is the main component of your Nuxt application.
+- [app.config.ts](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/app-config): Expose reactive configuration within your application with the App Config file.
+- [error.vue](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/app/error): The error.vue file is the error page in your Nuxt application.
+- [content](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/content): Use the content/ directory to create a file-based CMS for your application.
+- [modules](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/modules): Use the modules/ directory to automatically register local modules within your application.
+- [node_modules](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/node_modules): The package manager stores the dependencies of your project in the node_modules/ directory.
+- [public](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/public): The public/ directory is used to serve your website's static assets.
+- [server](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/server): Thư mục server/ được sử dụng để đăng ký các API và server handler cho ứng dụng của bạn.
+- [shared](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/shared): Use the shared/ directory to share functionality between the Vue app and the Nitro server.
+- [.env](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/env): A .env file specifies your build/dev-time environment variables.
+- [.gitignore](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/gitignore): A .gitignore file specifies intentionally untracked files that git should ignore.
+- [.nuxtignore](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/nuxtignore): The .nuxtignore file lets Nuxt ignore files in your project’s root directory during the build phase.
+- [.nuxtrc](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/nuxtrc): The .nuxtrc file allows you to define nuxt configurations in a flat syntax.
+- [nuxt.config.ts](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/nuxt-config): Nuxt can be easily configured with a single nuxt.config file.
+- [package.json](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/package): The package.json file contains all the dependencies and scripts for your application.
+- [tsconfig.json](https://nuxt.com/nuxt/nuxtcore/vi/guide/directory-structure/tsconfig): Nuxt generates multiple TypeScript configuration files with sensible defaults and your aliases.
+- [Events](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/events): Nuxt cung cấp một hệ thống sự kiện mạnh mẽ được hỗ trợ bởi hookable.
+- [Tính năng Thử nghiệm](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/experimental-features): Bật các tính năng thử nghiệm của Nuxt để mở khóa các khả năng mới.
+- [Features](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/features): Enable or disable optional Nuxt features to unlock new possibilities.
+- [How Nuxt Works?](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/internals): Nuxt là một framework tối giản nhưng có khả năng tùy chỉnh cao để xây dựng các ứng dụng web.
+- [Runtime Config](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/runtime-config): Nuxt cung cấp một runtime config API để expose configuration và secrets trong ứng dụng của bạn.
+- [Nightly Release Channel](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/nightly-release-channel): Kênh release nightly cho phép sử dụng Nuxt được xây dựng trực tiếp từ các commits mới nhất của repository.
+- [Lifecycle Hooks](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/hooks): Nuxt cung cấp một hệ thống hooking mạnh mẽ để mở rộng hầu hết mọi khía cạnh bằng cách sử dụng hooks.
+- [Module Author Guide](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/modules): Learn how to create a Nuxt Module to integrate, enhance or extend any Nuxt applications.
+- [Nuxt Kit](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/kit): @nuxt/kit cung cấp các tính năng cho tác giả module.
+- [NuxtApp](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/nuxt-app): Trong Nuxt, bạn có thể truy cập ngữ cảnh ứng dụng runtime trong composables, components và plugins.
+- [Authoring Nuxt Layers](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/layers): Nuxt cung cấp một hệ thống mạnh mẽ cho phép bạn mở rộng các tệp mặc định, configs, và nhiều hơn nữa.
+- [Debugging](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further/debugging): Trong Nuxt, bạn có thể bắt đầu debugging ứng dụng của mình trực tiếp trong trình duyệt cũng như trong IDE của bạn.
+- [](https://nuxt.com/nuxt/nuxtcore/vi/guide/going-further)
+- [Custom Routing](https://nuxt.com/nuxt/nuxtcore/vi/guide/recipes/custom-routing): Trong Nuxt, định tuyến của bạn được định nghĩa bởi cấu trúc của các file bên trong thư mục pages. Tuy nhiên, vì nó sử dụng vue-router ở dưới, Nuxt cung cấp cho bạn một số cách để thêm các tuyến tùy chỉnh trong dự án của bạn.
+- [Using Vite Plugins in Nuxt](https://nuxt.com/nuxt/nuxtcore/vi/guide/recipes/vite-plugin): Tìm hiểu cách tích hợp các plugin Vite vào dự án Nuxt của bạn.
+- [Custom useFetch in Nuxt](https://nuxt.com/nuxt/nuxtcore/vi/guide/recipes/custom-usefetch): Cách tạo một fetcher tùy chỉnh để gọi API bên ngoài của bạn trong Nuxt.
+- [Sessions and Authentication](https://nuxt.com/nuxt/nuxtcore/vi/guide/recipes/sessions-and-authentication): Xác thực là một yêu cầu cực kỳ phổ biến trong các ứng dụng web. Công thức này sẽ hướng dẫn bạn cách triển khai đăng ký người dùng cơ bản và xác thực trong ứng dụng Nuxt của bạn.
+- [Nuxt and hydration](https://nuxt.com/nuxt/nuxtcore/vi/guide/best-practices/hydration): Why fixing hydration issues is important
+- [Nuxt performance](https://nuxt.com/nuxt/nuxtcore/vi/guide/best-practices/performance): Best practices for improving performance of Nuxt apps.
+- [Nuxt Plugins](https://nuxt.com/nuxt/nuxtcore/vi/guide/best-practices/plugins): Best practices when using Nuxt plugins.
+- [<ClientOnly>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/client-only): Render components only in client-side with the <ClientOnly> component.
+- [<DevOnly>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/dev-only): Render components only during development with the <DevOnly> component.
+- [<NuxtClientFallback>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-client-fallback): Nuxt provides the <NuxtClientFallback> component to render its content on the client if any of its children trigger an error in SSR
+- [<NuxtPicture>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-picture): Nuxt provides a <NuxtPicture> component to handle automatic image optimization.
+- [<Teleport>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/teleports): The <Teleport> component teleports a component to a different location in the DOM.
+- [<NuxtRouteAnnouncer>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-route-announcer): The <NuxtRouteAnnouncer> component adds a hidden element with the page title to announce route changes to assistive technologies.
+- [<NuxtTime>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-time): The <NuxtTime> component displays time in a locale-friendly format with server-client consistency.
+- [<NuxtPage>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-page): The <NuxtPage> component is required to display pages located in the pages/ directory.
+- [<NuxtLayout>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-layout): Nuxt provides the <NuxtLayout> component to show layouts on pages and error pages.
+- [<NuxtLink>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-link): Nuxt provides <NuxtLink> component to handle any kind of links within your application.
+- [<NuxtLoadingIndicator>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-loading-indicator): Display a progress bar between page navigations.
+- [<NuxtErrorBoundary>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-error-boundary): The <NuxtErrorBoundary> component handles client-side errors happening in its default slot.
+- [<NuxtWelcome>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-welcome): The <NuxtWelcome> component greets users in new projects made from the starter template.
+- [<NuxtIsland>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-island): Nuxt provides the <NuxtIsland> component to render a non-interactive component without any client JS.
+- [<NuxtImg>](https://nuxt.com/nuxt/nuxtcore/vi/api/components/nuxt-img): Nuxt provides a <NuxtImg> component to handle automatic image optimization.
+- [onPrehydrate](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/on-prehydrate): Sử dụng onPrehydrate để chạy một callback trên client ngay lập tức trước khi Nuxt hydrate trang.
+- [useAppConfig](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-app-config): Truy cập cấu hình ứng dụng reactive được định nghĩa trong dự án.
+- [useAsyncData](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-async-data): useAsyncData cung cấp quyền truy cập vào dữ liệu được giải quyết bất đồng bộ trong một composable thân thiện với SSR.
+- [useCookie](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-cookie): useCookie là một composable thân thiện với SSR để đọc và ghi cookies.
+- [useError](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-error): useError composable trả về lỗi Nuxt toàn cục đang được xử lý.
+- [useFetch](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-fetch): Fetch dữ liệu từ một API endpoint với một composable thân thiện với SSR.
+- [useHead](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-head): useHead tùy chỉnh các thuộc tính head của các trang riêng lẻ trong ứng dụng Nuxt của bạn.
+- [useHeadSafe](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-head-safe): Cách được khuyến nghị để cung cấp dữ liệu head với đầu vào của người dùng.
+- [useHydration](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-hydration): Cho phép kiểm soát đầy đủ chu kỳ hydration để đặt và nhận dữ liệu từ máy chủ.
+- [useLazyAsyncData](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-lazy-async-data): Wrapper này xung quanh useAsyncData kích hoạt điều hướng ngay lập tức.
+- [useLazyFetch](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-lazy-fetch): Wrapper này xung quanh useFetch kích hoạt điều hướng ngay lập tức.
+- [useLoadingIndicator](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-loading-indicator): Composable này cung cấp cho bạn quyền truy cập vào trạng thái loading của trang ứng dụng.
+- [useNuxtApp](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-nuxt-app): Truy cập ngữ cảnh thời gian chạy chia sẻ của Ứng dụng Nuxt.
+- [useNuxtData](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-nuxt-data): Truy cập giá trị cache hiện tại của các composables fetch data.
+- [usePreviewMode](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-preview-mode): Sử dụng usePreviewMode để kiểm tra và kiểm soát chế độ preview trong Nuxt
+- [useRequestEvent](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-request-event): Truy cập sự kiện request đến với composable useRequestEvent.
+- [useRequestFetch](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-request-fetch): Chuyển tiếp ngữ cảnh request và headers cho các yêu cầu fetch server-side với composable useRequestFetch.
+- [useRequestHeader](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-request-header): Sử dụng useRequestHeader để truy cập một header request đến nhất định.
+- [useRequestHeaders](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-request-headers): Sử dụng useRequestHeaders để truy cập các headers request đến.
+- [useRequestURL](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-request-url): Truy cập URL request đến với composable useRequestURL.
+- [useResponseHeader](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-response-header): Sử dụng useResponseHeader để thiết lập một header response server.
+- [useRoute](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-route): Composable useRoute trả về route hiện tại.
+- [useRouteAnnouncer](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-route-announcer): Composable này quan sát các thay đổi tiêu đề trang và cập nhật thông báo announcer tương ứng.
+- [useRouter](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-router): Composable useRouter trả về instance router.
+- [useRuntimeConfig](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-runtime-config): Truy cập các biến config runtime với composable useRuntimeConfig.
+- [useRuntimeHook](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-runtime-hook): Đăng ký một runtime hook trong ứng dụng Nuxt và đảm bảo nó được dispose đúng cách khi scope bị destroy.
+- [useSeoMeta](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-seo-meta): Composable useSeoMeta cho phép bạn định nghĩa các meta tags SEO của site dưới dạng một object phẳng với hỗ trợ TypeScript đầy đủ.
+- [useServerSeoMeta](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-server-seo-meta): Composable useServerSeoMeta cho phép bạn định nghĩa các meta tags SEO của site dưới dạng một object phẳng với hỗ trợ TypeScript đầy đủ.
+- [useState](https://nuxt.com/nuxt/nuxtcore/vi/api/composables/use-state): Composable useState tạo ra một shared state reactive và SSR-friendly.
+- [$fetch](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/dollarfetch): Nuxt sử dụng ofetch để hiển thị toàn cầu trình trợ giúp $fetch để thực hiện các yêu cầu HTTP.
+- [abortNavigation](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/abort-navigation): abortNavigation là một hàm trợ giúp ngăn chặn việc điều hướng diễn ra và ném ra lỗi nếu có lỗi được đặt làm tham số.
+- [addRouteMiddleware](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/add-route-middleware): addRouteMiddleware() là một hàm trợ giúp để thêm middleware một cách động trong ứng dụng của bạn.
+- [callOnce](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/call-once): Chạy một hàm hoặc khối mã đã cho một lần trong quá trình SSR hoặc CSR.
+- [clearError](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/clear-error): Composable clearError xóa tất cả các lỗi đã xử lý.
+- [clearNuxtData](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/clear-nuxt-data): Xóa dữ liệu được lưu trong bộ nhớ cache, trạng thái lỗi và các promise đang chờ xử lý của useAsyncData và useFetch.
+- [clearNuxtState](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/clear-nuxt-state): Xóa trạng thái được lưu trong bộ nhớ cache của useState.
+- [createError](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/create-error): Tạo một đối tượng lỗi với siêu dữ liệu bổ sung.
+- [defineLazyHydrationComponent](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/define-lazy-hydration-component): Định nghĩa một thành phần hydrat hóa lười với một chiến lược cụ thể.
+- [defineNuxtComponent](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/define-nuxt-component): defineNuxtComponent() là một hàm trợ giúp để định nghĩa các thành phần an toàn kiểu với Options API.
+- [defineNuxtPlugin](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/define-nuxt-plugin): defineNuxtPlugin() là một hàm trợ giúp để tạo các plugin Nuxt.
+- [defineNuxtRouteMiddleware](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/define-nuxt-route-middleware): Tạo middleware tuyến được đặt tên bằng hàm trợ giúp defineNuxtRouteMiddleware.
+- [definePageMeta](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/define-page-meta): Định nghĩa siêu dữ liệu cho các thành phần trang của bạn.
+- [defineRouteRules](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/define-route-rules): Định nghĩa quy tắc tuyến cho kết xuất hybrid ở cấp độ trang.
+- [navigateTo](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/navigate-to): navigateTo là một hàm trợ giúp điều hướng người dùng theo chương trình.
+- [onBeforeRouteLeave](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/on-before-route-leave): Composable onBeforeRouteLeave cho phép đăng ký một bảo vệ tuyến trong một thành phần.
+- [onBeforeRouteUpdate](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/on-before-route-update): Composable onBeforeRouteUpdate cho phép đăng ký một bảo vệ tuyến trong một thành phần.
+- [onNuxtReady](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/on-nuxt-ready): Composable onNuxtReady cho phép chạy một callback sau khi ứng dụng của bạn đã hoàn thành khởi tạo.
+- [prefetchComponents](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/prefetch-components): Nuxt provides utilities to give you control over prefetching components.
+- [preloadComponents](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/preload-components): Nuxt provides utilities to give you control over preloading components.
+- [preloadRouteComponents](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/preload-route-components): preloadRouteComponents allows you to manually preload individual pages in your Nuxt app.
+- [prerenderRoutes](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/prerender-routes): prerenderRoutes hints to Nitro to prerender an additional route.
+- [refreshCookie](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/refresh-cookie): Refresh useCookie values manually when a cookie has changed
+- [refreshNuxtData](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/refresh-nuxt-data): Refresh all or specific asyncData instances in Nuxt
+- [reloadNuxtApp](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/reload-nuxt-app): reloadNuxtApp will perform a hard reload of the page.
+- [setPageLayout](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/set-page-layout): setPageLayout allows you to dynamically change the layout of a page.
+- [setResponseStatus](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/set-response-status): setResponseStatus sets the statusCode (and optionally the statusMessage) of the response.
+- [showError](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/show-error): Nuxt provides a quick and simple way to show a full screen error page if needed.
+- [updateAppConfig](https://nuxt.com/nuxt/nuxtcore/vi/api/utils/update-app-config): Update the App Config at runtime.
+- [nuxt add](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/add): Tạo khuôn mẫu một thực thể vào ứng dụng Nuxt của bạn.
+- [nuxt analyze](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/analyze): Phân tích gói sản xuất hoặc ứng dụng Nuxt của bạn.
+- [nuxt build](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/build): Xây dựng ứng dụng Nuxt của bạn.
+- [nuxt build-module](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/build-module): Lệnh Nuxt để xây dựng module Nuxt của bạn trước khi xuất bản.
+- [nuxt cleanup](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/cleanup): Xóa các tệp và bộ nhớ cache Nuxt được tạo phổ biến.
+- [nuxt dev](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/dev): Lệnh dev khởi động máy chủ phát triển với hot module replacement tại http://localhost:3000
+- [nuxt devtools](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/devtools): Lệnh devtools cho phép bạn bật hoặc tắt Nuxt DevTools trên cơ sở từng dự án.
+- [nuxt generate](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/generate): Pre-render mọi route của ứng dụng và lưu kết quả trong các tệp HTML thuần.
+- [nuxt info](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/info): Lệnh info ghi log thông tin về dự án Nuxt hiện tại hoặc được chỉ định.
+- [create nuxt](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/init): Lệnh init khởi tạo một dự án Nuxt mới.
+- [nuxt module](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/module): Tìm kiếm và thêm module vào ứng dụng Nuxt của bạn với dòng lệnh.
+- [nuxt prepare](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/prepare): Lệnh prepare tạo thư mục .nuxt trong ứng dụng của bạn và tạo các loại.
+- [nuxt preview](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/preview): Lệnh preview khởi động máy chủ để xem trước ứng dụng của bạn sau lệnh build.
+- [nuxt typecheck](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/typecheck): Lệnh typecheck chạy vue-tsc để kiểm tra các loại trong toàn bộ ứng dụng của bạn.
+- [nuxt upgrade](https://nuxt.com/nuxt/nuxtcore/vi/api/commands/upgrade): Lệnh upgrade nâng cấp Nuxt lên phiên bản mới nhất.
+- [Modules](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/modules): Nuxt Kit provides a set of utilities to help you create and use modules. You can use these utilities to create your own modules or to reuse existing modules.
+- [Runtime Config](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/runtime-config): Nuxt Kit provides a set of utilities to help you access and modify Nuxt runtime configuration.
+- [Templates](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/templates): Nuxt Kit provides a set of utilities to help you work with templates. These functions allow you to generate extra files during development and build time.
+- [Nitro](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/nitro): Nuxt Kit provides a set of utilities to help you work with Nitro. These functions allow you to add server handlers, plugins, and prerender routes.
+- [Resolving](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/resolving): Nuxt Kit provides a set of utilities to help you resolve paths. These functions allow you to resolve paths relative to the current module, with unknown name or extension.
+- [Logging](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/logging): Nuxt Kit provides a set of utilities to help you work with logging. These functions allow you to log messages with extra features.
+- [Builder](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/builder): Nuxt Kit provides a set of utilities to help you work with the builder. These functions allow you to extend the Vite and webpack configurations.
+- [Examples](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/examples): Examples of Nuxt Kit utilities in use.
+- [Programmatic Usage](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/programmatic): Nuxt Kit provides a set of utilities to help you work with Nuxt programmatically. These functions allow you to load Nuxt, build Nuxt, and load Nuxt configuration.
+- [Compatibility](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/compatibility): Nuxt Kit provides a set of utilities to help you check the compatibility of your modules with different Nuxt versions.
+- [Auto-imports](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/autoimports): Nuxt Kit provides a set of utilities to help you work with auto-imports. These functions allow you to register your own utils, composables and Vue APIs.
+- [Components](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/components): Nuxt Kit provides a set of utilities to help you work with components. You can register components globally or locally, and also add directories to be scanned for components.
+- [Context](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/context): Nuxt Kit provides a set of utilities to help you work with context.
+- [Pages](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/pages): Nuxt Kit provides a set of utilities to help you create and use pages. You can use these utilities to manipulate the pages configuration or to define route rules.
+- [Layout](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/layout): Nuxt Kit provides a set of utilities to help you work with layouts.
+- [Plugins](https://nuxt.com/nuxt/nuxtcore/vi/api/kit/plugins): Nuxt Kit provides a set of utilities to help you create and use plugins. You can add plugins or plugin templates to your module using these functions.
+- [Lifecycle Hooks](https://nuxt.com/nuxt/nuxtcore/vi/api/advanced/hooks): Nuxt cung cấp một hệ thống móc mạnh mẽ để mở rộng hầu hết mọi khía cạnh bằng cách sử dụng móc.
+- [Import meta](https://nuxt.com/nuxt/nuxtcore/vi/api/advanced/import-meta): Hiểu nơi mã của bạn đang chạy bằng cách sử dụng `import.meta`.
+- [Nuxt Configuration](https://nuxt.com/nuxt/nuxtcore/vi/api/nuxt-config): Discover all the options you can use in your nuxt.config.ts file.
+- [Nuxt API Reference](https://nuxt.com/nuxt/nuxtcore/vi/api): Explore all Nuxt Internals: Components, Composables, Utils, Commands and more.
+- [Getting Help](https://nuxt.com/nuxt/nuxtcore/vi/community/getting-help): We're a friendly community of developers and we'd love to help.
+- [Reporting Bugs](https://nuxt.com/nuxt/nuxtcore/vi/community/reporting-bugs): One of the most valuable roles in open source is taking the time to report bugs helpfully.
+- [Contribution](https://nuxt.com/nuxt/nuxtcore/vi/community/contribution): Nuxt is a community project - and so we love contributions of all kinds! ❤️
+- [Framework](https://nuxt.com/nuxt/nuxtcore/vi/community/framework-contribution): Một số điểm cụ thể về đóng góp cho kho lưu trữ framework.
+- [Roadmap](https://nuxt.com/nuxt/nuxtcore/vi/community/roadmap): Nuxt đang liên tục phát triển, với các tính năng và module mới được thêm vào mọi lúc.
+- [Releases](https://nuxt.com/nuxt/nuxtcore/vi/community/changelog): Khám phá các bản phát hành mới nhất của Nuxt & các module chính thức của Nuxt.
+- [Overview](https://nuxt.com/nuxt/nuxtcore/vi/bridge/overview): Reduce the differences with Nuxt 3 and reduce the burden of migration to Nuxt 3.
+- [Configuration](https://nuxt.com/nuxt/nuxtcore/vi/bridge/configuration): Learn how to configure Nuxt Bridge to your own needs.
+- [TypeScript](https://nuxt.com/nuxt/nuxtcore/vi/bridge/typescript): Learn how to use TypeScript with Nuxt Bridge.
+- [Legacy Composition API](https://nuxt.com/nuxt/nuxtcore/vi/bridge/bridge-composition-api): Learn how to migrate to Composition API with Nuxt Bridge.
+- [Plugins and Middleware](https://nuxt.com/nuxt/nuxtcore/vi/bridge/plugins-and-middleware): Learn how to migrate from Nuxt 2 to Nuxt Bridge new plugins and middleware.
+- [New Composition API](https://nuxt.com/nuxt/nuxtcore/vi/bridge/nuxt3-compatible-api): Nuxt Bridge implements composables compatible with Nuxt 3.
+- [Meta Tags](https://nuxt.com/nuxt/nuxtcore/vi/bridge/meta): Learn how to migrate from Nuxt 2 to Nuxt Bridge new meta tags.
+- [Runtime Config](https://nuxt.com/nuxt/nuxtcore/vi/bridge/runtime-config): Nuxt provides a runtime config API to expose configuration and secrets within your application.
+- [Nitro](https://nuxt.com/nuxt/nuxtcore/vi/bridge/nitro): Activate Nitro to your Nuxt 2 application with Nuxt Bridge.
+- [Vite](https://nuxt.com/nuxt/nuxtcore/vi/bridge/vite): Activate Vite to your Nuxt 2 application with Nuxt Bridge.
+- [Overview](https://nuxt.com/nuxt/nuxtcore/vi/migration/overview): Nuxt 3 is a complete rewrite of Nuxt 2, and also based on a new set of underlying technologies.
+- [Build Tooling](https://nuxt.com/nuxt/nuxtcore/vi/migration/bundling): Learn how to migrate from Nuxt 2 to Nuxt 3 build tooling.
+- [Server](https://nuxt.com/nuxt/nuxtcore/vi/migration/server): Learn how to migrate from Nuxt 2 to Nuxt 3 server.
+- [Configuration](https://nuxt.com/nuxt/nuxtcore/vi/migration/configuration): Learn how to migrate from Nuxt 2 to Nuxt 3 new configuration.
+- [Modules](https://nuxt.com/nuxt/nuxtcore/vi/migration/module-authors): Learn how to migrate from Nuxt 2 to Nuxt 3 modules.
+- [Auto Imports](https://nuxt.com/nuxt/nuxtcore/vi/migration/auto-imports): Nuxt 3 adopts a minimal friction approach, meaning wherever possible components and composables are auto-imported.
+- [Meta Tags](https://nuxt.com/nuxt/nuxtcore/vi/migration/meta): Manage your meta tags, from Nuxt 2 to Nuxt 3.
+- [Plugins and Middleware](https://nuxt.com/nuxt/nuxtcore/vi/migration/plugins-and-middleware): Learn how to migrate from Nuxt 2 to Nuxt 3 plugins and middleware.
+- [Pages and Layouts](https://nuxt.com/nuxt/nuxtcore/vi/migration/pages-and-layouts): Learn how to migrate from Nuxt 2 to Nuxt 3 pages and layouts.
+- [Component Options](https://nuxt.com/nuxt/nuxtcore/vi/migration/component-options): Learn how to migrate from Nuxt 2 components options to Nuxt 3 composables.
+- [Runtime Config](https://nuxt.com/nuxt/nuxtcore/vi/migration/runtime-config): Learn how to migrate from Nuxt 2 to Nuxt 3 runtime config.
+
+## Nuxtcontent
+
+- [Nuxt Content v3](https://nuxt.com/nuxt/nuxtcontent/live/getting-started): The powerful Git-based CMS designed specifically for Nuxt developers.
+- [Installation](https://nuxt.com/nuxt/nuxtcontent/live/getting-started/installation): Get started with Nuxt Content v3 in your Nuxt application.
+- [Configuration](https://nuxt.com/nuxt/nuxtcontent/live/getting-started/configuration): Nuxt Content is configured with sensible defaults.
+- [Migration](https://nuxt.com/nuxt/nuxtcontent/live/getting-started/migration): How to migrate from v2 to v3
+- [Define Content Collections](https://nuxt.com/nuxt/nuxtcontent/live/collections/define): Learn how to define and configure content collections in your Nuxt application.
+- [Collection Types](https://nuxt.com/nuxt/nuxtcontent/live/collections/types): Learn about the two types of collections you can define in Nuxt Content.
+- [Collection Sources](https://nuxt.com/nuxt/nuxtcontent/live/collections/sources): Learn how to import your files in Nuxt Content collections.
+- [Schema Validators](https://nuxt.com/nuxt/nuxtcontent/live/collections/validators): Define collection schemas with your preferred validator and full type-safety.
+- [Inherit Schema from a Vue Component](https://nuxt.com/nuxt/nuxtcontent/live/collections/inherit-schema-from-component): Reuse a Vue component's props as part of your collection schema using property().inherit().
+- [Markdown](https://nuxt.com/nuxt/nuxtcontent/live/files/markdown): Create and query Markdown files in your Nuxt applications and use the MDC syntax to integrate Vue components.
+- [YAML](https://nuxt.com/nuxt/nuxtcontent/live/files/yaml): How to define, write and query YAML data.
+- [JSON](https://nuxt.com/nuxt/nuxtcontent/live/files/json): How to define, write and query JSON data.
+- [CSV](https://nuxt.com/nuxt/nuxtcontent/live/files/csv): How to define, write and query CSV data.
+- [queryCollection](https://nuxt.com/nuxt/nuxtcontent/live/utils/query-collection): The queryCollection composable provides methods for querying and fetching your collections.
+- [queryCollectionNavigation](https://nuxt.com/nuxt/nuxtcontent/live/utils/query-collection-navigation): The queryCollectionNavigation composable generates the navigation tree of given collection.
+- [queryCollectionItemSurroundings](https://nuxt.com/nuxt/nuxtcontent/live/utils/query-collection-item-surroundings): The queryCollectionItemSurroundings composable looks for sibling contents of an specific path.
+- [queryCollectionSearchSections](https://nuxt.com/nuxt/nuxtcontent/live/utils/query-collection-search-sections): The queryCollectionSearchSections composable generates searchable sections from a collection for enhanced content discovery.
+- [ContentRenderer](https://nuxt.com/nuxt/nuxtcontent/live/components/content-renderer): Takes your component from an AST to a wonderful template.
+- [Slot](https://nuxt.com/nuxt/nuxtcontent/live/components/slot): The fastest way to inject Markdown into your Vue components.
+- [Prose Components](https://nuxt.com/nuxt/nuxtcontent/live/components/prose): A list of Prose components.
+- [Server Hosting](https://nuxt.com/nuxt/nuxtcontent/live/deploy/server): Node preset is the default preset for Nuxt and Nuxt Content. It is used to build and run Nuxt applications on Node.js.
+- [Static Hosting](https://nuxt.com/nuxt/nuxtcontent/live/deploy/static): How to deploy Nuxt Content to static hosting with static site generation.
+- [Serverless Hosting](https://nuxt.com/nuxt/nuxtcontent/live/deploy/serverless): How to deploy Nuxt Content on various serverless platforms.
+- [NuxtHub](https://nuxt.com/nuxt/nuxtcontent/live/deploy/nuxthub): Deploy your Content app to NuxtHub
+- [Cloudflare Pages](https://nuxt.com/nuxt/nuxtcontent/live/deploy/cloudflare-pages): Deploy your Content app to Cloudflare Pages
+- [Cloudflare Workers](https://nuxt.com/nuxt/nuxtcontent/live/deploy/cloudflare-workers): Deploy your Content app to Cloudflare Workers
+- [Vercel](https://nuxt.com/nuxt/nuxtcontent/live/deploy/vercel): Deploy your Content app to Vercel
+- [Netlify](https://nuxt.com/nuxt/nuxtcontent/live/deploy/netlify): Deploy your Content app to Netlify
+- [AWS Amplify](https://nuxt.com/nuxt/nuxtcontent/live/deploy/aws-amplify): Deploy your Content app to AWS Amplify
+- [Docker](https://nuxt.com/nuxt/nuxtcontent/live/deploy/docker): Deploy your Content app with Docker
+- [I18n module](https://nuxt.com/nuxt/nuxtcontent/live/integrations/i18n): Learn how to create multi-language websites using Nuxt Content with the @nuxtjs/i18n module.
+- [LLMs module](https://nuxt.com/nuxt/nuxtcontent/live/integrations/llms): Learn how to generate AI-ready content files using Nuxt Content and the Nuxt LLMs module.
+- [Full-Text Search](https://nuxt.com/nuxt/nuxtcontent/live/advanced/fulltext-search): Implement full-text search in your website using Nuxt Content
+- [Raw Content](https://nuxt.com/nuxt/nuxtcontent/live/advanced/raw-content): Access to contents raw data in appliction
+- [Database](https://nuxt.com/nuxt/nuxtcontent/live/advanced/database): How Nuxt Content stores and retrieves content
+- [Tools](https://nuxt.com/nuxt/nuxtcontent/live/advanced/tools): Debugging tools
+- [Hooks](https://nuxt.com/nuxt/nuxtcontent/live/advanced/hooks): Modify your content using Nuxt build time hooks
+- [Custom Source](https://nuxt.com/nuxt/nuxtcontent/live/advanced/custom-source): Define a custom source to retrive data.
+- [Transformers](https://nuxt.com/nuxt/nuxtcontent/live/advanced/transformers): Transformers in Nuxt Content allow you to programmatically parse, modify, or analyze your content files as they are processed.
+- [Setup Nuxt Studio](https://nuxt.com/nuxt/nuxtcontent/live/studio/setup): Studio is the intuitive CMS interface to edit Nuxt Content websites. Edit your Markdown, YAML and JSON files and publish your changes to GitHub.
+- [Real time synchronization between Studio and GitHub](https://nuxt.com/nuxt/nuxtcontent/live/studio/github): Nuxt Studio is natively synced with GitHub. Install the Nuxt Studio GitHub app and enable content publication on GitHub directly from Studio.
+- [Edit your content](https://nuxt.com/nuxt/nuxtcontent/live/studio/content): Discover and select your favorite way to manage your content between the visual or the code editor.
+- [Manage and integrate Medias in Nuxt Content Studio CMS](https://nuxt.com/nuxt/nuxtcontent/live/studio/medias): Explore how to browse and manage media files, and integrate them into your projects using Nuxt Content Studio CMS features.
+- [Tailor application configuration edition](https://nuxt.com/nuxt/nuxtcontent/live/studio/config): Discover how to customize application config edition in Studio by providing schema. Ensure a smooth and structured content management experience.
+- [Local Debug](https://nuxt.com/nuxt/nuxtcontent/live/studio/debug): Validate your customization in local development.
+- [Nuxt Content v3](https://nuxt.com/nuxt/nuxtcontent/vi/getting-started): The powerful Git-based CMS designed specifically for Nuxt developers.
+- [Installation](https://nuxt.com/nuxt/nuxtcontent/vi/getting-started/installation): Get started with Nuxt Content v3 in your Nuxt application.
+- [Configuration](https://nuxt.com/nuxt/nuxtcontent/vi/getting-started/configuration): Nuxt Content is configured with sensible defaults.
+- [Migration](https://nuxt.com/nuxt/nuxtcontent/vi/getting-started/migration): How to migrate from v2 to v3
+- [Define Content Collections](https://nuxt.com/nuxt/nuxtcontent/vi/collections/define): Learn how to define and configure content collections in your Nuxt application.
+- [Collection Types](https://nuxt.com/nuxt/nuxtcontent/vi/collections/types): Learn about the two types of collections you can define in Nuxt Content.
+- [Collection Sources](https://nuxt.com/nuxt/nuxtcontent/vi/collections/sources): Learn how to import your files in Nuxt Content collections.
+- [Markdown](https://nuxt.com/nuxt/nuxtcontent/vi/files/markdown): Create and query Markdown files in your Nuxt applications and use the MDC syntax to integrate Vue components.
+- [YAML](https://nuxt.com/nuxt/nuxtcontent/vi/files/yaml): How to define, write and query YAML data.
+- [JSON](https://nuxt.com/nuxt/nuxtcontent/vi/files/json): How to define, write and query JSON data.
+- [CSV](https://nuxt.com/nuxt/nuxtcontent/vi/files/csv): How to define, write and query CSV data.
+- [queryCollection](https://nuxt.com/nuxt/nuxtcontent/vi/utils/query-collection): The queryCollection composable provides methods for querying and fetching your collections.
+- [queryCollectionNavigation](https://nuxt.com/nuxt/nuxtcontent/vi/utils/query-collection-navigation): The queryCollectionNavigation composable generates the navigation tree of given collection.
+- [queryCollectionItemSurroundings](https://nuxt.com/nuxt/nuxtcontent/vi/utils/query-collection-item-surroundings): The queryCollectionItemSurroundings composable looks for sibling contents of an specific path.
+- [queryCollectionSearchSections](https://nuxt.com/nuxt/nuxtcontent/vi/utils/query-collection-search-sections): The queryCollectionSearchSections composable generates searchable sections from a collection for enhanced content discovery.
+- [ContentRenderer](https://nuxt.com/nuxt/nuxtcontent/vi/components/content-renderer): Takes your component from an AST to a wonderful template.
+- [Slot](https://nuxt.com/nuxt/nuxtcontent/vi/components/slot): The fastest way to inject Markdown into your Vue components.
+- [Prose Components](https://nuxt.com/nuxt/nuxtcontent/vi/components/prose): A list of Prose components.
+- [Server Hosting](https://nuxt.com/nuxt/nuxtcontent/vi/deploy/server): Node preset is the default preset for Nuxt and Nuxt Content. It is used to build and run Nuxt applications on Node.js.
+- [Static Hosting](https://nuxt.com/nuxt/nuxtcontent/vi/deploy/static): How to deploy Nuxt Content to static hosting with static site generation.
+- [Serverless Hosting](https://nuxt.com/nuxt/nuxtcontent/vi/deploy/serverless): How to deploy Nuxt Content on various serverless platforms.
+- [NuxtHub](https://nuxt.com/nuxt/nuxtcontent/vi/deploy/nuxthub): Deploy your Content app to NuxtHub
+- [Cloudflare Pages](https://nuxt.com/nuxt/nuxtcontent/vi/deploy/cloudflare-pages): Deploy your Content app to Cloudflare Pages
+- [Cloudflare Workers](https://nuxt.com/nuxt/nuxtcontent/vi/deploy/cloudflare-workers): Deploy your Content app to Cloudflare Workers
+- [Vercel](https://nuxt.com/nuxt/nuxtcontent/vi/deploy/vercel): Deploy your Content app to Vercel
+- [Netlify](https://nuxt.com/nuxt/nuxtcontent/vi/deploy/netlify): Deploy your Content app to Netlify
+- [AWS Amplify](https://nuxt.com/nuxt/nuxtcontent/vi/deploy/aws-amplify): Deploy your Content app to AWS Amplify
+- [Docker](https://nuxt.com/nuxt/nuxtcontent/vi/deploy/docker): Deploy your Content app with Docker
+- [I18n module](https://nuxt.com/nuxt/nuxtcontent/vi/integrations/i18n): Learn how to create multi-language websites using Nuxt Content with the @nuxtjs/i18n module.
+- [LLMs module](https://nuxt.com/nuxt/nuxtcontent/vi/integrations/llms): Learn how to generate AI-ready content files using Nuxt Content and the Nuxt LLMs module.
+- [Full-Text Search](https://nuxt.com/nuxt/nuxtcontent/vi/advanced/fulltext-search): Implement full-text search in your website using Nuxt Content
+- [Raw Content](https://nuxt.com/nuxt/nuxtcontent/vi/advanced/raw-content): Access to contents raw data in appliction
+- [Database](https://nuxt.com/nuxt/nuxtcontent/vi/advanced/database): How Nuxt Content stores and retrieves content
+- [Tools](https://nuxt.com/nuxt/nuxtcontent/vi/advanced/tools): Debugging tools
+- [Hooks](https://nuxt.com/nuxt/nuxtcontent/vi/advanced/hooks): Modify your content using Nuxt build time hooks
+- [Custom Source](https://nuxt.com/nuxt/nuxtcontent/vi/advanced/custom-source): Define a custom source to retrive data.
+- [Transformers](https://nuxt.com/nuxt/nuxtcontent/vi/advanced/transformers): Transformers in Nuxt Content allow you to programmatically parse, modify, or analyze your content files as they are processed.
+- [Setup Nuxt Studio](https://nuxt.com/nuxt/nuxtcontent/vi/studio/setup): Studio is the intuitive CMS interface to edit Nuxt Content websites. Edit your Markdown, YAML and JSON files and publish your changes to GitHub.
+- [Real time synchronization between Studio and GitHub](https://nuxt.com/nuxt/nuxtcontent/vi/studio/github): Nuxt Studio is natively synced with GitHub. Install the Nuxt Studio GitHub app and enable content publication on GitHub directly from Studio.
+- [Edit your content](https://nuxt.com/nuxt/nuxtcontent/vi/studio/content): Discover and select your favorite way to manage your content between the visual or the code editor.
+- [Manage and integrate Medias in Nuxt Content Studio CMS](https://nuxt.com/nuxt/nuxtcontent/vi/studio/medias): Explore how to browse and manage media files, and integrate them into your projects using Nuxt Content Studio CMS features.
+- [Tailor application configuration edition](https://nuxt.com/nuxt/nuxtcontent/vi/studio/config): Discover how to customize application config edition in Studio by providing schema. Ensure a smooth and structured content management experience.
+- [Local Debug](https://nuxt.com/nuxt/nuxtcontent/vi/studio/debug): Validate your customization in local development.
+
+## Nuxtui
+
+- [Introduction](https://nuxt.com/nuxt/nuxtui/live/getting-started): Nuxt UI harnesses the combined strengths of Reka UI, Tailwind CSS, and Tailwind Variants to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.
+- [Installation](https://nuxt.com/nuxt/nuxtui/live/getting-started/installation/nuxt): Learn how to install and configure Nuxt UI in your Nuxt application.
+- [Installation](https://nuxt.com/nuxt/nuxtui/live/getting-started/installation/vue): Learn how to install and configure Nuxt UI in your Vue application.
+- [Migration](https://nuxt.com/nuxt/nuxtui/live/getting-started/migration): A comprehensive guide to migrate your application from Nuxt UI v2 to Nuxt UI v3.
+- [Theme](https://nuxt.com/nuxt/nuxtui/live/getting-started/theme): Learn how to customize Nuxt UI components using Tailwind CSS v4, CSS variables and the Tailwind Variants API for powerful and flexible theming.
+- [Icons](https://nuxt.com/nuxt/nuxtui/live/getting-started/icons/nuxt): Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.
+- [Icons](https://nuxt.com/nuxt/nuxtui/live/getting-started/icons/vue): Nuxt UI integrates with Iconify to access over 200,000+ icons.
+- [Fonts](https://nuxt.com/nuxt/nuxtui/live/getting-started/fonts): Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.
+- [Color Mode](https://nuxt.com/nuxt/nuxtui/live/getting-started/color-mode/nuxt): Nuxt UI integrates with Nuxt Color Mode to allow for easy switching between light and dark themes.
+- [Color Mode](https://nuxt.com/nuxt/nuxtui/live/getting-started/color-mode/vue): Nuxt UI integrates with VueUse to allow for easy switching between light and dark themes.
+- [Internationalization (i18n)](https://nuxt.com/nuxt/nuxtui/live/getting-started/i18n/nuxt): Learn how to internationalize your Nuxt app with multi-directional support (LTR/RTL).
+- [Internationalization (i18n)](https://nuxt.com/nuxt/nuxtui/live/getting-started/i18n/vue): Learn how to internationalize your Vue app with multi-directional support (LTR/RTL).
+- [Contribution Guide](https://nuxt.com/nuxt/nuxtui/live/getting-started/contribution): A comprehensive guide on contributing to Nuxt UI, including project structure, development workflow, and best practices.
+- [defineShortcuts](https://nuxt.com/nuxt/nuxtui/live/composables/define-shortcuts): A composable to define keyboard shortcuts in your app.
+- [useFormField](https://nuxt.com/nuxt/nuxtui/live/composables/use-form-field): A composable to integrate custom inputs with the Form component
+- [useOverlay](https://nuxt.com/nuxt/nuxtui/live/composables/use-overlay): A composable to programmatically control overlays.
+- [useToast](https://nuxt.com/nuxt/nuxtui/live/composables/use-toast): A composable to display toast notifications in your app.
+- [App](https://nuxt.com/nuxt/nuxtui/live/components/app): Wraps your app to provide global configurations and more.
+- [Accordion](https://nuxt.com/nuxt/nuxtui/live/components/accordion): A stacked set of collapsible panels.
+- [Alert](https://nuxt.com/nuxt/nuxtui/live/components/alert): A callout to draw user's attention.
+- [Avatar](https://nuxt.com/nuxt/nuxtui/live/components/avatar): An img element with fallback and Nuxt Image support.
+- [AvatarGroup](https://nuxt.com/nuxt/nuxtui/live/components/avatar-group): Stack multiple avatars in a group.
+- [Badge](https://nuxt.com/nuxt/nuxtui/live/components/badge): A short text to represent a status or a category.
+- [Breadcrumb](https://nuxt.com/nuxt/nuxtui/live/components/breadcrumb): A hierarchy of links to navigate through a website.
+- [Button](https://nuxt.com/nuxt/nuxtui/live/components/button): A button element that can act as a link or trigger an action.
+- [ButtonGroup](https://nuxt.com/nuxt/nuxtui/live/components/button-group): Group multiple button-like elements together.
+- [Calendar](https://nuxt.com/nuxt/nuxtui/live/components/calendar): A calendar component for selecting single dates, multiple dates or date ranges.
+- [Card](https://nuxt.com/nuxt/nuxtui/live/components/card): Display content in a card with a header, body and footer.
+- [Carousel](https://nuxt.com/nuxt/nuxtui/live/components/carousel): A carousel with motion and swipe built using Embla.
+- [Checkbox](https://nuxt.com/nuxt/nuxtui/live/components/checkbox): An input element to toggle between checked and unchecked states.
+- [CheckboxGroup](https://nuxt.com/nuxt/nuxtui/live/components/checkbox-group): A set of checklist buttons to select multiple option from a list.
+- [Chip](https://nuxt.com/nuxt/nuxtui/live/components/chip): An indicator of a numeric value or a state.
+- [Collapsible](https://nuxt.com/nuxt/nuxtui/live/components/collapsible): A collapsible element to toggle visibility of its content.
+- [ColorPicker](https://nuxt.com/nuxt/nuxtui/live/components/color-picker): A component to select a color.
+- [CommandPalette](https://nuxt.com/nuxt/nuxtui/live/components/command-palette): A command palette with full-text search powered by Fuse.js for efficient fuzzy matching.
+- [Container](https://nuxt.com/nuxt/nuxtui/live/components/container): A container lets you center and constrain the width of your content.
+- [ContextMenu](https://nuxt.com/nuxt/nuxtui/live/components/context-menu): A menu to display actions when right-clicking on an element.
+- [Drawer](https://nuxt.com/nuxt/nuxtui/live/components/drawer): A drawer that smoothly slides in & out of the screen.
+- [DropdownMenu](https://nuxt.com/nuxt/nuxtui/live/components/dropdown-menu): A menu to display actions when clicking on an element.
+- [FileUpload](https://nuxt.com/nuxt/nuxtui/live/components/file-upload): An input element to upload files.
+- [Form](https://nuxt.com/nuxt/nuxtui/live/components/form): A form component with built-in validation and submission handling.
+- [FormField](https://nuxt.com/nuxt/nuxtui/live/components/form-field): A wrapper for form elements that provides validation and error handling.
+- [Icon](https://nuxt.com/nuxt/nuxtui/live/components/icon): A component to display any icon from Iconify.
+- [Input](https://nuxt.com/nuxt/nuxtui/live/components/input): An input element to enter text.
+- [InputMenu](https://nuxt.com/nuxt/nuxtui/live/components/input-menu): An autocomplete input with real-time suggestions.
+- [InputNumber](https://nuxt.com/nuxt/nuxtui/live/components/input-number): An input for numerical values with a customizable range.
+- [InputTags](https://nuxt.com/nuxt/nuxtui/live/components/input-tags): An input element that displays interactive tags.
+- [Kbd](https://nuxt.com/nuxt/nuxtui/live/components/kbd): A kbd element to display a keyboard key.
+- [Link](https://nuxt.com/nuxt/nuxtui/live/components/link): A wrapper around <NuxtLink> with extra props.
+- [Modal](https://nuxt.com/nuxt/nuxtui/live/components/modal): A dialog window that can be used to display a message or request user input.
+- [NavigationMenu](https://nuxt.com/nuxt/nuxtui/live/components/navigation-menu): A list of links that can be displayed horizontally or vertically.
+- [Pagination](https://nuxt.com/nuxt/nuxtui/live/components/pagination): A list of buttons or links to navigate through pages.
+- [PinInput](https://nuxt.com/nuxt/nuxtui/live/components/pin-input): An input element to enter a pin.
+- [Popover](https://nuxt.com/nuxt/nuxtui/live/components/popover): A non-modal dialog that floats around a trigger element.
+- [Progress](https://nuxt.com/nuxt/nuxtui/live/components/progress): An indicator showing the progress of a task.
+- [RadioGroup](https://nuxt.com/nuxt/nuxtui/live/components/radio-group): A set of radio buttons to select a single option from a list.
+- [Select](https://nuxt.com/nuxt/nuxtui/live/components/select): A select element to choose from a list of options.
+- [SelectMenu](https://nuxt.com/nuxt/nuxtui/live/components/select-menu): An advanced searchable select element.
+- [Separator](https://nuxt.com/nuxt/nuxtui/live/components/separator): Separates content horizontally or vertically.
+- [Skeleton](https://nuxt.com/nuxt/nuxtui/live/components/skeleton): A placeholder to show while content is loading.
+- [Slideover](https://nuxt.com/nuxt/nuxtui/live/components/slideover): A dialog that slides in from any side of the screen.
+- [Slider](https://nuxt.com/nuxt/nuxtui/live/components/slider): An input to select a numeric value within a range.
+- [Stepper](https://nuxt.com/nuxt/nuxtui/live/components/stepper): A set of steps that are used to indicate progress through a multi-step process.
+- [Switch](https://nuxt.com/nuxt/nuxtui/live/components/switch): A control that toggles between two states.
+- [Table](https://nuxt.com/nuxt/nuxtui/live/components/table): A responsive table element to display data in rows and columns.
+- [Tabs](https://nuxt.com/nuxt/nuxtui/live/components/tabs): A set of tab panels that are displayed one at a time.
+- [Textarea](https://nuxt.com/nuxt/nuxtui/live/components/textarea): A textarea element to input multi-line text.
+- [Timeline](https://nuxt.com/nuxt/nuxtui/live/components/timeline): A component that displays a sequence of events with dates, titles, icons or avatars.
+- [Toast](https://nuxt.com/nuxt/nuxtui/live/components/toast): A succinct message to provide information or feedback to the user.
+- [Tooltip](https://nuxt.com/nuxt/nuxtui/live/components/tooltip): A popup that reveals information when hovering over an element.
+- [Tree](https://nuxt.com/nuxt/nuxtui/live/components/tree): A tree view component to display and interact with hierarchical data structures.
+- [Conditions Générales de Vente de Nuxt UI Pro](https://nuxt.com/nuxt/nuxtui/live/pro/terms): Dernière mise à jour : 20 août 2024
+- [Introduction](https://nuxt.com/nuxt/nuxtui/vi/getting-started): Nuxt UI harnesses the combined strengths of Reka UI, Tailwind CSS, and Tailwind Variants to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.
+- [Installation](https://nuxt.com/nuxt/nuxtui/vi/getting-started/installation/nuxt): Learn how to install and configure Nuxt UI in your Nuxt application.
+- [Installation](https://nuxt.com/nuxt/nuxtui/vi/getting-started/installation/vue): Learn how to install and configure Nuxt UI in your Vue application.
+- [Migration](https://nuxt.com/nuxt/nuxtui/vi/getting-started/migration): A comprehensive guide to migrate your application from Nuxt UI v2 to Nuxt UI v3.
+- [Theme](https://nuxt.com/nuxt/nuxtui/vi/getting-started/theme): Learn how to customize Nuxt UI components using Tailwind CSS v4, CSS variables and the Tailwind Variants API for powerful and flexible theming.
+- [Icons](https://nuxt.com/nuxt/nuxtui/vi/getting-started/icons/nuxt): Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.
+- [Icons](https://nuxt.com/nuxt/nuxtui/vi/getting-started/icons/vue): Nuxt UI integrates with Iconify to access over 200,000+ icons.
+- [Fonts](https://nuxt.com/nuxt/nuxtui/vi/getting-started/fonts): Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.
+- [Color Mode](https://nuxt.com/nuxt/nuxtui/vi/getting-started/color-mode/nuxt): Nuxt UI integrates with Nuxt Color Mode to allow for easy switching between light and dark themes.
+- [Color Mode](https://nuxt.com/nuxt/nuxtui/vi/getting-started/color-mode/vue): Nuxt UI integrates with VueUse to allow for easy switching between light and dark themes.
+- [Internationalization (i18n)](https://nuxt.com/nuxt/nuxtui/vi/getting-started/i18n/nuxt): Learn how to internationalize your Nuxt app with multi-directional support (LTR/RTL).
+- [Internationalization (i18n)](https://nuxt.com/nuxt/nuxtui/vi/getting-started/i18n/vue): Learn how to internationalize your Vue app with multi-directional support (LTR/RTL).
+- [Contribution Guide](https://nuxt.com/nuxt/nuxtui/vi/getting-started/contribution): A comprehensive guide on contributing to Nuxt UI, including project structure, development workflow, and best practices.
+- [defineShortcuts](https://nuxt.com/nuxt/nuxtui/vi/composables/define-shortcuts): A composable to define keyboard shortcuts in your app.
+- [useFormField](https://nuxt.com/nuxt/nuxtui/vi/composables/use-form-field): A composable to integrate custom inputs with the Form component
+- [useOverlay](https://nuxt.com/nuxt/nuxtui/vi/composables/use-overlay): A composable to programmatically control overlays.
+- [useToast](https://nuxt.com/nuxt/nuxtui/vi/composables/use-toast): A composable to display toast notifications in your app.
+- [App](https://nuxt.com/nuxt/nuxtui/vi/components/app): Wraps your app to provide global configurations and more.
+- [Accordion](https://nuxt.com/nuxt/nuxtui/vi/components/accordion): Một tập hợp các bảng có thể thu gọn xếp chồng.
+- [Alert](https://nuxt.com/nuxt/nuxtui/vi/components/alert): Một lời kêu gọi để thu hút sự chú ý của người dùng.
+- [Avatar](https://nuxt.com/nuxt/nuxtui/vi/components/avatar): Một phần tử img với dự phòng và hỗ trợ Nuxt Image.
+- [AvatarGroup](https://nuxt.com/nuxt/nuxtui/vi/components/avatar-group): Xếp chồng nhiều avatar trong một nhóm.
+- [Badge](https://nuxt.com/nuxt/nuxtui/vi/components/badge): Một văn bản ngắn để đại diện cho trạng thái hoặc danh mục.
+- [Breadcrumb](https://nuxt.com/nuxt/nuxtui/vi/components/breadcrumb): Một hệ thống phân cấp các liên kết để điều hướng qua trang web.
+- [Button](https://nuxt.com/nuxt/nuxtui/vi/components/button): Một phần tử nút có thể hoạt động như một liên kết hoặc kích hoạt một hành động.
+- [ButtonGroup](https://nuxt.com/nuxt/nuxtui/vi/components/button-group): Nhóm nhiều phần tử giống nút lại với nhau.
+- [Calendar](https://nuxt.com/nuxt/nuxtui/vi/components/calendar): Một thành phần lịch để chọn ngày đơn lẻ, nhiều ngày hoặc phạm vi ngày.
+- [Card](https://nuxt.com/nuxt/nuxtui/vi/components/card): Hiển thị nội dung trong một thẻ với tiêu đề, thân và chân trang.
+- [Carousel](https://nuxt.com/nuxt/nuxtui/vi/components/carousel): Một carousel với chuyển động và vuốt được xây dựng bằng Embla.
+- [Checkbox](https://nuxt.com/nuxt/nuxtui/vi/components/checkbox): Một phần tử đầu vào để chuyển đổi giữa các trạng thái đã kiểm tra và chưa kiểm tra.
+- [CheckboxGroup](https://nuxt.com/nuxt/nuxtui/vi/components/checkbox-group): Một tập hợp các nút danh sách kiểm tra để chọn nhiều tùy chọn từ danh sách.
+- [Chip](https://nuxt.com/nuxt/nuxtui/vi/components/chip): Một chỉ báo của giá trị số hoặc trạng thái.
+- [Collapsible](https://nuxt.com/nuxt/nuxtui/vi/components/collapsible): Một phần tử có thể thu gọn để chuyển đổi khả năng hiển thị của nội dung của nó.
+- [ColorPicker](https://nuxt.com/nuxt/nuxtui/vi/components/color-picker): Một thành phần để chọn màu sắc.
+- [CommandPalette](https://nuxt.com/nuxt/nuxtui/vi/components/command-palette): Một bảng lệnh với tìm kiếm toàn văn được cung cấp bởi Fuse.js để khớp mờ hiệu quả.
+- [Container](https://nuxt.com/nuxt/nuxtui/vi/components/container): Một container cho phép bạn căn giữa và hạn chế chiều rộng của nội dung của bạn.
+- [ContextMenu](https://nuxt.com/nuxt/nuxtui/vi/components/context-menu): Một menu để hiển thị các hành động khi nhấp chuột phải vào một phần tử.
+- [Drawer](https://nuxt.com/nuxt/nuxtui/vi/components/drawer): A drawer that smoothly slides in & out of the screen.
+- [DropdownMenu](https://nuxt.com/nuxt/nuxtui/vi/components/dropdown-menu): A menu to display actions when clicking on an element.
+- [FileUpload](https://nuxt.com/nuxt/nuxtui/vi/components/file-upload): An input element to upload files.
+- [Form](https://nuxt.com/nuxt/nuxtui/vi/components/form): A form component with built-in validation and submission handling.
+- [FormField](https://nuxt.com/nuxt/nuxtui/vi/components/form-field): A wrapper for form elements that provides validation and error handling.
+- [Icon](https://nuxt.com/nuxt/nuxtui/vi/components/icon): A component to display any icon from Iconify.
+- [Input](https://nuxt.com/nuxt/nuxtui/vi/components/input): An input element to enter text.
+- [InputMenu](https://nuxt.com/nuxt/nuxtui/vi/components/input-menu): An autocomplete input with real-time suggestions.
+- [InputNumber](https://nuxt.com/nuxt/nuxtui/vi/components/input-number): An input for numerical values with a customizable range.
+- [InputTags](https://nuxt.com/nuxt/nuxtui/vi/components/input-tags): An input element that displays interactive tags.
+- [Kbd](https://nuxt.com/nuxt/nuxtui/vi/components/kbd): Một phần tử kbd để hiển thị phím bàn phím.
+- [Link](https://nuxt.com/nuxt/nuxtui/vi/components/link): Một wrapper xung quanh <NuxtLink> với các prop bổ sung.
+- [Modal](https://nuxt.com/nuxt/nuxtui/vi/components/modal): Một cửa sổ dialog có thể được sử dụng để hiển thị một thông điệp hoặc yêu cầu đầu vào từ người dùng.
+- [NavigationMenu](https://nuxt.com/nuxt/nuxtui/vi/components/navigation-menu): Một danh sách các link có thể được hiển thị theo chiều ngang hoặc dọc.
+- [Pagination](https://nuxt.com/nuxt/nuxtui/vi/components/pagination): Một danh sách các buttons hoặc links để navigate qua các pages.
+- [PinInput](https://nuxt.com/nuxt/nuxtui/vi/components/pin-input): Một input element để enter a pin.
+- [Popover](https://nuxt.com/nuxt/nuxtui/vi/components/popover): Một non-modal dialog that floats xung quanh a trigger element.
+- [Progress](https://nuxt.com/nuxt/nuxtui/vi/components/progress): Một indicator showing the progress of a task.
+- [RadioGroup](https://nuxt.com/nuxt/nuxtui/vi/components/radio-group): Một set of radio buttons để select a single option từ a list.
+- [Select](https://nuxt.com/nuxt/nuxtui/vi/components/select): Một phần tử select để chọn từ danh sách các tùy chọn.
+- [SelectMenu](https://nuxt.com/nuxt/nuxtui/vi/components/select-menu): Một phần tử select có thể tìm kiếm nâng cao.
+- [Separator](https://nuxt.com/nuxt/nuxtui/vi/components/separator): Phân tách nội dung theo chiều ngang hoặc dọc.
+- [Skeleton](https://nuxt.com/nuxt/nuxtui/vi/components/skeleton): Một placeholder để hiển thị trong khi nội dung đang tải.
+- [Slideover](https://nuxt.com/nuxt/nuxtui/vi/components/slideover): Một dialog trượt vào từ bất kỳ bên nào của màn hình.
+- [Slider](https://nuxt.com/nuxt/nuxtui/vi/components/slider): Một input để chọn một giá trị số trong một phạm vi.
+- [Stepper](https://nuxt.com/nuxt/nuxtui/vi/components/stepper): Một tập các bước được sử dụng để chỉ ra tiến trình qua một quy trình đa bước.
+- [Switch](https://nuxt.com/nuxt/nuxtui/vi/components/switch): Một control chuyển đổi giữa hai trạng thái.
+- [Table](https://nuxt.com/nuxt/nuxtui/vi/components/table): A responsive table element to display data in rows and columns.
+- [Tabs](https://nuxt.com/nuxt/nuxtui/vi/components/tabs): A set of tab panels that are displayed one at a time.
+- [Textarea](https://nuxt.com/nuxt/nuxtui/vi/components/textarea): A textarea element to input multi-line text.
+- [Timeline](https://nuxt.com/nuxt/nuxtui/vi/components/timeline): A component that displays a sequence of events with dates, titles, icons or avatars.
+- [Toast](https://nuxt.com/nuxt/nuxtui/vi/components/toast): A succinct message to provide information or feedback to the user.
+- [Tooltip](https://nuxt.com/nuxt/nuxtui/vi/components/tooltip): A popup that reveals information when hovering over an element.
+- [Tree](https://nuxt.com/nuxt/nuxtui/vi/components/tree): A tree view component to display and interact with hierarchical data structures.

@@ -1,0 +1,2 @@
+import{Ri as e}from"#entry";var t=()=>e(`component-meta-state`,()=>({}));async function n(e){let n=t();return n.value[e]?.then?(await n.value[e],n.value[e]):n.value[e]?n.value[e]:(n.value[e]=$fetch(`/api/component-meta/${e}.json`).then(t=>{n.value[e]=t}).catch(()=>{n.value[e]={}}),await n.value[e],n.value[e])}export{n as t};
+//# sourceMappingURL=BKCXwsN-.js.map

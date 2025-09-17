@@ -1,0 +1,12 @@
+{
+  "name": "ui-pro",
+  "version": "3.3.0",
+  "configKey": "uiPro",
+  "compatibility": {
+    "nuxt": ">=3.16.0"
+  },
+  "builder": {
+    "@nuxt/module-builder": "1.0.1",
+    "unbuild": "3.5.0"
+  }
+}

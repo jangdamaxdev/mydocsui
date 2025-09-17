@@ -1,0 +1,2 @@
+import{Ri as e,Yi as t,pt as n}from"#entry";var r=[`getting-started`,`concepts`,`recipes`,`directory-structure`,`going-further`,`best-practices`,`components`,`composables`,`utils`,`kit`,`commands`,`advanced`,`community`,`bridge`,`migration`],i=t(t=>{let i=e(`navigation`),a=n(t.path,i.value);if(r.includes(t.path.split(`/`).pop())&&a.children)return a.children[0].path});export{i as default};
+//# sourceMappingURL=CSXIpWnk.js.map

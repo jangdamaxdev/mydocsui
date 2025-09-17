@@ -1,0 +1,1 @@
+import{t as e}from"#entry";export{e as default};

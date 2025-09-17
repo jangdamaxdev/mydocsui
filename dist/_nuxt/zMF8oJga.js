@@ -1,0 +1,2 @@
+import{Ga as e,Ja as t,Ni as n,Oa as r,Ta as i,dn as a,wo as o,xa as s,xo as c}from"#entry";import{t as l}from"./CTnJhWcV.js";var u={__name:`ProseAccordionItem`,props:{label:{type:String,required:!0},description:{type:String,required:!1},class:{type:null,required:!1}},setup(u){let d=u,f=n(),p=s(()=>a({extend:a(l),...f.uiPro?.prose?.accordionItem||{}}));return(n,a)=>(e(),i(`div`,{class:c(p.value({class:d.class}))},[t(n.$slots,`default`,{},()=>[r(o(u.description),1)])],2))}};export{u as default};
+//# sourceMappingURL=zMF8oJga.js.map

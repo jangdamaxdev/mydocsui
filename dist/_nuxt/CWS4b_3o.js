@@ -1,0 +1,1 @@
+import{Cn as e}from"#entry";export{e as default};

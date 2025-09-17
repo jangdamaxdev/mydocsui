@@ -1,0 +1,2 @@
+import{Ca as e,En as t,Ga as n,Ja as r,Ni as i,Xr as a,so as o,xa as s,xo as c,y as l,yo as u}from"#entry";var d={__name:`UContainer`,props:{as:{type:null,required:!1},class:{type:null,required:!1}},setup(d){let f=d,p=i(),m=s(()=>t({extend:t(l),...p.ui?.container||{}}));return(t,i)=>(n(),e(u(a),{as:d.as,class:c(m.value({class:f.class}))},{default:o(()=>[r(t.$slots,`default`)]),_:3},8,[`as`,`class`]))}};export{d as t};
+//# sourceMappingURL=BGJ94mrw.js.map

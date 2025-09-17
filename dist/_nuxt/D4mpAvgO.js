@@ -1,0 +1,2 @@
+import{Ca as e,Ga as t,Ut as n,ja as r}from"#entry";import{t as i}from"./FJi13pKo.js";var a=r({__name:`[...slug]`,setup(r){return(r,i)=>{let a=n;return t(),e(a)}}});export{a as default};
+//# sourceMappingURL=D4mpAvgO.js.map

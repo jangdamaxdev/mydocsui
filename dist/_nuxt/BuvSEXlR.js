@@ -1,0 +1,2 @@
+import{Ga as e,Ta as t,ft as n}from"#entry";import"./B89OoJR8.js";import{t as r}from"./CCjOvWH_.js";var i={},a={class:`text-4xl text-black dark:text-white`};function o(n,i){return e(),t(`h1`,a,[r(n.$slots,`default`,{mdcUnwrap:`p`})])}var s=Object.assign(n(i,[[`render`,o]]),{__name:`ExampleTitle`});export{s as default};
+//# sourceMappingURL=BuvSEXlR.js.map

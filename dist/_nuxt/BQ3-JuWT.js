@@ -1,0 +1,2 @@
+import{Ga as e,Ja as t,Ni as n,Ta as r,dn as i,xa as a,xo as o}from"#entry";import{t as s}from"./CC3nw1i4.js";var c={__name:`ProseThead`,props:{class:{type:null,required:!1}},setup(c){let l=c,u=n(),d=a(()=>i({extend:i(s),...u.uiPro?.prose?.thead||{}}));return(n,i)=>(e(),r(`thead`,{class:o(d.value({class:l.class}))},[t(n.$slots,`default`)],2))}};export{c as t};
+//# sourceMappingURL=BQ3-JuWT.js.map

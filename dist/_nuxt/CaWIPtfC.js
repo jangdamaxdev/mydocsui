@@ -1,0 +1,2 @@
+import{Ca as e,Ga as t,La as n,So as r,Xa as i,ir as a,ja as o,oi as s,wn as c,yo as l}from"#entry";var u=o({__name:`Icon`,props:{name:{},mode:{},size:{},customize:{type:Function}},setup(o){let u=s(a(o,`name`,`mode`,`size`,`customize`));return(a,o)=>{let s=c;return typeof a.name==`string`?(t(),e(s,r(n({key:0},l(u))),null,16)):(t(),e(i(a.name),{key:1}))}}}),d=Object.assign(u,{__name:`UIcon`});export{d as t};
+//# sourceMappingURL=CaWIPtfC.js.map

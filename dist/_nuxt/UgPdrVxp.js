@@ -1,0 +1,2 @@
+import{Ca as e,Ga as t,ft as n,so as r}from"#entry";import"./B89OoJR8.js";import{t as i}from"./CCjOvWH_.js";import"./AfLrOjzC.js";import{t as a}from"./B08XxfLw.js";var o={};function s(n,o){let s=a;return t(),e(s,{icon:`i-lucide-badge-alert`,color:`important`},{default:r(()=>[i(n.$slots,`default`,{mdcUnwrap:`p`})]),_:3})}var c=Object.assign(n(o,[[`render`,s]]),{__name:`Important`});export{c as default};
+//# sourceMappingURL=UgPdrVxp.js.map

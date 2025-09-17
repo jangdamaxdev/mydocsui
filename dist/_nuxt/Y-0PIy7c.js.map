@@ -1,0 +1,1 @@
+{"version":3,"file":"Y-0PIy7c.js","names":[],"sources":["../../node_modules/virtual:nuxt:E%3A%2FPROJECT%2Fmydocsui%2Fnode_modules%2F.cache%2Fnuxt%2F.nuxt%2Fui-pro%2Fprose%2Fcard-group.ts"],"sourcesContent":["export default {\n  \"base\": \"grid grid-cols-1 sm:grid-cols-2 gap-5 my-5 *:my-0\"\n}"],"x_google_ignoreList":[0],"mappings":"AAAA,IAAA,EAAe,CACb,KAAQ,oDACT"}

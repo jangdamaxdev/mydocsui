@@ -1,0 +1,1 @@
+{"version":3,"file":"BKtZgYTA.js","names":[],"sources":["../../node_modules/libs/nuip/dist/runtime/utils/dashboard.js"],"sourcesContent":["import { createContext } from \"reka-ui\";\nexport const [useDashboard, provideDashboardContext] = createContext(\"DashboardGroup\");\n"],"mappings":"4BACA,KAAa,CAAC,EAAc,GAA2B,EAAc,iBAAiB"}

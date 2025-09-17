@@ -1,0 +1,2 @@
+import{Ga as e,Ja as t,Ta as n,ra as r,xa as i,yo as a}from"#entry";var o=[`id`],s=[`href`],c={__name:`ProseH5`,props:{id:{type:String,required:!1}},setup(c){let l=c,{headings:u}=r().public.mdc,d=i(()=>l.id&&(typeof u?.anchorLinks==`boolean`&&u?.anchorLinks===!0||typeof u?.anchorLinks==`object`&&u?.anchorLinks?.h5));return(r,i)=>(e(),n(`h5`,{id:l.id},[l.id&&a(d)?(e(),n(`a`,{key:0,href:`#${l.id}`},[t(r.$slots,`default`)],8,s)):t(r.$slots,`default`,{key:1})],8,o))}};export{c as default};
+//# sourceMappingURL=BU4KEY9o.js.map

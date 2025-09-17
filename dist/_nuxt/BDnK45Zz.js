@@ -1,0 +1,1 @@
+import{Mt as e}from"#entry";export{e as default};

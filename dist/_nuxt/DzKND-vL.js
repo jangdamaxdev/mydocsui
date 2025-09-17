@@ -1,0 +1,2 @@
+import{Ga as e,Ja as t,Ta as n,Zr as r,_a as i,ja as a,ka as o,so as s,yo as c}from"#entry";var l=a({__name:`FrameworkOnly`,setup(a){return(a,l)=>(e(),n(i,null,[o(c(r),{class:`nuxt-only`},{default:s(()=>[t(a.$slots,`nuxt`)]),_:3}),o(c(r),{class:`vue-only`},{default:s(()=>[t(a.$slots,`vue`)]),_:3})],64))}}),u=Object.assign(l,{__name:`FrameworkOnly`});export{u as default};
+//# sourceMappingURL=DzKND-vL.js.map

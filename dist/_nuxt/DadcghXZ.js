@@ -1,0 +1,2 @@
+import{Yi as e}from"#entry";var t=e((e,t)=>{let n=t.path.split(`/`).slice(0,4).join(`/`);if(e.path.startsWith(`/docs/guide/directory-structure/plugins`))return`/docs/guide/directory-structure/app/plugins`;if(e.path.startsWith(`/docs`))return e.fullPath.replace(`/docs`,n)});export{t as default};
+//# sourceMappingURL=DadcghXZ.js.map

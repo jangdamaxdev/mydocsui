@@ -1,0 +1,2 @@
+import{Ga as e,Ja as t,Ta as n,ft as r}from"#entry";var i={};function a(r,i){return e(),n(`div`,null,[t(r.$slots,`default`)])}var o=r(i,[[`render`,a]]);export{o as default};
+//# sourceMappingURL=C6ht_pTY.js.map
