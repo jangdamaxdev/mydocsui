@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@nuxt/eslint',
     '@nuxt/scripts',
-    '@nuxtjs/turnstile',
+    // '@nuxtjs/turnstile',
     '@vueuse/nuxt',
     'nuxt-og-image',
     'motion-v/nuxt',
@@ -68,8 +68,7 @@ export default defineNuxtConfig({
     // NUXT CORE
     // Pre-render
     '/': { prerender: true },
-    '/404.html': { prerender: true },
-    '/nuxt/nuxtcore/vi/getting-started/introduction': { prerender: true },
+    '/404.html': { prerender: true },    
     // Admin
     '/admin': { ssr: false },
     '/admin/**': { ssr: false },
@@ -173,9 +172,9 @@ export default defineNuxtConfig({
       description: 'The complete Nuxt documentation and blog posts written in Markdown (MDC syntax).'
     }
   },
-  turnstile: {
-    siteKey: '0x4AAAAAAAP2vNBsTBT3ucZi'
-  },
+  // turnstile: {
+  //   siteKey: '0x4AAAAAAAP2vNBsTBT3ucZi'
+  // },
   twoslash: {
     floatingVueOptions: {
       classMarkdown: 'prose prose-primary dark:prose-invert'

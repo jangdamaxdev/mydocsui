@@ -34,6 +34,7 @@
     "drizzle-orm": "^0.44.5",
     "feed": "^5.1.0",
     "little-date": "^1.0.0",
+    "minisearch": "^7.1.2",
     "motion-v": "1.7.0",
     "nuip": "workspace:*",
     "nuxt": "^4.1.1",
@@ -46,8 +47,7 @@
     "sitemap": "^8.0.0",
     "std-env": "^3.9.0",
     "ufo": "^1.6.1",
-    "valibot": "1.1.0",
-     "minisearch": "^7.1.2"
+    "valibot": "1.1.0"
   },
   "devDependencies": {
     "@iconify-json/vscode-icons": "^1.2.30",
@@ -69,21 +69,27 @@
     "wrangler": "^4.35.0"
   },
   "resolutions": {
-    "debug": "4.3.7",
-    "rollup": "4.34.9",
-    "unimport": "4.1.1",
-    "unplugin": "^2.3.5"
+    "chokidar": "3.6.0",
+    "unimport": "4.1.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
       "better-sqlite3",
       "esbuild",
-      "sharp"
+      "maplibre-gl",
+      "rolldown",
+      "sharp",
+      "unrs-resolver",
+      "workerd"
     ],
     "ignoredBuiltDependencies": [
       "@parcel/watcher",
       "puppeteer",
       "vue-demi"
-    ]
+    ],
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    }
   }
 }
