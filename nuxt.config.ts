@@ -33,6 +33,7 @@ export default defineNuxtConfig({
       '@nuxtjs/plausible',
       'nuxt/dist',
       'nuxt-og-image',
+      
     ],
     metaFields: {
       type: false,
