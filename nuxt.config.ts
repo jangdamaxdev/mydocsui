@@ -149,12 +149,7 @@ export default defineNuxtConfig({
   typescript: {
     strict: false
   },
-  hooks: {
-    'content:file:beforeParse': async ({ file }) => {
-      if (file.id.startsWith('docsv4/')) {
-        file.body = file.body.replaceAll('(/docs/', '(/docs/4.x/')
-      }
-    },
+  hooks: {    
     'content:file:afterParse': async ({ file, content }) => {
       if (file.id === 'index/index.yml') {
         // @ts-expect-error -- TODO: fix this
