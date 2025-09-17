@@ -2,9 +2,10 @@
 const props = defineProps<{
   category: string
 }>()
+const { version } = useDocsVersion()
 
 const { data: components } = await useAsyncData(`components-${props.category}`, () => {
-  return queryCollection('docs')
+  return queryCollection(version.value.collection)
     .where('path', 'LIKE', '/docs/components/%')
     .where('extension', '=', 'md')
     .where('category', '=', props.category)

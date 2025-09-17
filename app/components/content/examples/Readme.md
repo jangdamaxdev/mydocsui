@@ -1,1 +1,0 @@
-Thư mục này dùng cho docs của nuxt UI.

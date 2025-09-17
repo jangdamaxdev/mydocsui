@@ -133,7 +133,7 @@ function onSelect(item: any) {
 
 <template>
   <UCommandPalette
-    :groups="groups"
+    :children="groups"
     class="flex-1 h-80"
     @update:model-value="onSelect"
   />

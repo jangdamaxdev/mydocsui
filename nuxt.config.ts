@@ -1,6 +1,5 @@
 import { createResolver } from 'nuxt/kit'
 import { parseMdc } from './helpers/mdc-parser.mjs'
-
 const { resolve } = createResolver(import.meta.url)
 
 // https://nuxt.com/docs/api/configuration/nuxt-config

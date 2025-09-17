@@ -1,8 +1,16 @@
 <script setup lang="ts">
 import Fuse from 'fuse.js'
+// const { version } = useDocsVersion()
 
 const query = ref('')
-const { data } = await useAsyncData('search-data', () => queryCollectionSearchSections('docs'))
+const { data } = await useAsyncData('search-data', () => queryCollectionSearchSections('nuxtui')
+// .then(data => data.map(item => ({
+//   id: item.,
+//   title: item.title,
+//   content: item.content,
+// }))
+// )
+)
 
 const fuse = new Fuse(data.value || [], {
   keys: [

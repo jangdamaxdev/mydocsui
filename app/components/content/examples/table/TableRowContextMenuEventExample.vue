@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { ContextMenuItem, TableColumn, TableRow } from '@nuxt/ui'
+import type { ArrayOrNested, ContextMenuItem, TableColumn, TableRow } from '@nuxt/ui'
 import { useClipboard } from '@vueuse/core'
 
 const UBadge = resolveComponent('UBadge')
@@ -107,7 +107,7 @@ const columns: TableColumn<Payment>[] = [{
   }
 }]
 
-const items = ref<ContextMenuItem[]>([])
+const items = ref<ArrayOrNested<ContextMenuItem>>()
 
 function getRowItems(row: TableRow<Payment>) {
   return [{
