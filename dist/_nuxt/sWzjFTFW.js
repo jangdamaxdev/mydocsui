@@ -1,2 +1,0 @@
-import{Ga as e,Ja as t,Sa as n,Ta as r,ft as i}from"#entry";import"./B89OoJR8.js";import{t as a}from"./CCjOvWH_.js";var o={},s={class:`pt-4`},c={class:`text-4xl`};function l(i,o){return e(),r(`section`,s,[n(`h1`,c,[a(i.$slots,`default`,{mdcUnwrap:`p`})]),t(i.$slots,`description`)])}var u=Object.assign(i(o,[[`render`,l]]),{__name:`ExampleHero`});export{u as default};
-//# sourceMappingURL=sWzjFTFW.js.map

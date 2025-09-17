@@ -1,2 +1,0 @@
-import{Ca as e,Ga as t,Ni as n,S as r,dn as i,so as a,xa as o,xo as s}from"#entry";import"./B89OoJR8.js";import{t as c}from"./CCjOvWH_.js";import{t as l}from"./V7O4OwRj.js";var u={__name:`ProseBadge`,props:{class:{type:null,required:!1}},setup(u){let d=u,f=n(),p=o(()=>i({extend:i(l),...f.uiPro?.prose?.badge||{}}));return(n,i)=>(t(),e(r,{color:`primary`,variant:`subtle`,class:s(p.value({class:d.class}))},{default:a(()=>[c(n.$slots,`default`,{mdcUnwrap:`p`})]),_:3},8,[`class`]))}};export{u as default};
-//# sourceMappingURL=BMpWWdVe.js.map

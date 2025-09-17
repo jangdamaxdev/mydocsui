@@ -1,2 +1,0 @@
-import{Ga as e,Ja as t,Ta as n,ft as r}from"#entry";var i={},a={class:`p-2 border bg-white dark:bg-black dark:border-gray-700 rounded`};function o(r,i){return e(),n(`div`,a,[t(r.$slots,`default`)])}var s=Object.assign(r(i,[[`render`,o]]),{__name:`ExampleCard`});export{s as default};
-//# sourceMappingURL=CQTxGCOW.js.map

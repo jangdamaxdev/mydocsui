@@ -1,2 +1,0 @@
-import{Ca as e,Ga as t,Ni as n,Qt as r,dn as i,xa as a,xo as o}from"#entry";import{t as s}from"./DtUtKVSH.js";var c={__name:`ProseIcon`,props:{name:{type:String,required:!0},class:{type:null,required:!1}},setup(c){let l=c,u=n(),d=a(()=>i({extend:i(s),...u.uiPro?.prose?.icon||{}}));return(n,i)=>(t(),e(r,{name:c.name,class:o(d.value({class:l.class}))},null,8,[`name`,`class`]))}};export{c as default};
-//# sourceMappingURL=CuK4PxCH.js.map

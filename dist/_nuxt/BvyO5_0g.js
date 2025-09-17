@@ -1,2 +1,0 @@
-import{Ga as e,Ja as t,Ni as n,Sa as r,Ta as i,dn as a,xa as o,xo as s}from"#entry";import{t as c}from"./DQIBuhLs.js";var l={__name:`ProseTable`,props:{class:{type:null,required:!1},ui:{type:null,required:!1}},setup(l){let u=l,d=n(),f=o(()=>a({extend:a(c),...d.uiPro?.prose?.table||{}})());return(n,a)=>(e(),i(`div`,{class:s(f.value.root({class:[u.ui?.root,u.class]}))},[r(`table`,{class:s(f.value.base({class:u.ui?.base}))},[t(n.$slots,`default`)],2)],2))}};export{l as t};
-//# sourceMappingURL=BvyO5_0g.js.map

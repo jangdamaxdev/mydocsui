@@ -1,2 +1,0 @@
-import{Ga as e,Ja as t,Ni as n,Ta as r,dn as i,xa as a,xo as o}from"#entry";import{t as s}from"./C5CIhPe2.js";var c={__name:`ProseBlockquote`,props:{class:{type:null,required:!1}},setup(c){let l=c,u=n(),d=a(()=>i({extend:i(s),...u.uiPro?.prose?.blockquote||{}}));return(n,i)=>(e(),r(`blockquote`,{class:o(d.value({class:l.class}))},[t(n.$slots,`default`)],2))}};export{c as default};
-//# sourceMappingURL=Deq_3DR8.js.map

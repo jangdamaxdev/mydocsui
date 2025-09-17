@@ -1,2 +1,0 @@
-import{Ca as e,Ga as t,Ja as n,La as r,Xr as i,ja as a,si as o,so as s,yo as c}from"#entry";var l=a({__name:`Label`,props:{for:{type:String,required:!1},asChild:{type:Boolean,required:!1},as:{type:null,required:!1,default:`label`}},setup(a){let l=a;return o(),(a,o)=>(t(),e(c(i),r(l,{onMousedown:o[0]||=e=>{!e.defaultPrevented&&e.detail>1&&e.preventDefault()}}),{default:s(()=>[n(a.$slots,`default`)]),_:3},16))}});export{l as t};
-//# sourceMappingURL=Dt_XFzy_.js.map

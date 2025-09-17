@@ -1,2 +1,0 @@
-import{Ca as e,Ga as t,Ni as n,so as r,yo as i}from"#entry";import"./B89OoJR8.js";import{t as a}from"./CCjOvWH_.js";import"./AfLrOjzC.js";import{t as o}from"./B08XxfLw.js";var s={__name:`ProseWarning`,setup(s){let c=n();return(n,s)=>(t(),e(o,{color:`warning`,icon:i(c).ui.icons.warning},{default:r(()=>[a(n.$slots,`default`,{mdcUnwrap:`p`})]),_:3},8,[`icon`]))}};export{s as default};
-//# sourceMappingURL=CnEeC5tB.js.map

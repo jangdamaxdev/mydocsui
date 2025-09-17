@@ -1,2 +1,0 @@
-import{Ga as e,Ni as t,Ta as n,dn as r,xa as i,xo as a}from"#entry";import{t as o}from"./RPeyyCBG.js";var s={__name:`ProseHr`,props:{class:{type:null,required:!1}},setup(s){let c=s,l=t(),u=i(()=>r({extend:r(o),...l.uiPro?.prose?.hr||{}}));return(t,r)=>(e(),n(`hr`,{class:a(u.value({class:c.class}))},null,2))}};export{s as default};
-//# sourceMappingURL=Dw9ouDyt.js.map

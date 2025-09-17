@@ -1,2 +1,0 @@
-import{Ca as e,Ga as t,Ja as n,Ni as r,Xr as i,dn as a,so as o,xa as s,xo as c,yo as l}from"#entry";import{t as u}from"./P6pIfgTK.js";var d={__name:`UMain`,props:{as:{type:null,required:!1,default:`main`},class:{type:null,required:!1}},setup(d){let f=d,p=r(),m=s(()=>a({extend:a(u),...p.uiPro?.main||{}}));return(r,a)=>(t(),e(l(i),{as:d.as,class:c(m.value({class:f.class}))},{default:o(()=>[n(r.$slots,`default`)]),_:3},8,[`as`,`class`]))}};export{d as t};
-//# sourceMappingURL=BDdsm3FB.js.map

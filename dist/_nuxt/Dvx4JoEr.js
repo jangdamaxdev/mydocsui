@@ -1,2 +1,0 @@
-import{Ga as e,Ja as t,Ni as n,Ta as r,dn as i,xa as a,xo as o}from"#entry";import{t as s}from"./t7W2940U.js";var c={__name:`ProseCode`,props:{lang:{type:String,required:!1},color:{type:null,required:!1},class:{type:null,required:!1}},setup(c){let l=c,u=n(),d=a(()=>i({extend:i(s),...u.uiPro?.prose?.code||{}}));return(n,i)=>(e(),r(`code`,{class:o(d.value({class:(l.class||``).split(`,`).join(` `),color:l.color}))},[t(n.$slots,`default`)],2))}};export{c as t};
-//# sourceMappingURL=Dvx4JoEr.js.map

@@ -1,1 +1,0 @@
-{"version":3,"file":"CQTxGCOW.js","names":[],"sources":["../../node_modules/app/components/example/ExampleCard.vue"],"sourcesContent":["<template>\n  <div class=\"p-2 border bg-white dark:bg-black dark:border-gray-700 rounded\">\n    <slot />\n  </div>\n</template>\n"],"mappings":"gEACO,MAAM,iEAAgE,4BAA3E,EAEM,MAFN,EAEM,CADJ,EAAQ,EAAA,OAAA,UAAA,CAAA,CAAA"}

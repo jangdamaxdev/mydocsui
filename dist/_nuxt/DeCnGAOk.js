@@ -1,2 +1,0 @@
-import{Ca as e,En as t,Ga as n,Ja as r,Ni as i,Xr as a,so as o,xa as s,xo as c,yo as l}from"#entry";import{t as u}from"./D9oQNEOL.js";var d={__name:`USkeleton`,props:{as:{type:null,required:!1},class:{type:null,required:!1}},setup(d){let f=d,p=i(),m=s(()=>t({extend:t(u),...p.ui?.skeleton||{}}));return(t,i)=>(n(),e(l(a),{as:d.as,"aria-busy":`true`,"aria-label":`loading`,"aria-live":`polite`,role:`alert`,class:c(m.value({class:f.class}))},{default:o(()=>[r(t.$slots,`default`)]),_:3},8,[`as`,`class`]))}};export{d as default};
-//# sourceMappingURL=DeCnGAOk.js.map

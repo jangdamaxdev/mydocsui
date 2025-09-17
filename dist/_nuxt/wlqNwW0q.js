@@ -1,2 +1,0 @@
-import{Ca as e,Ga as t,Oa as n,P as r,fn as i,ft as a,ka as o,so as s,yo as c}from"#entry";import"./D4hkTsoa.js";import{t as l}from"./BmAA_oDL.js";var u={};function d(a,u){let d=i,f=l;return t(),e(f,null,{default:s(()=>[o(d,{color:`primary`,icon:`i-lucide-search`,onClick:u[0]||=e=>(`useContentSearch`in a?a.useContentSearch:c(r))().open.value=!0},{default:s(()=>[...u[1]||=[n(` Open Search Modal `,-1)]]),_:1})]),_:1})}var f=Object.assign(a(u,[[`render`,d]]),{__name:`ExampleFulltextContentSearch`});export{f as default};
-//# sourceMappingURL=wlqNwW0q.js.map

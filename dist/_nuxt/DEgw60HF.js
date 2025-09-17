@@ -1,2 +1,0 @@
-import{Ga as e,Ja as t,Ni as n,Ta as r,dn as i,xa as a,xo as o}from"#entry";import{t as s}from"./Cm3u7DzQ.js";var c={__name:`ProseStrong`,props:{class:{type:null,required:!1}},setup(c){let l=c,u=n(),d=a(()=>i({extend:i(s),...u.uiPro?.prose?.strong||{}}));return(n,i)=>(e(),r(`strong`,{class:o(d.value({class:l.class}))},[t(n.$slots,`default`)],2))}};export{c as default};
-//# sourceMappingURL=DEgw60HF.js.map

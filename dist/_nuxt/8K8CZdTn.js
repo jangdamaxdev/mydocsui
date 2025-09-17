@@ -1,2 +1,0 @@
-var e={slots:{root:`flex flex-col lg:grid lg:grid-cols-10 lg:gap-10`,left:`lg:col-span-2`,center:`lg:col-span-8`,right:`lg:col-span-2 order-first lg:order-last`},variants:{left:{true:``},right:{true:``}},compoundVariants:[{left:!0,right:!0,class:{center:`lg:col-span-6`}},{left:!1,right:!1,class:{center:`lg:col-span-10`}}]};export{e as t};
-//# sourceMappingURL=8K8CZdTn.js.map

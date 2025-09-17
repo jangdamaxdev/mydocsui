@@ -1,2 +1,0 @@
-import{$t as e,Ca as t,Ga as n,Ja as r,Ni as i,dn as a,so as o,xa as s,xo as c}from"#entry";import{t as l}from"./DLFsw7Nu.js";var u={__name:`ProseA`,props:{href:{type:String,required:!1},target:{type:null,required:!1},class:{type:null,required:!1}},setup(u){let d=i(),f=s(()=>a({extend:a(l),...d.uiPro?.prose?.a||{}})),p=u;return(i,a)=>(n(),t(e,{href:u.href,target:u.target,class:c(f.value({class:p.class})),raw:``},{default:o(()=>[r(i.$slots,`default`)]),_:3},8,[`href`,`target`,`class`]))}};export{u as t};
-//# sourceMappingURL=Ckrv_W_c.js.map

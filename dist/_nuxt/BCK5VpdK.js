@@ -1,2 +1,0 @@
-import{Ga as e,Ja as t,Ta as n,Zr as r,_a as i,ja as a,ka as o,so as s,yo as c}from"#entry";var l=a({__name:`ModuleOnly`,setup(a){return(a,l)=>(e(),n(i,null,[o(c(r),{class:`ui-only`},{default:s(()=>[t(a.$slots,`ui`)]),_:3}),o(c(r),{class:`ui-pro-only`},{default:s(()=>[t(a.$slots,`ui-pro`)]),_:3})],64))}}),u=Object.assign(l,{__name:`ModuleOnly`});export{u as default};
-//# sourceMappingURL=BCK5VpdK.js.map

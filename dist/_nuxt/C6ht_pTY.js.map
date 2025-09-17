@@ -1,1 +1,0 @@
-{"version":3,"file":"C6ht_pTY.js","names":[],"sources":["../../node_modules/app/layouts/admin.vue"],"sourcesContent":["<template>\r\n  <div>\r\n    <slot />\r\n  </div>\r\n</template>\r\n"],"mappings":"wFACE,EAEM,MAAA,KAAA,CADJ,EAAQ,EAAA,OAAA,UAAA,CAAA,CAAA"}

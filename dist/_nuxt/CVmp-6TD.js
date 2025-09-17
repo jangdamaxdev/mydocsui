@@ -1,2 +1,0 @@
-import{Ca as e,Ga as t,La as n,Sn as r,Ta as i,Xa as a,_a as o,yo as s}from"#entry";var c=Object.assign({inheritAttrs:!1},{__name:`UColorModeImage`,props:{dark:{type:String,required:!0},light:{type:String,required:!0}},setup(c){return(l,u)=>(t(),i(o,null,[(t(),e(a(s(r)),n({src:c.light,class:`dark:hidden`},l.$attrs),null,16,[`src`])),(t(),e(a(s(r)),n({src:c.dark,class:`hidden dark:block`},l.$attrs),null,16,[`src`]))],64))}});export{c as default};
-//# sourceMappingURL=CVmp-6TD.js.map

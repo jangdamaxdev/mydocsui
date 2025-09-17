@@ -1,1 +1,0 @@
-import{t as e}from"./Bk8MSaeh.js";export{e as getMdcConfigs};

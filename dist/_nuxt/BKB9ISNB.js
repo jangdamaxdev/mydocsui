@@ -1,2 +1,0 @@
-import{Ca as e,Ga as t,L as n,Ni as r,dn as i,xa as a,xo as o}from"#entry";import{t as s}from"./CTQtzZu8.js";var c={__name:`ProseKbd`,props:{value:{type:String,required:!0},class:{type:null,required:!1}},setup(c){let l=c,u=r(),d=a(()=>i({extend:i(s),...u.uiPro?.prose?.kbd||{}}));return(r,i)=>(t(),e(n,{value:c.value,class:o(d.value({class:l.class}))},null,8,[`value`,`class`]))}};export{c as default};
-//# sourceMappingURL=BKB9ISNB.js.map
