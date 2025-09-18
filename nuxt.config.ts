@@ -17,10 +17,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     'motion-v/nuxt',
-    'nuxt-llms',
+
     '@nuxthub/core',
-    'nuxt-charts',
-    'nuxt-auth-utils'
+
   ],
   $development: {
     site: {
@@ -162,16 +161,7 @@ export default defineNuxtConfig({
     ipx: {
       baseURL: 'https://ipx.nuxt.com'
     }
-  },
-  llms: {
-    domain: 'https://nuxt.com',
-    title: 'Nuxt Docs',
-    description: 'Nuxt is an open source framework that makes web development intuitive and powerful. Create performant and production-grade full-stack web apps and websites with confidence.',
-    full: {
-      title: 'Nuxt Docs',
-      description: 'The complete Nuxt documentation and blog posts written in Markdown (MDC syntax).'
-    }
-  },
+  },  
   // turnstile: {
   //   siteKey: '0x4AAAAAAAP2vNBsTBT3ucZi'
   // },

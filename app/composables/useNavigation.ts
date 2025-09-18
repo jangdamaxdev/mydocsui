@@ -36,7 +36,7 @@ function _useHeaderLinks() {
         label: 'TypeScript',
         description: 'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.',
         icon: 'i-lucide-messages-square',
-        to: `/`,
+        to: `https://www.typescriptlang.org/`,
         // active: route.path.startsWith(path)
       },
       {

@@ -113,45 +113,6 @@ const editLink = computed(() => {
   return `https://github.com/jangdamaxdev/docs/edit/${version.value.collection}/${filepath}`
 })
 
-// const communityLinks = [{
-//   icon: 'i-lucide-heart',
-//   label: 'Become a Sponsor',
-//   to: 'https://go.nuxt.com/sponsor',
-//   target: '_blank'
-// }, {
-//   icon: 'i-lucide-chef-hat',
-//   label: 'Master Nuxt',
-//   to: 'https://masteringnuxt.com/nuxt3',
-//   target: '_blank'
-// }, {
-//   icon: 'i-lucide-award',
-//   label: 'Nuxt Certification',
-//   to: 'https://certification.nuxt.com',
-//   target: '_blank'
-// }]
-
-// const title = computed(() => page.value?.seo?.title || page.value?.title)
-// const titleTemplate = computed(() => `${findTitleTemplate(page, navigation)} ${version.value.shortTag}`)
-
-// useSeoMeta({
-//   titleTemplate,
-//   title
-// })
-
-// if (import.meta.server) {
-//   const description = page.value?.seo?.description || page.value?.description
-//   useSeoMeta({
-//     description,
-//     ogDescription: description,
-//     ogTitle: titleTemplate.value?.includes('%s') ? titleTemplate.value.replace('%s', title.value) : title.value
-//   })
-
-//   defineOgImageComponent('Docs', {
-//     headline: breadcrumb.value.length ? breadcrumb.value.map(link => link.label).join(' > ') : '',
-//     title,
-//     description
-//   })
-// }
 </script>
 
 <template>
@@ -225,7 +186,7 @@ const editLink = computed(() => {
               <USeparator v-if="page.body?.toc?.links?.length" type="dashed" />
               <!-- <UPageLinks title="Community" :links="communityLinks" /> -->
               <USeparator type="dashed" />
-              <SocialLinks />
+              <!-- <SocialLinks /> -->
               <!-- <Ads /> -->
             </template>
           </UContentToc>
