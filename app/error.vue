@@ -10,7 +10,7 @@ useSeoMeta({
 defineProps<{ error: NuxtError }>();
 
 const { version } = useDocsVersion();
-const { searchGroups, searchLinks, searchTerm } = useNavigation();
+const { searchLinks, searchTerm } = useNavigation();
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
   useAsyncData(
@@ -72,8 +72,7 @@ useState('navigation', () => navigation)
       <LazyUContentSearch
         v-model:search-term="searchTerm"
         :files="versionFiles"
-        :navigation="versionNavigation"
-        :groups="searchGroups"
+        :navigation="versionNavigation"  
         :links="searchLinks"
         :fuse="{ resultLimit: 20 }"
       />

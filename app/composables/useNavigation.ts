@@ -12,7 +12,7 @@ function _useHeaderLinks() {
       {
         label: 'Nuxt meta-framework',
         icon: 'i-lucide-book-marked',
-        // to: `/nuxt/nuxtcore/${lang}/getting-started`,
+        to: `https://nuxt.com/`,
         search: false,
         active: route.path.startsWith('/nuxt'),
         children: [{
@@ -41,23 +41,23 @@ function _useHeaderLinks() {
       },
       {
         label: 'TypeScript',
-        description: 'TypeScript',
+        description: 'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.',
         icon: 'i-lucide-messages-square',
-        // to: `/typescript/spec`,
+        to: `https://www.typescriptlang.org/`,
         // active: route.path.startsWith(path)
       },
       {
         label: 'Golang',
-        description: 'Golang',
+        description: 'An open source programming language that makes it easy to build simple, reliable, and efficient software.',
         icon: 'i-lucide-messages-square',
-        // to: `go.dev/spec`,
+        to: `https://go.dev/`,
         // active: route.path.startsWith(`${to}/spec`)
       },
       {
-        label: 'Test',
-        description: 'Test',
+        label: 'Rust',
+        description: 'Empowering everyone to build reliable and efficient software.',
         icon: 'i-lucide-messages-square',
-        // to: `/docs`,
+        to: `https://www.rust-lang.org/`,
         // active: route.path.startsWith(`${to}/spec`)
       }
     ]
@@ -73,7 +73,6 @@ const _useNavigation = () => {
   const searchTerm = ref<string>('')
 
   const { headerLinks } = useHeaderLinks()
-  // const { footerLinks } = useFooterLinks()
 
   const searchLinks = computed(() => [
     {

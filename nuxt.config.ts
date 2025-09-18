@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     'nuip',
     'nuxt-content-twoslash',
     '@nuxt/content',
-    '@nuxt/image',
+    // '@nuxt/image',
     '@nuxthub/core',
     '@nuxtjs/plausible',
     '@nuxt/eslint',
@@ -17,11 +17,11 @@ export default defineNuxtConfig({
     // '@nuxtjs/turnstile',
     '@vueuse/nuxt',
     'nuxt-component-meta',
-    'nuxt-og-image',
-    'motion-v/nuxt',
+    // 'nuxt-og-image',
+    // 'motion-v/nuxt',
     'nuxt-llms',
-    'nuxt-charts',
-    'nuxt-auth-utils',
+    // 'nuxt-charts',
+    // 'nuxt-auth-utils',
   ],
   componentMeta: {
     exclude: [
@@ -52,11 +52,11 @@ export default defineNuxtConfig({
       exposed: false
     }
   },
-  $development: {
-    site: {
-      url: 'http://localhost:3000'
-    }
-  },
+  // $development: {
+  //   site: {
+  //     url: 'http://localhost:3000'
+  //   }
+  // },
   devtools: {
     enabled: true
   },
@@ -79,10 +79,7 @@ export default defineNuxtConfig({
           langs: ['sql', 'diff', 'ini']
         }
       }
-    },
-    preview: {
-      api: 'https://api.nuxt.studio'
-    }
+    }    
   },
   mdc: {
     highlight: {
@@ -99,10 +96,6 @@ export default defineNuxtConfig({
     // Pre-render
     '/': { prerender: true },
     '/404.html': { prerender: true },
-    // Admin
-    '/admin': { ssr: false },
-    '/admin/**': { ssr: false },
-
     // NUXT CORE: Redirect `hard code link` trong content (marckdown) sang trang chủ Live version.
     // @ts-ignore
     '/blog/**': { redirect: (route: { path: string }) => 'https://nuxt.com/' + route.path, prerender: false },
@@ -189,15 +182,15 @@ export default defineNuxtConfig({
     },
     provider: 'iconify'
   },
-  image: {
-    format: ['webp', 'jpeg', 'jpg', 'png', 'svg'],
-    provider: 'ipx',
-    ipx: {
-      baseURL: 'https://ipx.nuxt.com'
-    }
-  },
+  // image: {
+  //   format: ['webp', 'jpeg', 'jpg', 'png', 'svg'],
+  //   provider: 'ipx',
+  //   ipx: {
+  //     baseURL: 'https://ipx.nuxt.com'
+  //   }
+  // },
   llms: {
-    domain: 'https://nuxt.com',
+    domain: 'jdocs.jangdamaxdev.workers.dev',
     title: 'Nuxt Docs',
     description: 'Nuxt is an open source framework that makes web development intuitive and powerful. Create performant and production-grade full-stack web apps and websites with confidence.',
     full: {

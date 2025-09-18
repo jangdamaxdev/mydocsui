@@ -3,7 +3,7 @@ import { upperFirst } from 'scule'
 
 const colorMode = useColorMode()
 const { version } = useDocsVersion()
-const { searchGroups, searchLinks, searchTerm } = useNavigation()
+const { searchLinks, searchTerm } = useNavigation()
 const color = computed(() => (colorMode.value === 'dark' ? '#020420' : 'white'))
 // SET DEFAULT FOR NUXT UI
 useSharedData()
@@ -103,7 +103,6 @@ onMounted(() => {
         v-model:search-term="searchTerm"
         :files="versionFiles"
         :navigation="versionNavigation"
-        :groups="searchGroups"
         :links="searchLinks"
         :fuse="{ resultLimit: 20 }"
       />
