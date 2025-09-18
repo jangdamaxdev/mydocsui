@@ -2,7 +2,8 @@
 const route = useRoute()
 const toast = useToast()
 const { copy, copied } = useClipboard()
-const site = useSiteConfig()
+// const site = useSiteConfig()
+const site = {url: 'http://localhost:3000'}
 const isCopying = ref(false)
 
 const mdPath = computed(() => `${site.url}/raw${route.path}.md`)

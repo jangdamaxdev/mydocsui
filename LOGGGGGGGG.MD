@@ -5,24 +5,5 @@ Lỗi ở Content
 * Studio:
 - /studio/debug: `Warning.vue:9` [Vue warn]: Failed to resolve component: `Shortcut` ------lỗi từ biên tập content. Chức năng không dùng đến hoặc đã bỏ, còn trong content của bản live.
 
-# UI
-ComponentsList.vue
-IconsTheme.vue
-ComponentTheme.vue
-
-Code.vue:21 [Vue warn]: Slot "default" invoked outside of the render function: this will not track dependencies used in the slot. Invoke the slot function inside the render function instead. 
-  at <ProseCode class="language-ts-type shiki shiki-themes material-theme-lighter material-theme-lighter material-theme-palenight" language="ts-type" style= {}  ... > 
-  at <AsyncComponentWrapper class="language-ts-type shiki shiki-themes material-theme-lighter material-theme-lighter material-theme-palenight" language="ts-type" style=""  ... > 
-  at <ProseP key="0" > 
-  at <AsyncComponentWrapper key="0" > 
-  at <MDCRenderer key=0 body= 
-
-Found 5 errors in 5 files.
-
-
-Errors  Files
-     1  app/components/content/examples/command-palette/CommandPaletteSelectExample.vue:136
-     1  app/components/content/examples/input/InputMaskExample.vue:2
-     1  app/components/content/examples/table/TableRowContextMenuEventExample.vue:147
-     1  app/components/example/ExampleFulltextFusejs.vue:5
-     1  app/components/TemplateCard.vue:2
+Ignored build scripts: @tailwindcss/oxide, maplibre-gl, unrs-resolver, workerd.          │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.

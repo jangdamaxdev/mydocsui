@@ -1,9 +1,0 @@
-
-
-export default defineNuxtRouteMiddleware((to) => {
-
-  if (to.path.startsWith('/nuxt/nuxtcore') && !to.path.startsWith('/nuxt/nuxtcore/live') && !to.path.startsWith('/nuxt/nuxtcore/vi')) {
-    return to.fullPath.replace('/nuxt/nuxtcore', '/nuxt/nuxtcore/vi')
-  }
-
-})

@@ -1,5 +1,5 @@
 import type { Collections } from '@nuxt/content'
-import { queryCollection } from '@nuxt/content/nitro'
+import { queryCollection } from '@nuxt/content/server'
 import { stringify } from 'minimark/stringify'
 import { withLeadingSlash } from 'ufo'
 
@@ -11,7 +11,6 @@ export default eventHandler(async (event) => {
   }
 
   const path = withLeadingSlash(slug.replace('.md', ''))
-console.log('slug', getRouterParams(event), 'path', path, 'collection', collection);
 
   const page = await queryCollection(event, collection).path(path).first() 
   if (!page) {

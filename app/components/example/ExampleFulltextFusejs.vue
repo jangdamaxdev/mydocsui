@@ -3,14 +3,7 @@ import Fuse from 'fuse.js'
 // const { version } = useDocsVersion()
 
 const query = ref('')
-const { data } = await useAsyncData('search-data', () => queryCollectionSearchSections('nuxtui')
-// .then(data => data.map(item => ({
-//   id: item.,
-//   title: item.title,
-//   content: item.content,
-// }))
-// )
-)
+const { data } = await useAsyncData('search-data', () => queryCollectionSearchSections('nuxtcontent'))
 
 const fuse = new Fuse(data.value || [], {
   keys: [
