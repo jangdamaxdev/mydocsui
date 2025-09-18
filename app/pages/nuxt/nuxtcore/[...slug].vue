@@ -7,7 +7,7 @@ import { mapContentNavigation } from '#ui-pro/utils'
 definePageMeta({
   heroBackground: 'opacity-30',
   key: 'docs',
-  middleware: ['nuxt-core-route'],
+  middleware: ['core-route'],
 })
 const navigation = useState<ContentNavigationItem[]>('navigation')
 const route = useRoute()

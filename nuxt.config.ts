@@ -9,23 +9,23 @@ export default defineNuxtConfig({
     'nuip',
     'nuxt-content-twoslash',
     '@nuxt/content',
-    '@nuxt/image',
+
     '@nuxtjs/plausible',
     '@nuxt/eslint',
     '@nuxt/scripts',
     // '@nuxtjs/turnstile',
     '@vueuse/nuxt',
-    'nuxt-og-image',
+
  
 
     '@nuxthub/core',
 
   ],
-  $development: {
-    site: {
-      url: 'http://localhost:3000'
-    }
-  },
+  // $development: {
+  //   site: {
+  //     url: 'http://localhost:3000'
+  //   }
+  // },
   devtools: {
     enabled: true
   },
@@ -48,10 +48,7 @@ export default defineNuxtConfig({
           langs: ['sql', 'diff', 'ini']
         }
       }
-    },
-    preview: {
-      api: 'https://api.nuxt.studio'
-    }
+    }    
   },
   mdc: {
     highlight: {
@@ -133,13 +130,13 @@ export default defineNuxtConfig({
       }
     }
   },
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never'
-      }
-    }
-  },
+  // eslint: {
+  //   config: {
+  //     stylistic: {
+  //       commaDangle: 'never'
+  //     }
+  //   }
+  // },
   icon: {
     customCollections: [{
       prefix: 'custom',
@@ -151,13 +148,13 @@ export default defineNuxtConfig({
     },
     provider: 'iconify'
   },
-  image: {
-    format: ['webp', 'jpeg', 'jpg', 'png', 'svg'],
-    provider: 'ipx',
-    ipx: {
-      baseURL: 'https://ipx.nuxt.com'
-    }
-  },  
+  // image: {
+  //   format: ['webp', 'jpeg', 'jpg', 'png', 'svg'],
+  //   provider: 'ipx',
+  //   ipx: {
+  //     baseURL: 'https://ipx.nuxt.com'
+  //   }
+  // },  
   // turnstile: {
   //   siteKey: '0x4AAAAAAAP2vNBsTBT3ucZi'
   // },

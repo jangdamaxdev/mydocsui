@@ -1,22 +1,12 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
 
-// const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
 const navigation = useState<ContentNavigationItem[]>('navigation')
 const route = useRoute()
-// const stats = useStats()
+
 const { headerLinks } = useHeaderLinks()
 const { version } = useDocsVersion()
-const mobileNavigation = computed<ContentNavigationItem[]>(() => {
-  // Show Migration and Bridge on mobile only when user is reading them
-  const docsLink = navPageFromPath(version.value.path, navigation.value)
-  return [
-    {
-      ...docsLink,
-      title: 'Table of Contents',
-      children: docsLink.children?.map(child => ({ ...child, active: child.path.includes(route.params.slug[1]) })),
-    },
-    ...headerLinks.value.map(
+const baseNavigation = headerLinks.value.map(
       link =>
         ({
           ...link,
@@ -28,8 +18,23 @@ const mobileNavigation = computed<ContentNavigationItem[]>(() => {
             path: child.to,
           })),
         }) as ContentNavigationItem
-    ),
-  ].filter((item): item is ContentNavigationItem => Boolean(item))
+    )
+
+const mobileNavigation = computed<ContentNavigationItem[]>(() => {
+  // Show Migration and Bridge on mobile only when user is reading them
+  const docsLink = navPageFromPath(version.value.path, navigation.value)
+  // Menu for index page
+  if (!route.params?.slug) {
+    return baseNavigation
+  }
+  return [
+    {
+      ...docsLink,
+      title: 'Table of Contents',
+      children: docsLink.children?.map(child => ({ ...child, active: child.path.includes(route.params.slug[1]) })),
+    },
+    ...baseNavigation
+    ].filter((item): item is ContentNavigationItem => Boolean(item))
 })
 
 const defaultOpen = computed(() => {
@@ -38,33 +43,7 @@ const defaultOpen = computed(() => {
 
   return topLevelWithChildren.some(link => link.children?.some(child => currentPath.startsWith(child.path as string)))
 })
-// const logo = useTemplateRef('logo')
-// const { copy } = useClipboard()
-// const logoContextMenuItems = [
-//   [
-//     {
-//       label: 'Copy logo as SVG',
-//       icon: 'i-simple-icons-nuxtdotjs',
-//       onSelect() {
-//         if (logo.value) {
-//           copy(logo.value.$el.outerHTML, {
-//             title: 'Nuxt logo copied as SVG',
-//             description: 'You can now paste it into your project',
-//             icon: 'i-lucide-circle-check',
-//             color: 'success',
-//           })
-//         }
-//       },
-//     },
-//   ],
-//   [
-//     {
-//       label: 'Browse design kit',
-//       icon: 'i-lucide-shapes',
-//       to: '/design-kit',
-//     },
-//   ],
-// ]
+
 </script>
 
 <template>
@@ -107,8 +86,7 @@ const defaultOpen = computed(() => {
       <template v-if="route.path.startsWith('/nuxt')">
         <VersionSelect />
         <USeparator type="dashed" class="my-6" />
-      </template>
-
+      </template>    
       <UContentNavigation :navigation="mobileNavigation" :default-open="defaultOpen" highlight />
     </template>
   </UHeader>

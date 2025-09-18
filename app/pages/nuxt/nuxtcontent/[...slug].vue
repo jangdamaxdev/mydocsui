@@ -7,7 +7,7 @@ import { mapContentNavigation } from '#ui-pro/utils'
 definePageMeta({
   heroBackground: 'opacity-30',
   key: 'docs',
-  middleware: ['nuxt-content-route'],
+  middleware: ['content-route'],
 
 })
 

@@ -13,5 +13,6 @@
     {
       "path": "./.nuxt/tsconfig.node.json"
     }
-  ]
+  ],
+  "include": ["./.nuxt/tsconfig.json"]
 }
