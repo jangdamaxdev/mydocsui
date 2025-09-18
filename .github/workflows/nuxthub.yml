@@ -1,17 +1,10 @@
 name: Deploy to NuxtHub
-
-on:
-  push:
-  repository_dispatch:
-    types: [docs-updated]
+on: push
 
 jobs:
   deploy:
     name: "Deploy to NuxtHub"
     runs-on: ubuntu-latest
-    environment:
-      name: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
-      url: ${{ steps.deploy.outputs.deployment-url }}
     permissions:
       contents: read
       id-token: write
@@ -34,15 +27,7 @@ jobs:
       - name: Ensure NuxtHub module is installed
         run: pnpx nuxthub@latest ensure
 
-      - name: Build application
-        run: pnpm build
-        env:
-          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
-          NUXT_CONTENT_PREVIEW_STAGING_API: https://dev-api.nuxt.studio
-          NUXT_SITE_URL: https://nuxt.com
-
-      - name: Deploy to NuxtHub
-        uses: nuxt-hub/action@v1
-        id: deploy
+      - name: Build & Deploy to NuxtHub
+        uses: nuxt-hub/action@v2
         with:
-          project-key: nuxt-com-lvuq
+          project-key: jdocs-hu7n
