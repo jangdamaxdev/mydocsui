@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     'nuip',
     'nuxt-content-twoslash',
     '@nuxt/content',
-    // '@nuxt/image',
+    '@nuxt/image',
     '@nuxthub/core',
     '@nuxtjs/plausible',
     '@nuxt/eslint',
