@@ -9,12 +9,12 @@ const { headerLinks } = useHeaderLinks()
 const { version } = useDocsVersion()
 const mobileNavigation = computed<ContentNavigationItem[]>(() => {
   // Show Migration and Bridge on mobile only when user is reading them
-  const docsLink = navPageFromPath(version.value.path, navigation.value) 
+  const docsLink = navPageFromPath(version.value.path, navigation.value)
   return [
     {
       ...docsLink,
       title: 'Table of Contents',
-      children: docsLink.children?.map(child => ({...child, active: child.path.includes(route.params.slug[1])})),
+      children: docsLink.children?.map(child => ({ ...child, active: child.path.includes(route.params.slug[1]) })),
     },
     ...headerLinks.value.map(
       link =>
