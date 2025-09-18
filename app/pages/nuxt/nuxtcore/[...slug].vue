@@ -167,7 +167,7 @@ const editLink = computed(() => {
         <UPageBody>
           <ContentRenderer v-if="page.body" :value="page" />
           <div>
-            <Feedback :page="page" />
+            <!-- <Feedback :page="page" /> -->
             <USeparator class="mt-6 mb-10">
               <!-- ĐOẠN CHO PHÉP EDIT GITHUB CONTENT -->
               <div class="flex items-center gap-2 text-sm text-muted">

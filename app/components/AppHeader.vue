@@ -4,7 +4,7 @@ import type { ContentNavigationItem } from '@nuxt/content'
 // const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
 const navigation = useState<ContentNavigationItem[]>('navigation')
 const route = useRoute()
-const stats = useStats()
+// const stats = useStats()
 const { headerLinks } = useHeaderLinks()
 const { version } = useDocsVersion()
 const mobileNavigation = computed<ContentNavigationItem[]>(() => {
@@ -93,7 +93,7 @@ const defaultOpen = computed(() => {
           target="_blank"
           variant="ghost"
           color="neutral"
-          :label="stats ? formatNumber(stats.stars) : '...'"
+
           :ui="{
             label: 'hidden sm:inline-flex',
           }"

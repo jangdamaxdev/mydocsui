@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     // '@nuxtjs/turnstile',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    'motion-v/nuxt',
+ 
 
     '@nuxthub/core',
 
@@ -67,11 +67,7 @@ export default defineNuxtConfig({
     // NUXT CORE
     // Pre-render
     '/': { prerender: true },
-    '/404.html': { prerender: true },    
-    // Admin
-    '/admin': { ssr: false },
-    '/admin/**': { ssr: false },
-
+    '/404.html': { prerender: true },
     // NUXT CORE: Redirect `hard code link` trong content (marckdown) sang trang chủ Live version.
     '/blog': { redirect: 'https://nuxt.com/blog', prerender: false },
     '/blog/nuxt-on-the-edge': { redirect: 'https://nuxt.com/blog/nuxt-on-the-edge', prerender: false },

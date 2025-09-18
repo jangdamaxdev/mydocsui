@@ -68,12 +68,12 @@ const _useNavigation = () => {
   const { headerLinks } = useHeaderLinks()
 
   const searchLinks = computed(() => [
-    {
-      label: 'Ask AI',
-      icon: 'i-lucide-wand',
-      to: 'javascript:void(0);',
-      onSelect: () => nuxtApp.$kapa?.openModal()
-    },
+    // {
+    //   label: 'Ask AI',
+    //   icon: 'i-lucide-wand',
+    //   to: 'javascript:void(0);',
+    //   onSelect: () => nuxtApp.$kapa?.openModal()
+    // },
     ...headerLinks.value.map((link) => {
       // Remove `/docs` and `/enterprise` links from command palette
       if (link.search === false) {
@@ -88,58 +88,58 @@ const _useNavigation = () => {
       .filter((link): link is NonNullable<typeof link> => Boolean(link))
   ])
 
-  type SearchGroup = {
-    id: string
-    label: string
-    icon?: string
-    items: Array<{
-      id: string
-      label: string
-      suffix?: string
-      icon?: string
-      avatar?: {
-        src?: string
-        ui?: {
-          root: string
-        }
-      }
-      to: string
-      onSelect?: () => Promise<void>
-    }>
-  }
+  // type SearchGroup = {
+  //   id: string
+  //   label: string
+  //   icon?: string
+  //   items: Array<{
+  //     id: string
+  //     label: string
+  //     suffix?: string
+  //     icon?: string
+  //     avatar?: {
+  //       src?: string
+  //       ui?: {
+  //         root: string
+  //       }
+  //     }
+  //     to: string
+  //     onSelect?: () => Promise<void>
+  //   }>
+  // }
 
-  const searchGroups = computed<SearchGroup[]>(() => {
-    const aiGroup: SearchGroup = {
-      id: 'ask-ai-search',
-      label: 'AI',
-      icon: 'i-lucide-wand',
-      items: []
-    }
+  // const searchGroups = computed<SearchGroup[]>(() => {
+  //   const aiGroup: SearchGroup = {
+  //     id: 'ask-ai-search',
+  //     label: 'AI',
+  //     icon: 'i-lucide-wand',
+  //     items: []
+  //   }
 
-    const groups = [aiGroup]
+  //   const groups = [aiGroup]
 
-    if (!searchTerm.value) {
-      return groups
-    }
+  //   if (!searchTerm.value) {
+  //     return groups
+  //   }
 
-    aiGroup.items = [{
-      id: `ask-ai-${searchTerm.value}`,
-      label: `Ask AI about "${searchTerm.value}"`,
-      icon: 'i-lucide-wand',
-      to: 'javascript:void(0);',
-      onSelect() {
-        return nuxtApp.$kapa.openModal(searchTerm.value)
-      }
-    }]
+  //   aiGroup.items = [{
+  //     id: `ask-ai-${searchTerm.value}`,
+  //     label: `Ask AI about "${searchTerm.value}"`,
+  //     icon: 'i-lucide-wand',
+  //     to: 'javascript:void(0);',
+  //     onSelect() {
+  //       return nuxtApp.$kapa.openModal(searchTerm.value)
+  //     }
+  //   }]
 
-    return groups
-  })
+  //   return groups
+  // })
 
   return {
     searchTerm,
     headerLinks,
     searchLinks,
-    searchGroups
+    // searchGroups
   }
 }
 

@@ -1,1 +1,0 @@
-Dùng cho /admin
